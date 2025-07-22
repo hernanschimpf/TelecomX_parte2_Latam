@@ -1,0 +1,464 @@
+
+================================================================================
+TELECOMX - INFORME DE ELIMINACIÓN DE COLUMNAS IRRELEVANTES
+================================================================================
+Fecha y Hora: 20250721_202843
+Paso: 1 - Eliminación de Columnas Irrelevantes
+
+================================================================================
+RESUMEN EJECUTIVO
+================================================================================
+• Dataset Original: 7043 filas x 24 columnas
+• Dataset Final: 7043 filas x 21 columnas
+• Columnas Eliminadas: 3
+• Integridad de Filas: ✅ CORRECTA
+• Variable Objetivo: ✅ PRESENTE
+
+================================================================================
+MÉTODOS Y CRITERIOS ESTADÍSTICOS APLICADOS
+================================================================================
+
+🔬 CRITERIO 1: IDENTIFICADORES ÚNICOS
+   Métrica: Uniqueness Ratio >= 0.95
+   Justificación: Columnas con 95%+ valores únicos no aportan capacidad predictiva
+   
+🔬 CRITERIO 2: DATOS MALFORMADOS  
+   Métrica: Detección de patrones estructurales incorrectos
+   Justificación: Datos no procesables por algoritmos de ML
+   
+🔬 CRITERIO 3: SIN VARIABILIDAD
+   Métrica: Unique Values = 1
+   Justificación: Columnas constantes no proporcionan información discriminatoria
+   
+🔬 CRITERIO 4: ALTA PRESENCIA DE NULOS
+   Métrica: Null Percentage > 80%
+   Justificación: Información insuficiente para entrenamiento confiable
+   
+🔬 CRITERIO 5: ALTA CARDINALIDAD CATEGÓRICA
+   Métrica: Uniqueness Ratio > 0.5 en variables categóricas
+   Justificación: Demasiadas categorías pueden causar overfitting
+
+================================================================================
+COLUMNAS ELIMINADAS CON JUSTIFICACIÓN ESTADÍSTICA
+================================================================================
+
+🚫 IDENTIFICADORES ÚNICOS
+
+   📊 ID_Cliente:
+      Razón: Identificador único - Uniqueness Ratio: 1.0000
+      Uniqueness Ratio: 1.0000
+      Valores únicos: 7,043
+
+🚫 DATOS MALFORMADOS
+
+   📊 Estructura_Cargos_Original:
+      Razón: Datos malformados - Contiene estructuras no válidas
+      Muestra problemática: ["{'Monthly': 65.6", "{'Monthly': 59.9"]
+
+   📊 Cargo_Mensual:
+      Razón: Datos malformados - Contiene estructuras no válidas
+      Muestra problemática: [" 'Total': '593.3'}", " 'Total': '542.4'}"]
+
+
+================================================================================
+MÉTRICAS ESTADÍSTICAS RESUMEN
+================================================================================
+• Total de columnas analizadas: 24
+• Columnas eliminadas: 3
+• Columnas mantenidas: 21
+• Tasa de eliminación: 12.5%
+
+Criterios aplicados:
+  - Identificadores únicos: 1 columnas
+  - Datos malformados: 2 columnas
+  - Sin variabilidad: 0 columnas
+  - Muchos nulos: 0 columnas
+  - Alta cardinalidad: 0 columnas
+================================================================================
+ANÁLISIS ESTADÍSTICO DETALLADO POR COLUMNA
+================================================================================
+
+📈 ID_Cliente 🚫 ELIMINADA - Identificador único - Uniqueness Ratio: 1.0000
+   • Tipo de dato: object
+   • Valores únicos: 7,043 de 7,043
+   • Uniqueness Ratio: 1.0000
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: 0002-ORFBO, 0003-MKNFE, 0004-TLHLJ
+   • Frecuencia del valor más común: 0.01%
+   • Distribución top 3: 9995-HOTOH: 1, 0002-ORFBO: 1, 0003-MKNFE: 1
+📈 Abandono_Cliente ✅ MANTENIDA
+   • Tipo de dato: int64
+   • Valores únicos: 2 de 7,043
+   • Uniqueness Ratio: 0.0003
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: 0, 1
+📈 Genero ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 2 de 7,043
+   • Uniqueness Ratio: 0.0003
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Femenino, Masculino
+   • Frecuencia del valor más común: 50.48%
+   • Distribución top 3: Masculino: 3555, Femenino: 3488
+📈 Ciudadano_Mayor ✅ MANTENIDA
+   • Tipo de dato: int64
+   • Valores únicos: 2 de 7,043
+   • Uniqueness Ratio: 0.0003
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: 0, 1
+📈 Tiene_Pareja ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 2 de 7,043
+   • Uniqueness Ratio: 0.0003
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Sí, No
+   • Frecuencia del valor más común: 51.70%
+   • Distribución top 3: No: 3641, Sí: 3402
+📈 Tiene_Dependientes ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 2 de 7,043
+   • Uniqueness Ratio: 0.0003
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Sí, No
+   • Frecuencia del valor más común: 70.04%
+   • Distribución top 3: No: 4933, Sí: 2110
+📈 Meses_Cliente ✅ MANTENIDA
+   • Tipo de dato: int64
+   • Valores únicos: 73 de 7,043
+   • Uniqueness Ratio: 0.0104
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: 9, 4, 13
+📈 Servicio_Telefono ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 2 de 7,043
+   • Uniqueness Ratio: 0.0003
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Sí, No
+   • Frecuencia del valor más común: 90.32%
+   • Distribución top 3: Sí: 6361, No: 682
+📈 Lineas_Multiples ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 3 de 7,043
+   • Uniqueness Ratio: 0.0004
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: No, Sí, No phone service
+   • Frecuencia del valor más común: 48.13%
+   • Distribución top 3: No: 3390, Sí: 2971, No phone service: 682
+📈 Servicio_Internet ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 3 de 7,043
+   • Uniqueness Ratio: 0.0004
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: DSL, Fibra Óptica, No
+   • Frecuencia del valor más común: 43.96%
+   • Distribución top 3: Fibra Óptica: 3096, DSL: 2421, No: 1526
+📈 Seguridad_Online ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 3 de 7,043
+   • Uniqueness Ratio: 0.0004
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: No, Sí, No internet service
+   • Frecuencia del valor más común: 49.67%
+   • Distribución top 3: No: 3498, Sí: 2019, No internet service: 1526
+📈 Respaldo_Online ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 3 de 7,043
+   • Uniqueness Ratio: 0.0004
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Sí, No, No internet service
+   • Frecuencia del valor más común: 43.84%
+   • Distribución top 3: No: 3088, Sí: 2429, No internet service: 1526
+📈 Proteccion_Dispositivo ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 3 de 7,043
+   • Uniqueness Ratio: 0.0004
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: No, Sí, No internet service
+   • Frecuencia del valor más común: 43.94%
+   • Distribución top 3: No: 3095, Sí: 2422, No internet service: 1526
+📈 Soporte_Tecnico ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 3 de 7,043
+   • Uniqueness Ratio: 0.0004
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Sí, No, No internet service
+   • Frecuencia del valor más común: 49.31%
+   • Distribución top 3: No: 3473, Sí: 2044, No internet service: 1526
+📈 TV_Streaming ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 3 de 7,043
+   • Uniqueness Ratio: 0.0004
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Sí, No, No internet service
+   • Frecuencia del valor más común: 39.90%
+   • Distribución top 3: No: 2810, Sí: 2707, No internet service: 1526
+📈 Peliculas_Streaming ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 3 de 7,043
+   • Uniqueness Ratio: 0.0004
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: No, Sí, No internet service
+   • Frecuencia del valor más común: 39.54%
+   • Distribución top 3: No: 2785, Sí: 2732, No internet service: 1526
+📈 Tipo_Contrato ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 3 de 7,043
+   • Uniqueness Ratio: 0.0004
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Un Año, Mes a Mes, Dos Años
+   • Frecuencia del valor más común: 55.02%
+   • Distribución top 3: Mes a Mes: 3875, Dos Años: 1695, Un Año: 1473
+📈 Facturacion_Digital ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 2 de 7,043
+   • Uniqueness Ratio: 0.0003
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Sí, No
+   • Frecuencia del valor más común: 59.22%
+   • Distribución top 3: Sí: 4171, No: 2872
+📈 Metodo_Pago ✅ MANTENIDA
+   • Tipo de dato: object
+   • Valores únicos: 4 de 7,043
+   • Uniqueness Ratio: 0.0006
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: Cheque Postal, Cheque Electrónico, Tarjeta de Crédito
+   • Frecuencia del valor más común: 33.58%
+   • Distribución top 3: Cheque Electrónico: 2365, Cheque Postal: 1612, Transferencia Bancaria: 1544
+📈 Estructura_Cargos_Original 🚫 ELIMINADA - Datos malformados - Contiene estructuras no válidas
+   • Tipo de dato: object
+   • Valores únicos: 1,585 de 7,043
+   • Uniqueness Ratio: 0.2250
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: {'Monthly': 65.6, {'Monthly': 59.9, {'Monthly': 73.9
+   • Frecuencia del valor más común: 0.87%
+   • Distribución top 3: {'Monthly': 20.05: 61, {'Monthly': 19.85: 45, {'Monthly': 19.9: 44
+📈 Cargo_Mensual 🚫 ELIMINADA - Datos malformados - Contiene estructuras no válidas
+   • Tipo de dato: object
+   • Valores únicos: 6,531 de 7,043
+   • Uniqueness Ratio: 0.9273
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores:  'Total': '593.3'},  'Total': '542.4'},  'Total': '280.85'}
+   • Frecuencia del valor más común: 0.16%
+   • Distribución top 3:  'Total': '20.2'}: 11,  'Total': ' '}: 11,  'Total': '19.75'}: 9
+📈 Cargo_Total ✅ MANTENIDA
+   • Tipo de dato: float64
+   • Valores únicos: 1,585 de 7,043
+   • Uniqueness Ratio: 0.2250
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: 65.6, 59.9, 73.9
+📈 Facturacion_Mensual ✅ MANTENIDA
+   • Tipo de dato: float64
+   • Valores únicos: 6,531 de 7,043
+   • Uniqueness Ratio: 0.9273
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: 593.3, 542.4, 280.85
+📈 Facturacion_Diaria ✅ MANTENIDA
+   • Tipo de dato: float64
+   • Valores únicos: 322 de 7,043
+   • Uniqueness Ratio: 0.0457
+   • Completitud: 100.00% (0.0% nulos)
+   • Muestra de valores: 2.19, 2.0, 2.46
+================================================================================
+COLUMNAS FINALES PARA MODELADO
+================================================================================
+Total de columnas para modelado: 21
+
+🎯 VARIABLE OBJETIVO:
+   • Abandono_Cliente
+
+📊 VARIABLES PREDICTORAS (20 columnas):
+    1. Genero
+    2. Ciudadano_Mayor
+    3. Tiene_Pareja
+    4. Tiene_Dependientes
+    5. Meses_Cliente
+    6. Servicio_Telefono
+    7. Lineas_Multiples
+    8. Servicio_Internet
+    9. Seguridad_Online
+   10. Respaldo_Online
+   11. Proteccion_Dispositivo
+   12. Soporte_Tecnico
+   13. TV_Streaming
+   14. Peliculas_Streaming
+   15. Tipo_Contrato
+   16. Facturacion_Digital
+   17. Metodo_Pago
+   18. Cargo_Total
+   19. Facturacion_Mensual
+   20. Facturacion_Diaria
+
+================================================================================
+ANÁLISIS DETALLADO DE COLUMNAS ORIGINALES
+================================================================================
+
+ID_Cliente 🚫 ELIMINADA - Identificador único - Uniqueness Ratio: 1.0000
+   • Valores únicos: 7,043
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: 0002-ORFBO, 0003-MKNFE, 0004-TLHLJ, 0011-IGKFF, 0013-EXCHZ
+
+Abandono_Cliente ✅ MANTENIDA
+   • Valores únicos: 2
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: int64
+   • Muestra: 0, 1
+
+Genero ✅ MANTENIDA
+   • Valores únicos: 2
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Femenino, Masculino
+
+Ciudadano_Mayor ✅ MANTENIDA
+   • Valores únicos: 2
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: int64
+   • Muestra: 0, 1
+
+Tiene_Pareja ✅ MANTENIDA
+   • Valores únicos: 2
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Sí, No
+
+Tiene_Dependientes ✅ MANTENIDA
+   • Valores únicos: 2
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Sí, No
+
+Meses_Cliente ✅ MANTENIDA
+   • Valores únicos: 73
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: int64
+   • Muestra: 9, 4, 13, 3, 71
+
+Servicio_Telefono ✅ MANTENIDA
+   • Valores únicos: 2
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Sí, No
+
+Lineas_Multiples ✅ MANTENIDA
+   • Valores únicos: 3
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: No, Sí, No phone service
+
+Servicio_Internet ✅ MANTENIDA
+   • Valores únicos: 3
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: DSL, Fibra Óptica, No
+
+Seguridad_Online ✅ MANTENIDA
+   • Valores únicos: 3
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: No, Sí, No internet service
+
+Respaldo_Online ✅ MANTENIDA
+   • Valores únicos: 3
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Sí, No, No internet service
+
+Proteccion_Dispositivo ✅ MANTENIDA
+   • Valores únicos: 3
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: No, Sí, No internet service
+
+Soporte_Tecnico ✅ MANTENIDA
+   • Valores únicos: 3
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Sí, No, No internet service
+
+TV_Streaming ✅ MANTENIDA
+   • Valores únicos: 3
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Sí, No, No internet service
+
+Peliculas_Streaming ✅ MANTENIDA
+   • Valores únicos: 3
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: No, Sí, No internet service
+
+Tipo_Contrato ✅ MANTENIDA
+   • Valores únicos: 3
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Un Año, Mes a Mes, Dos Años
+
+Facturacion_Digital ✅ MANTENIDA
+   • Valores únicos: 2
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Sí, No
+
+Metodo_Pago ✅ MANTENIDA
+   • Valores únicos: 4
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: Cheque Postal, Cheque Electrónico, Tarjeta de Crédito, Transferencia Bancaria
+
+Estructura_Cargos_Original 🚫 ELIMINADA - Datos malformados - Contiene estructuras no válidas
+   • Valores únicos: 1,585
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra: {'Monthly': 65.6, {'Monthly': 59.9, {'Monthly': 73.9, {'Monthly': 98.0, {'Monthly': 83.9
+
+Cargo_Mensual 🚫 ELIMINADA - Datos malformados - Contiene estructuras no válidas
+   • Valores únicos: 6,531
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: object
+   • Muestra:  'Total': '593.3'},  'Total': '542.4'},  'Total': '280.85'},  'Total': '1237.85'},  'Total': '267.4'}
+
+Cargo_Total ✅ MANTENIDA
+   • Valores únicos: 1,585
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: float64
+   • Muestra: 65.6, 59.9, 73.9, 98.0, 83.9
+
+Facturacion_Mensual ✅ MANTENIDA
+   • Valores únicos: 6,531
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: float64
+   • Muestra: 593.3, 542.4, 280.85, 1237.85, 267.4
+
+Facturacion_Diaria ✅ MANTENIDA
+   • Valores únicos: 322
+   • Valores nulos: 0 (0.0%)
+   • Tipo de dato: float64
+   • Muestra: 2.19, 2.0, 2.46, 3.27, 2.8
+
+================================================================================
+VALIDACIÓN DE INTEGRIDAD
+================================================================================
+• Filas originales: 7,043
+• Filas finales: 7,043
+• Filas perdidas: 0
+• Columnas originales: 24
+• Columnas finales: 21
+• Columnas eliminadas: 3
+
+Verificaciones:
+✅ Integridad de filas mantenida
+✅ Variable objetivo presente
+
+================================================================================
+SIGUIENTE PASO RECOMENDADO
+================================================================================
+Paso 2: Análisis Exploratorio de Datos (EDA)
+- Distribución de la variable objetivo
+- Análisis de correlaciones
+- Detección de outliers
+- Análisis de variables categóricas vs numéricas
+
+================================================================================
+FIN DEL INFORME
+================================================================================

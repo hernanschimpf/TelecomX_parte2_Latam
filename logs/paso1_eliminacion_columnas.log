@@ -1,0 +1,314 @@
+2025-07-21 20:28:43,819 - INFO - INICIANDO PASO 1: ELIMINACION DE COLUMNAS IRRELEVANTES
+2025-07-21 20:28:43,820 - INFO - ======================================================================
+2025-07-21 20:28:43,820 - INFO - Probando codificacion: cp1252
+2025-07-21 20:28:43,868 - INFO - Dataset cargado exitosamente desde: telecomx_dataframe_LIMPIO.csv
+2025-07-21 20:28:43,869 - INFO - Codificacion exitosa: cp1252
+2025-07-21 20:28:43,870 - INFO - Dimensiones iniciales: 7043 filas x 24 columnas
+2025-07-21 20:28:43,870 - INFO - Columnas detectadas:
+2025-07-21 20:28:43,870 - INFO -   1. ID_Cliente
+2025-07-21 20:28:43,870 - INFO -   2. Abandono_Cliente
+2025-07-21 20:28:43,871 - INFO -   3. Genero
+2025-07-21 20:28:43,871 - INFO -   4. Ciudadano_Mayor
+2025-07-21 20:28:43,871 - INFO -   5. Tiene_Pareja
+2025-07-21 20:28:43,871 - INFO - Iniciando analisis estadistico detallado de columnas...
+2025-07-21 20:28:43,876 - INFO - Columna 'ID_Cliente':
+2025-07-21 20:28:43,876 - INFO -   - Valores únicos: 7,043 de 7,043 (ratio: 1.0000)
+2025-07-21 20:28:43,876 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,877 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,877 - INFO -   - Frecuencia del valor más común: 0.01%
+2025-07-21 20:28:43,877 - INFO - Columna 'Abandono_Cliente':
+2025-07-21 20:28:43,878 - INFO -   - Valores únicos: 2 de 7,043 (ratio: 0.0003)
+2025-07-21 20:28:43,878 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,878 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,880 - INFO - Columna 'Genero':
+2025-07-21 20:28:43,881 - INFO -   - Valores únicos: 2 de 7,043 (ratio: 0.0003)
+2025-07-21 20:28:43,881 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,881 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,882 - INFO -   - Frecuencia del valor más común: 50.48%
+2025-07-21 20:28:43,882 - INFO - Columna 'Ciudadano_Mayor':
+2025-07-21 20:28:43,882 - INFO -   - Valores únicos: 2 de 7,043 (ratio: 0.0003)
+2025-07-21 20:28:43,883 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,883 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,885 - INFO - Columna 'Tiene_Pareja':
+2025-07-21 20:28:43,886 - INFO -   - Valores únicos: 2 de 7,043 (ratio: 0.0003)
+2025-07-21 20:28:43,886 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,886 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,886 - INFO -   - Frecuencia del valor más común: 51.70%
+2025-07-21 20:28:43,889 - INFO - Columna 'Tiene_Dependientes':
+2025-07-21 20:28:43,889 - INFO -   - Valores únicos: 2 de 7,043 (ratio: 0.0003)
+2025-07-21 20:28:43,890 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,890 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,890 - INFO -   - Frecuencia del valor más común: 70.04%
+2025-07-21 20:28:43,891 - INFO - Columna 'Meses_Cliente':
+2025-07-21 20:28:43,891 - INFO -   - Valores únicos: 73 de 7,043 (ratio: 0.0104)
+2025-07-21 20:28:43,891 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,891 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,893 - INFO - Columna 'Servicio_Telefono':
+2025-07-21 20:28:43,893 - INFO -   - Valores únicos: 2 de 7,043 (ratio: 0.0003)
+2025-07-21 20:28:43,894 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,894 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,894 - INFO -   - Frecuencia del valor más común: 90.32%
+2025-07-21 20:28:43,896 - INFO - Columna 'Lineas_Multiples':
+2025-07-21 20:28:43,897 - INFO -   - Valores únicos: 3 de 7,043 (ratio: 0.0004)
+2025-07-21 20:28:43,897 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,897 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,897 - INFO -   - Frecuencia del valor más común: 48.13%
+2025-07-21 20:28:43,900 - INFO - Columna 'Servicio_Internet':
+2025-07-21 20:28:43,900 - INFO -   - Valores únicos: 3 de 7,043 (ratio: 0.0004)
+2025-07-21 20:28:43,901 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,901 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,901 - INFO -   - Frecuencia del valor más común: 43.96%
+2025-07-21 20:28:43,904 - INFO - Columna 'Seguridad_Online':
+2025-07-21 20:28:43,904 - INFO -   - Valores únicos: 3 de 7,043 (ratio: 0.0004)
+2025-07-21 20:28:43,905 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,905 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,905 - INFO -   - Frecuencia del valor más común: 49.67%
+2025-07-21 20:28:43,910 - INFO - Columna 'Respaldo_Online':
+2025-07-21 20:28:43,910 - INFO -   - Valores únicos: 3 de 7,043 (ratio: 0.0004)
+2025-07-21 20:28:43,911 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,911 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,911 - INFO -   - Frecuencia del valor más común: 43.84%
+2025-07-21 20:28:43,913 - INFO - Columna 'Proteccion_Dispositivo':
+2025-07-21 20:28:43,913 - INFO -   - Valores únicos: 3 de 7,043 (ratio: 0.0004)
+2025-07-21 20:28:43,913 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,914 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,914 - INFO -   - Frecuencia del valor más común: 43.94%
+2025-07-21 20:28:43,916 - INFO - Columna 'Soporte_Tecnico':
+2025-07-21 20:28:43,916 - INFO -   - Valores únicos: 3 de 7,043 (ratio: 0.0004)
+2025-07-21 20:28:43,916 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,917 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,917 - INFO -   - Frecuencia del valor más común: 49.31%
+2025-07-21 20:28:43,919 - INFO - Columna 'TV_Streaming':
+2025-07-21 20:28:43,919 - INFO -   - Valores únicos: 3 de 7,043 (ratio: 0.0004)
+2025-07-21 20:28:43,920 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,920 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,920 - INFO -   - Frecuencia del valor más común: 39.90%
+2025-07-21 20:28:43,924 - INFO - Columna 'Peliculas_Streaming':
+2025-07-21 20:28:43,924 - INFO -   - Valores únicos: 3 de 7,043 (ratio: 0.0004)
+2025-07-21 20:28:43,924 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,925 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,925 - INFO -   - Frecuencia del valor más común: 39.54%
+2025-07-21 20:28:43,927 - INFO - Columna 'Tipo_Contrato':
+2025-07-21 20:28:43,927 - INFO -   - Valores únicos: 3 de 7,043 (ratio: 0.0004)
+2025-07-21 20:28:43,927 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,927 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,928 - INFO -   - Frecuencia del valor más común: 55.02%
+2025-07-21 20:28:43,929 - INFO - Columna 'Facturacion_Digital':
+2025-07-21 20:28:43,930 - INFO -   - Valores únicos: 2 de 7,043 (ratio: 0.0003)
+2025-07-21 20:28:43,930 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,930 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,930 - INFO -   - Frecuencia del valor más común: 59.22%
+2025-07-21 20:28:43,932 - INFO - Columna 'Metodo_Pago':
+2025-07-21 20:28:43,932 - INFO -   - Valores únicos: 4 de 7,043 (ratio: 0.0006)
+2025-07-21 20:28:43,933 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,933 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,933 - INFO -   - Frecuencia del valor más común: 33.58%
+2025-07-21 20:28:43,935 - INFO - Columna 'Estructura_Cargos_Original':
+2025-07-21 20:28:43,935 - INFO -   - Valores únicos: 1,585 de 7,043 (ratio: 0.2250)
+2025-07-21 20:28:43,936 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,936 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,936 - INFO -   - Frecuencia del valor más común: 0.87%
+2025-07-21 20:28:43,941 - INFO - Columna 'Cargo_Mensual':
+2025-07-21 20:28:43,942 - INFO -   - Valores únicos: 6,531 de 7,043 (ratio: 0.9273)
+2025-07-21 20:28:43,942 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,942 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,942 - INFO -   - Frecuencia del valor más común: 0.16%
+2025-07-21 20:28:43,943 - INFO - Columna 'Cargo_Total':
+2025-07-21 20:28:43,943 - INFO -   - Valores únicos: 1,585 de 7,043 (ratio: 0.2250)
+2025-07-21 20:28:43,943 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,944 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,944 - INFO - Columna 'Facturacion_Mensual':
+2025-07-21 20:28:43,945 - INFO -   - Valores únicos: 6,531 de 7,043 (ratio: 0.9273)
+2025-07-21 20:28:43,945 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,945 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,946 - INFO - Columna 'Facturacion_Diaria':
+2025-07-21 20:28:43,946 - INFO -   - Valores únicos: 322 de 7,043 (ratio: 0.0457)
+2025-07-21 20:28:43,946 - INFO -   - Completitud: 100.00%
+2025-07-21 20:28:43,946 - INFO -   - Valores nulos: 0.0%
+2025-07-21 20:28:43,946 - INFO - APLICANDO CRITERIOS ESTADISTICOS PARA ELIMINACION DE COLUMNAS
+2025-07-21 20:28:43,946 - INFO - ============================================================
+2025-07-21 20:28:43,946 - INFO - CRITERIO 1: IDENTIFICADORES UNICOS
+2025-07-21 20:28:43,947 - INFO - Métrica: Uniqueness Ratio >= 0.95
+2025-07-21 20:28:43,947 - INFO - ----------------------------------------
+2025-07-21 20:28:43,947 - INFO -   ELIMINAR: ID_Cliente
+2025-07-21 20:28:43,947 - INFO -     Ratio de unicidad: 1.0000 >= 0.95
+2025-07-21 20:28:43,947 - INFO -     Valores únicos: 7,043 de 7,043
+2025-07-21 20:28:43,948 - INFO -   MANTENER: Abandono_Cliente
+2025-07-21 20:28:43,948 - INFO -     Ratio de unicidad: 0.0003 < 0.95
+2025-07-21 20:28:43,948 - INFO -     Valores únicos: 2 de 7,043
+2025-07-21 20:28:43,948 - INFO -   MANTENER: Genero
+2025-07-21 20:28:43,948 - INFO -     Ratio de unicidad: 0.0003 < 0.95
+2025-07-21 20:28:43,948 - INFO -     Valores únicos: 2 de 7,043
+2025-07-21 20:28:43,948 - INFO -   MANTENER: Ciudadano_Mayor
+2025-07-21 20:28:43,948 - INFO -     Ratio de unicidad: 0.0003 < 0.95
+2025-07-21 20:28:43,948 - INFO -     Valores únicos: 2 de 7,043
+2025-07-21 20:28:43,949 - INFO -   MANTENER: Tiene_Pareja
+2025-07-21 20:28:43,949 - INFO -     Ratio de unicidad: 0.0003 < 0.95
+2025-07-21 20:28:43,949 - INFO -     Valores únicos: 2 de 7,043
+2025-07-21 20:28:43,949 - INFO -   MANTENER: Tiene_Dependientes
+2025-07-21 20:28:43,949 - INFO -     Ratio de unicidad: 0.0003 < 0.95
+2025-07-21 20:28:43,949 - INFO -     Valores únicos: 2 de 7,043
+2025-07-21 20:28:43,949 - INFO -   MANTENER: Meses_Cliente
+2025-07-21 20:28:43,949 - INFO -     Ratio de unicidad: 0.0104 < 0.95
+2025-07-21 20:28:43,949 - INFO -     Valores únicos: 73 de 7,043
+2025-07-21 20:28:43,950 - INFO -   MANTENER: Servicio_Telefono
+2025-07-21 20:28:43,950 - INFO -     Ratio de unicidad: 0.0003 < 0.95
+2025-07-21 20:28:43,950 - INFO -     Valores únicos: 2 de 7,043
+2025-07-21 20:28:43,950 - INFO -   MANTENER: Lineas_Multiples
+2025-07-21 20:28:43,950 - INFO -     Ratio de unicidad: 0.0004 < 0.95
+2025-07-21 20:28:43,950 - INFO -     Valores únicos: 3 de 7,043
+2025-07-21 20:28:43,950 - INFO -   MANTENER: Servicio_Internet
+2025-07-21 20:28:43,950 - INFO -     Ratio de unicidad: 0.0004 < 0.95
+2025-07-21 20:28:43,950 - INFO -     Valores únicos: 3 de 7,043
+2025-07-21 20:28:43,951 - INFO -   MANTENER: Seguridad_Online
+2025-07-21 20:28:43,951 - INFO -     Ratio de unicidad: 0.0004 < 0.95
+2025-07-21 20:28:43,951 - INFO -     Valores únicos: 3 de 7,043
+2025-07-21 20:28:43,951 - INFO -   MANTENER: Respaldo_Online
+2025-07-21 20:28:43,951 - INFO -     Ratio de unicidad: 0.0004 < 0.95
+2025-07-21 20:28:43,951 - INFO -     Valores únicos: 3 de 7,043
+2025-07-21 20:28:43,951 - INFO -   MANTENER: Proteccion_Dispositivo
+2025-07-21 20:28:43,951 - INFO -     Ratio de unicidad: 0.0004 < 0.95
+2025-07-21 20:28:43,951 - INFO -     Valores únicos: 3 de 7,043
+2025-07-21 20:28:43,952 - INFO -   MANTENER: Soporte_Tecnico
+2025-07-21 20:28:43,952 - INFO -     Ratio de unicidad: 0.0004 < 0.95
+2025-07-21 20:28:43,952 - INFO -     Valores únicos: 3 de 7,043
+2025-07-21 20:28:43,952 - INFO -   MANTENER: TV_Streaming
+2025-07-21 20:28:43,952 - INFO -     Ratio de unicidad: 0.0004 < 0.95
+2025-07-21 20:28:43,952 - INFO -     Valores únicos: 3 de 7,043
+2025-07-21 20:28:43,953 - INFO -   MANTENER: Peliculas_Streaming
+2025-07-21 20:28:43,953 - INFO -     Ratio de unicidad: 0.0004 < 0.95
+2025-07-21 20:28:43,953 - INFO -     Valores únicos: 3 de 7,043
+2025-07-21 20:28:43,954 - INFO -   MANTENER: Tipo_Contrato
+2025-07-21 20:28:43,954 - INFO -     Ratio de unicidad: 0.0004 < 0.95
+2025-07-21 20:28:43,954 - INFO -     Valores únicos: 3 de 7,043
+2025-07-21 20:28:43,954 - INFO -   MANTENER: Facturacion_Digital
+2025-07-21 20:28:43,955 - INFO -     Ratio de unicidad: 0.0003 < 0.95
+2025-07-21 20:28:43,955 - INFO -     Valores únicos: 2 de 7,043
+2025-07-21 20:28:43,955 - INFO -   MANTENER: Metodo_Pago
+2025-07-21 20:28:43,956 - INFO -     Ratio de unicidad: 0.0006 < 0.95
+2025-07-21 20:28:43,956 - INFO -     Valores únicos: 4 de 7,043
+2025-07-21 20:28:43,956 - INFO -   MANTENER: Estructura_Cargos_Original
+2025-07-21 20:28:43,956 - INFO -     Ratio de unicidad: 0.2250 < 0.95
+2025-07-21 20:28:43,957 - INFO -     Valores únicos: 1,585 de 7,043
+2025-07-21 20:28:43,957 - INFO -   MANTENER: Cargo_Mensual
+2025-07-21 20:28:43,957 - INFO -     Ratio de unicidad: 0.9273 < 0.95
+2025-07-21 20:28:43,957 - INFO -     Valores únicos: 6,531 de 7,043
+2025-07-21 20:28:43,958 - INFO -   MANTENER: Cargo_Total
+2025-07-21 20:28:43,958 - INFO -     Ratio de unicidad: 0.2250 < 0.95
+2025-07-21 20:28:43,958 - INFO -     Valores únicos: 1,585 de 7,043
+2025-07-21 20:28:43,958 - INFO -   MANTENER: Facturacion_Mensual
+2025-07-21 20:28:43,959 - INFO -     Ratio de unicidad: 0.9273 < 0.95
+2025-07-21 20:28:43,959 - INFO -     Valores únicos: 6,531 de 7,043
+2025-07-21 20:28:43,959 - INFO -   MANTENER: Facturacion_Diaria
+2025-07-21 20:28:43,959 - INFO -     Ratio de unicidad: 0.0457 < 0.95
+2025-07-21 20:28:43,959 - INFO -     Valores únicos: 322 de 7,043
+2025-07-21 20:28:43,959 - INFO - 
+CRITERIO 2: DATOS MALFORMADOS
+2025-07-21 20:28:43,959 - INFO - Métrica: Detección de patrones problemáticos
+2025-07-21 20:28:43,960 - INFO - ----------------------------------------
+2025-07-21 20:28:43,960 - INFO -   ELIMINAR: Estructura_Cargos_Original
+2025-07-21 20:28:43,960 - INFO -     Patrón problemático detectado
+2025-07-21 20:28:43,960 - INFO -     Muestra de valores: ["{'Monthly': 65.6", "{'Monthly': 59.9"]
+2025-07-21 20:28:43,960 - INFO -   ELIMINAR: Cargo_Mensual
+2025-07-21 20:28:43,960 - INFO -     Patrón problemático detectado
+2025-07-21 20:28:43,960 - INFO -     Muestra de valores: [" 'Total': '593.3'}", " 'Total': '542.4'}"]
+2025-07-21 20:28:43,960 - INFO - 
+CRITERIO 3: COLUMNAS CON UN SOLO VALOR
+2025-07-21 20:28:43,961 - INFO - Métrica: unique_values = 1
+2025-07-21 20:28:43,961 - INFO - ----------------------------------------
+2025-07-21 20:28:43,961 - INFO - 
+CRITERIO 4: MUCHOS VALORES NULOS
+2025-07-21 20:28:43,961 - INFO - Métrica: Null Percentage > 80%
+2025-07-21 20:28:43,961 - INFO - ----------------------------------------
+2025-07-21 20:28:43,961 - INFO - 
+CRITERIO 5: ALTA CARDINALIDAD EN CATEGORICAS
+2025-07-21 20:28:43,961 - INFO - Métrica: Columnas categóricas con Uniqueness Ratio > 0.5
+2025-07-21 20:28:43,962 - INFO - Excepción: Variables financieras y numéricas importantes
+2025-07-21 20:28:43,962 - INFO - ----------------------------------------
+2025-07-21 20:28:43,962 - INFO -   MANTENER: Cargo_Mensual (Variable numérica/financiera importante)
+2025-07-21 20:28:43,962 - INFO -     Ratio de unicidad: 0.9273 > 0.5
+2025-07-21 20:28:43,962 - INFO -     Razón: Variable financiera
+2025-07-21 20:28:43,963 - INFO -     Muestra: [" 'Total': '593.3'}", " 'Total': '542.4'}", " 'Total': '280.85'}"]
+2025-07-21 20:28:43,963 - INFO - 
+COLUMNAS QUE SE MANTIENEN:
+2025-07-21 20:28:43,963 - INFO - ----------------------------------------
+2025-07-21 20:28:43,963 - INFO -   MANTENER: Abandono_Cliente
+2025-07-21 20:28:43,963 - INFO -     Valores únicos: 2, Ratio: 0.0003
+2025-07-21 20:28:43,963 - INFO -     Nulos: 0.0%, Tipo: int64
+2025-07-21 20:28:43,963 - INFO -   MANTENER: Genero
+2025-07-21 20:28:43,964 - INFO -     Valores únicos: 2, Ratio: 0.0003
+2025-07-21 20:28:43,964 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,964 - INFO -   MANTENER: Ciudadano_Mayor
+2025-07-21 20:28:43,964 - INFO -     Valores únicos: 2, Ratio: 0.0003
+2025-07-21 20:28:43,964 - INFO -     Nulos: 0.0%, Tipo: int64
+2025-07-21 20:28:43,964 - INFO -   MANTENER: Tiene_Pareja
+2025-07-21 20:28:43,965 - INFO -     Valores únicos: 2, Ratio: 0.0003
+2025-07-21 20:28:43,965 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,965 - INFO -   MANTENER: Tiene_Dependientes
+2025-07-21 20:28:43,965 - INFO -     Valores únicos: 2, Ratio: 0.0003
+2025-07-21 20:28:43,965 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,965 - INFO -   MANTENER: Meses_Cliente
+2025-07-21 20:28:43,965 - INFO -     Valores únicos: 73, Ratio: 0.0104
+2025-07-21 20:28:43,965 - INFO -     Nulos: 0.0%, Tipo: int64
+2025-07-21 20:28:43,966 - INFO -   MANTENER: Servicio_Telefono
+2025-07-21 20:28:43,966 - INFO -     Valores únicos: 2, Ratio: 0.0003
+2025-07-21 20:28:43,966 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,966 - INFO -   MANTENER: Lineas_Multiples
+2025-07-21 20:28:43,966 - INFO -     Valores únicos: 3, Ratio: 0.0004
+2025-07-21 20:28:43,966 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,966 - INFO -   MANTENER: Servicio_Internet
+2025-07-21 20:28:43,966 - INFO -     Valores únicos: 3, Ratio: 0.0004
+2025-07-21 20:28:43,967 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,967 - INFO -   MANTENER: Seguridad_Online
+2025-07-21 20:28:43,967 - INFO -     Valores únicos: 3, Ratio: 0.0004
+2025-07-21 20:28:43,967 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,968 - INFO -   MANTENER: Respaldo_Online
+2025-07-21 20:28:43,968 - INFO -     Valores únicos: 3, Ratio: 0.0004
+2025-07-21 20:28:43,968 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,968 - INFO -   MANTENER: Proteccion_Dispositivo
+2025-07-21 20:28:43,968 - INFO -     Valores únicos: 3, Ratio: 0.0004
+2025-07-21 20:28:43,968 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,968 - INFO -   MANTENER: Soporte_Tecnico
+2025-07-21 20:28:43,969 - INFO -     Valores únicos: 3, Ratio: 0.0004
+2025-07-21 20:28:43,969 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,969 - INFO -   MANTENER: TV_Streaming
+2025-07-21 20:28:43,969 - INFO -     Valores únicos: 3, Ratio: 0.0004
+2025-07-21 20:28:43,969 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,969 - INFO -   MANTENER: Peliculas_Streaming
+2025-07-21 20:28:43,969 - INFO -     Valores únicos: 3, Ratio: 0.0004
+2025-07-21 20:28:43,970 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,970 - INFO -   MANTENER: Tipo_Contrato
+2025-07-21 20:28:43,970 - INFO -     Valores únicos: 3, Ratio: 0.0004
+2025-07-21 20:28:43,970 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,970 - INFO -   MANTENER: Facturacion_Digital
+2025-07-21 20:28:43,970 - INFO -     Valores únicos: 2, Ratio: 0.0003
+2025-07-21 20:28:43,970 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,971 - INFO -   MANTENER: Metodo_Pago
+2025-07-21 20:28:43,971 - INFO -     Valores únicos: 4, Ratio: 0.0006
+2025-07-21 20:28:43,971 - INFO -     Nulos: 0.0%, Tipo: object
+2025-07-21 20:28:43,971 - INFO -   MANTENER: Cargo_Total
+2025-07-21 20:28:43,971 - INFO -     Valores únicos: 1,585, Ratio: 0.2250
+2025-07-21 20:28:43,971 - INFO -     Nulos: 0.0%, Tipo: float64
+2025-07-21 20:28:43,971 - INFO -   MANTENER: Facturacion_Mensual
+2025-07-21 20:28:43,971 - INFO -     Valores únicos: 6,531, Ratio: 0.9273
+2025-07-21 20:28:43,972 - INFO -     Nulos: 0.0%, Tipo: float64
+2025-07-21 20:28:43,972 - INFO -   MANTENER: Facturacion_Diaria
+2025-07-21 20:28:43,972 - INFO -     Valores únicos: 322, Ratio: 0.0457
+2025-07-21 20:28:43,972 - INFO -     Nulos: 0.0%, Tipo: float64
+2025-07-21 20:28:43,972 - INFO - ============================================================
+2025-07-21 20:28:43,972 - INFO - RESUMEN: 3 columnas identificadas para eliminación
+2025-07-21 20:28:43,977 - INFO - Eliminadas 3 columnas irrelevantes
+2025-07-21 20:28:43,977 - INFO - Dimensiones despues de limpieza: 7043 filas x 21 columnas
+2025-07-21 20:28:43,978 - INFO - Validando integridad de datos...
+2025-07-21 20:28:43,978 - INFO - Integridad de filas: CORRECTA
+2025-07-21 20:28:43,978 - INFO - Variable objetivo 'Abandono_Cliente': PRESENTE
+2025-07-21 20:28:44,019 - INFO - Dataset limpio guardado: excel/telecomx_paso1_sin_columnas_irrelevantes_20250721_202843.csv
+2025-07-21 20:28:44,020 - INFO - Archivo guardado con codificacion UTF-8-sig (compatible con Excel)
+2025-07-21 20:28:44,022 - INFO - Informe guardado: informes/paso1_eliminacion_columnas_irrelevantes_informe_20250721_202843.txt
+2025-07-21 20:28:44,022 - INFO - ======================================================================
+2025-07-21 20:28:44,022 - INFO - PROCESO COMPLETADO EXITOSAMENTE
+2025-07-21 20:28:44,023 - INFO - Columnas eliminadas: 3
+2025-07-21 20:28:44,023 - INFO - Columnas finales: 21
+2025-07-21 20:28:44,023 - INFO - Archivo resultante: excel/telecomx_paso1_sin_columnas_irrelevantes_20250721_202843.csv
+2025-07-21 20:28:44,023 - INFO - Informe generado: informes/paso1_eliminacion_columnas_irrelevantes_informe_20250721_202843.txt
+2025-07-21 20:28:44,023 - INFO - ======================================================================

@@ -1,0 +1,294 @@
+
+================================================================================
+TELECOMX - INFORME DE ENCODING DE VARIABLES CATEGÓRICAS
+================================================================================
+Fecha y Hora: 20250721_231439
+Paso: 2 - Encoding de Variables Categóricas
+
+================================================================================
+RESUMEN EJECUTIVO
+================================================================================
+• Dataset Original: 7,043 filas x 21 columnas
+• Dataset Final: 7,043 filas x 64 columnas
+• Columnas Agregadas: 43
+• Variables Procesadas: 15
+• Integridad de Filas: ✅ CORRECTA
+• Variable Objetivo: ✅ PRESERVADA
+
+================================================================================
+METODOLOGÍA APLICADA - ENFOQUE MODERADO
+================================================================================
+
+🔬 ESTRATEGIAS DE ENCODING UTILIZADAS:
+
+1. LABEL ENCODING
+   • Aplicado a: Variables binarias (2 valores únicos)
+   • Justificación: Mapeo directo 0/1 para algoritmos de ML
+   • Ventaja: Mantiene simplicidad y interpretabilidad
+
+2. ORDINAL ENCODING  
+   • Aplicado a: Variables con orden lógico natural
+   • Justificación: Preserva relación ordinal entre categorías
+   • Ejemplo: Mes a Mes < Un Año < Dos Años
+
+3. ONE-HOT ENCODING
+   • Aplicado a: Variables nominales con ≤5 categorías
+   • Justificación: Evita asunción de orden en datos nominales
+   • Control: Limitado a baja cardinalidad para evitar explosión dimensional
+
+4. FREQUENCY ENCODING
+   • Aplicado a: Variables nominales con >5 categorías
+   • Justificación: Reduce dimensionalidad manteniendo información
+   • Método: Mapeo por frecuencia de aparición
+
+================================================================================
+ANÁLISIS DETALLADO POR VARIABLE
+================================================================================
+
+📊 Genero
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Femenino', 'Masculino']
+   • Distribución: {'Masculino': 3555, 'Femenino': 3488}
+   • Mapeo: {'Femenino': np.int64(0), 'Masculino': np.int64(1)}
+
+📊 Tiene_Pareja
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No']
+   • Distribución: {'No': 3641, 'Sí': 3402}
+   • Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+
+📊 Tiene_Dependientes
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No']
+   • Distribución: {'No': 4933, 'Sí': 2110}
+   • Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+
+📊 Servicio_Telefono
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No']
+   • Distribución: {'Sí': 6361, 'No': 682}
+   • Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+
+📊 Lineas_Multiples
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['No', 'Sí', 'No phone service']
+   • Distribución: {'No': 3390, 'Sí': 2971, 'No phone service': 682}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Lineas_Multiples_No', 'Lineas_Multiples_No phone service', 'Lineas_Multiples_Sí', 'Lineas_Multiples_nan']
+
+📊 Servicio_Internet
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['DSL', 'Fibra Óptica', 'No']
+   • Distribución: {'Fibra Óptica': 3096, 'DSL': 2421, 'No': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Servicio_Internet_DSL', 'Servicio_Internet_Fibra Óptica', 'Servicio_Internet_No', 'Servicio_Internet_nan']
+
+📊 Seguridad_Online
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['No', 'Sí', 'No internet service']
+   • Distribución: {'No': 3498, 'Sí': 2019, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Seguridad_Online_No', 'Seguridad_Online_No internet service', 'Seguridad_Online_Sí', 'Seguridad_Online_nan']
+
+📊 Respaldo_Online
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No', 'No internet service']
+   • Distribución: {'No': 3088, 'Sí': 2429, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Respaldo_Online_No', 'Respaldo_Online_No internet service', 'Respaldo_Online_Sí', 'Respaldo_Online_nan']
+
+📊 Proteccion_Dispositivo
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['No', 'Sí', 'No internet service']
+   • Distribución: {'No': 3095, 'Sí': 2422, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Proteccion_Dispositivo_No', 'Proteccion_Dispositivo_No internet service', 'Proteccion_Dispositivo_Sí', 'Proteccion_Dispositivo_nan']
+
+📊 Soporte_Tecnico
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No', 'No internet service']
+   • Distribución: {'No': 3473, 'Sí': 2044, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Soporte_Tecnico_No', 'Soporte_Tecnico_No internet service', 'Soporte_Tecnico_Sí', 'Soporte_Tecnico_nan']
+
+📊 TV_Streaming
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No', 'No internet service']
+   • Distribución: {'No': 2810, 'Sí': 2707, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['TV_Streaming_No', 'TV_Streaming_No internet service', 'TV_Streaming_Sí', 'TV_Streaming_nan']
+
+📊 Peliculas_Streaming
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['No', 'Sí', 'No internet service']
+   • Distribución: {'No': 2785, 'Sí': 2732, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Peliculas_Streaming_No', 'Peliculas_Streaming_No internet service', 'Peliculas_Streaming_Sí', 'Peliculas_Streaming_nan']
+
+📊 Tipo_Contrato
+   • Tipo Original: ordinal (3 valores únicos)
+   • Estrategia Aplicada: ORDINAL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Un Año', 'Mes a Mes', 'Dos Años']
+   • Distribución: {'Mes a Mes': 3875, 'Dos Años': 1695, 'Un Año': 1473}
+   • Orden: ['Mes a Mes', 'Un Año', 'Dos Años']
+
+📊 Facturacion_Digital
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No']
+   • Distribución: {'Sí': 4171, 'No': 2872}
+   • Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+
+📊 Metodo_Pago
+   • Tipo Original: nominal (4 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Cheque Postal', 'Cheque Electrónico', 'Tarjeta de Crédito', 'Transferencia Bancaria']
+   • Distribución: {'Cheque Electrónico': 2365, 'Cheque Postal': 1612, 'Transferencia Bancaria': 1544}
+   • Columnas Creadas: 5
+   • Nuevas Variables: ['Metodo_Pago_Cheque Electrónico', 'Metodo_Pago_Cheque Postal', 'Metodo_Pago_Tarjeta de Crédito', 'Metodo_Pago_Transferencia Bancaria', 'Metodo_Pago_nan']
+
+================================================================================
+RESUMEN DE ESTRATEGIAS APLICADAS
+================================================================================
+• Label Encoding: 5 variables
+• One-Hot Encoding: 9 variables
+• Ordinal Encoding: 1 variables
+
+================================================================================
+ANÁLISIS DE CORRELACIONES CON VARIABLE OBJETIVO
+================================================================================
+
+Top 10 Variables Más Correlacionadas con Abandono_Cliente:
+ 1. Abandono_Cliente: 1.0000 (Positiva, Fuerte)
+ 2. Tipo_Contrato_encoded: 0.3967 (Positiva, Moderada)
+ 3. Meses_Cliente: 0.3522 (Positiva, Moderada)
+ 4. Facturacion_Mensual: 0.1983 (Positiva, Débil)
+ 5. Facturacion_Diaria: 0.1942 (Positiva, Débil)
+ 6. Cargo_Total: 0.1941 (Positiva, Débil)
+ 7. Facturacion_Digital_encoded: 0.1918 (Positiva, Débil)
+ 8. Tiene_Dependientes_encoded: 0.1642 (Positiva, Débil)
+ 9. Ciudadano_Mayor: 0.1509 (Positiva, Débil)
+10. Tiene_Pareja_encoded: 0.1504 (Positiva, Débil)
+
+Correlaciones de Variables Encoded:
+• Tipo_Contrato_encoded: 0.3967
+• Facturacion_Digital_encoded: 0.1918
+• Tiene_Dependientes_encoded: 0.1642
+• Tiene_Pareja_encoded: 0.1504
+• Servicio_Telefono_encoded: 0.0119
+• Genero_encoded: 0.0086
+
+================================================================================
+DETECCIÓN DE MULTICOLINEALIDAD - CORRELACIONES ALTAS (>0.8)
+================================================================================
+
+⚠️  Se detectaron 2 pares de variables con correlación alta:
+• Meses_Cliente ↔ Facturacion_Mensual: 0.8262
+• Cargo_Total ↔ Facturacion_Diaria: 1.0000
+
+================================================================================
+ANÁLISIS VIF - FACTOR DE INFLACIÓN DE VARIANZA
+================================================================================
+
+Interpretación VIF:
+• VIF < 5: Sin multicolinealidad
+• VIF 5-10: Multicolinealidad moderada  
+• VIF > 10: Multicolinealidad severa
+
+Top 10 Variables por VIF:
+• Servicio_Telefono_encoded: 3.74 (✅ Bajo)
+• Tiene_Pareja_encoded: 2.53 (✅ Bajo)
+• Facturacion_Digital_encoded: 2.24 (✅ Bajo)
+• Genero_encoded: 1.87 (✅ Bajo)
+• Tipo_Contrato_encoded: 1.85 (✅ Bajo)
+• Tiene_Dependientes_encoded: 1.83 (✅ Bajo)
+
+================================================================================
+IMPACTO EN DIMENSIONALIDAD
+================================================================================
+
+Análisis del cambio dimensional:
+• Columnas originales: 21
+• Columnas finales: 64
+• Incremento: 43 columnas (204.8%)
+
+Distribución del incremento por estrategia:
+• Label Encoding: +5 columnas
+• One-Hot Encoding: +37 columnas
+• Ordinal Encoding: +1 columnas
+
+================================================================================
+VALIDACIÓN DE INTEGRIDAD DE DATOS
+================================================================================
+
+Verificaciones realizadas:
+✅ Número de filas: 7,043 → 7,043 
+   (Sin pérdida)
+
+✅ Variable objetivo preservada: Sí
+   (Distribución mantenida)
+
+✅ Variables categóricas procesadas: 15/15
+
+✅ Nuevas variables numéricas disponibles para ML: 43
+
+================================================================================
+RECOMENDACIONES PARA SIGUIENTE PASO
+================================================================================
+
+Basado en el análisis realizado:
+
+1. SELECCIÓN DE CARACTERÍSTICAS:
+   • Considerar eliminar variables con VIF > 10 si se detectaron
+   • Evaluar variables con correlación muy baja con objetivo (<0.1)
+   • Revisar pares de variables con correlación > 0.9
+
+2. PREPARACIÓN PARA MODELADO:
+   • Dataset listo para algoritmos de ML
+   • 64 características disponibles
+   • Variable objetivo balanceada: verificar distribución
+
+3. PRÓXIMOS PASOS SUGERIDOS:
+   • Paso 3: Normalización/Escalado de variables numéricas
+   • Paso 4: División en conjuntos de entrenamiento/validación/test
+   • Paso 5: Selección de características (feature selection)
+
+================================================================================
+ARCHIVOS GENERADOS
+================================================================================
+
+• Dataset procesado: excel/telecomx_paso2_encoding_aplicado_20250721_231439.csv
+• Gráficos: graficos/paso2_correlaciones_objetivo_20250721_231439.png
+• Gráficos: graficos/paso2_distribucion_objetivo_20250721_231439.png
+• Informe: informes/paso2_encoding_variables_categoricas_informe_20250721_231439.txt
+
+================================================================================
+FIN DEL INFORME
+================================================================================
