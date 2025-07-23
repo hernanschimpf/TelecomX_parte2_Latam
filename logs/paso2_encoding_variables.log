@@ -1,215 +1,309 @@
-2025-07-21 23:14:39,318 - INFO - INICIANDO PASO 2: ENCODING DE VARIABLES CATEGORICAS
-2025-07-21 23:14:39,319 - INFO - ======================================================================
-2025-07-21 23:14:39,319 - INFO - Archivo del Paso 1 encontrado: excel\telecomx_paso1_sin_columnas_irrelevantes_20250721_202843.csv
-2025-07-21 23:14:39,365 - INFO - Dataset cargado exitosamente desde: excel\telecomx_paso1_sin_columnas_irrelevantes_20250721_202843.csv
-2025-07-21 23:14:39,365 - INFO - Codificacion utilizada: utf-8-sig
-2025-07-21 23:14:39,365 - INFO - Dimensiones iniciales: 7043 filas x 21 columnas
-2025-07-21 23:14:39,366 - INFO - INICIANDO ANALISIS DE VARIABLES CATEGORICAS
-2025-07-21 23:14:39,366 - INFO - ============================================================
-2025-07-21 23:14:39,368 - INFO - Variables categoricas encontradas: 15
-2025-07-21 23:14:39,371 - INFO - 
+2025-07-22 19:30:47,671 - INFO - INICIANDO PASO 2: ENCODING DE VARIABLES CATEGORICAS
+2025-07-22 19:30:47,672 - INFO - ======================================================================
+2025-07-22 19:30:47,672 - INFO - Archivo del Paso 1 encontrado: excel\telecomx_paso1_sin_columnas_irrelevantes_20250721_202843.csv
+2025-07-22 19:30:47,695 - INFO - Dataset cargado exitosamente desde: excel\telecomx_paso1_sin_columnas_irrelevantes_20250721_202843.csv
+2025-07-22 19:30:47,695 - INFO - Codificacion utilizada: utf-8-sig
+2025-07-22 19:30:47,695 - INFO - Dimensiones iniciales: 7043 filas x 21 columnas
+2025-07-22 19:30:47,698 - INFO - INICIANDO ANALISIS DE VARIABLES CATEGORICAS
+2025-07-22 19:30:47,698 - INFO - ============================================================
+2025-07-22 19:30:47,699 - INFO - Variables categoricas encontradas: 15
+2025-07-22 19:30:47,703 - INFO - 
 Variable: Genero
-2025-07-21 23:14:39,371 - INFO -   Tipo: binaria
-2025-07-21 23:14:39,371 - INFO -   Valores unicos: 2
-2025-07-21 23:14:39,372 - INFO -   Estrategia: label_encoding
-2025-07-21 23:14:39,372 - INFO -   Valores: ['Femenino', 'Masculino']
-2025-07-21 23:14:39,375 - INFO - 
+2025-07-22 19:30:47,704 - INFO -   Tipo: binaria
+2025-07-22 19:30:47,704 - INFO -   Valores unicos: 2
+2025-07-22 19:30:47,705 - INFO -   Estrategia: label_encoding
+2025-07-22 19:30:47,705 - INFO -   Valores: ['Femenino', 'Masculino']
+2025-07-22 19:30:47,707 - INFO - 
 Variable: Tiene_Pareja
-2025-07-21 23:14:39,376 - INFO -   Tipo: binaria
-2025-07-21 23:14:39,376 - INFO -   Valores unicos: 2
-2025-07-21 23:14:39,376 - INFO -   Estrategia: label_encoding
-2025-07-21 23:14:39,377 - INFO -   Valores: ['Sí', 'No']
-2025-07-21 23:14:39,380 - INFO - 
+2025-07-22 19:30:47,707 - INFO -   Tipo: binaria
+2025-07-22 19:30:47,708 - INFO -   Valores unicos: 2
+2025-07-22 19:30:47,708 - INFO -   Estrategia: label_encoding
+2025-07-22 19:30:47,708 - INFO -   Valores: ['Sí', 'No']
+2025-07-22 19:30:47,710 - INFO - 
 Variable: Tiene_Dependientes
-2025-07-21 23:14:39,380 - INFO -   Tipo: binaria
-2025-07-21 23:14:39,380 - INFO -   Valores unicos: 2
-2025-07-21 23:14:39,380 - INFO -   Estrategia: label_encoding
-2025-07-21 23:14:39,380 - INFO -   Valores: ['Sí', 'No']
-2025-07-21 23:14:39,382 - INFO - 
+2025-07-22 19:30:47,710 - INFO -   Tipo: binaria
+2025-07-22 19:30:47,711 - INFO -   Valores unicos: 2
+2025-07-22 19:30:47,711 - INFO -   Estrategia: label_encoding
+2025-07-22 19:30:47,712 - INFO -   Valores: ['Sí', 'No']
+2025-07-22 19:30:47,714 - INFO - 
 Variable: Servicio_Telefono
-2025-07-21 23:14:39,382 - INFO -   Tipo: binaria
-2025-07-21 23:14:39,383 - INFO -   Valores unicos: 2
-2025-07-21 23:14:39,383 - INFO -   Estrategia: label_encoding
-2025-07-21 23:14:39,383 - INFO -   Valores: ['Sí', 'No']
-2025-07-21 23:14:39,385 - INFO - 
+2025-07-22 19:30:47,714 - INFO -   Tipo: binaria
+2025-07-22 19:30:47,714 - INFO -   Valores unicos: 2
+2025-07-22 19:30:47,715 - INFO -   Estrategia: label_encoding
+2025-07-22 19:30:47,715 - INFO -   Valores: ['Sí', 'No']
+2025-07-22 19:30:47,717 - INFO - 
 Variable: Lineas_Multiples
-2025-07-21 23:14:39,385 - INFO -   Tipo: nominal
-2025-07-21 23:14:39,385 - INFO -   Valores unicos: 3
-2025-07-21 23:14:39,385 - INFO -   Estrategia: one_hot_encoding
-2025-07-21 23:14:39,385 - INFO -   Valores: ['No', 'Sí', 'No phone service']
-2025-07-21 23:14:39,387 - INFO - 
+2025-07-22 19:30:47,717 - INFO -   Tipo: nominal
+2025-07-22 19:30:47,718 - INFO -   Valores unicos: 3
+2025-07-22 19:30:47,718 - INFO -   Estrategia: one_hot_encoding
+2025-07-22 19:30:47,719 - INFO -   Valores: ['No', 'Sí', 'No phone service']
+2025-07-22 19:30:47,723 - INFO - 
 Variable: Servicio_Internet
-2025-07-21 23:14:39,387 - INFO -   Tipo: nominal
-2025-07-21 23:14:39,388 - INFO -   Valores unicos: 3
-2025-07-21 23:14:39,388 - INFO -   Estrategia: one_hot_encoding
-2025-07-21 23:14:39,388 - INFO -   Valores: ['DSL', 'Fibra Óptica', 'No']
-2025-07-21 23:14:39,390 - INFO - 
+2025-07-22 19:30:47,724 - INFO -   Tipo: nominal
+2025-07-22 19:30:47,724 - INFO -   Valores unicos: 3
+2025-07-22 19:30:47,724 - INFO -   Estrategia: one_hot_encoding
+2025-07-22 19:30:47,724 - INFO -   Valores: ['DSL', 'Fibra Óptica', 'No']
+2025-07-22 19:30:47,726 - INFO - 
 Variable: Seguridad_Online
-2025-07-21 23:14:39,390 - INFO -   Tipo: nominal
-2025-07-21 23:14:39,390 - INFO -   Valores unicos: 3
-2025-07-21 23:14:39,390 - INFO -   Estrategia: one_hot_encoding
-2025-07-21 23:14:39,390 - INFO -   Valores: ['No', 'Sí', 'No internet service']
-2025-07-21 23:14:39,393 - INFO - 
+2025-07-22 19:30:47,727 - INFO -   Tipo: nominal
+2025-07-22 19:30:47,727 - INFO -   Valores unicos: 3
+2025-07-22 19:30:47,727 - INFO -   Estrategia: one_hot_encoding
+2025-07-22 19:30:47,727 - INFO -   Valores: ['No', 'Sí', 'No internet service']
+2025-07-22 19:30:47,729 - INFO - 
 Variable: Respaldo_Online
-2025-07-21 23:14:39,394 - INFO -   Tipo: nominal
-2025-07-21 23:14:39,394 - INFO -   Valores unicos: 3
-2025-07-21 23:14:39,394 - INFO -   Estrategia: one_hot_encoding
-2025-07-21 23:14:39,394 - INFO -   Valores: ['Sí', 'No', 'No internet service']
-2025-07-21 23:14:39,396 - INFO - 
+2025-07-22 19:30:47,730 - INFO -   Tipo: nominal
+2025-07-22 19:30:47,730 - INFO -   Valores unicos: 3
+2025-07-22 19:30:47,730 - INFO -   Estrategia: one_hot_encoding
+2025-07-22 19:30:47,730 - INFO -   Valores: ['Sí', 'No', 'No internet service']
+2025-07-22 19:30:47,732 - INFO - 
 Variable: Proteccion_Dispositivo
-2025-07-21 23:14:39,396 - INFO -   Tipo: nominal
-2025-07-21 23:14:39,396 - INFO -   Valores unicos: 3
-2025-07-21 23:14:39,396 - INFO -   Estrategia: one_hot_encoding
-2025-07-21 23:14:39,397 - INFO -   Valores: ['No', 'Sí', 'No internet service']
-2025-07-21 23:14:39,398 - INFO - 
+2025-07-22 19:30:47,733 - INFO -   Tipo: nominal
+2025-07-22 19:30:47,734 - INFO -   Valores unicos: 3
+2025-07-22 19:30:47,734 - INFO -   Estrategia: one_hot_encoding
+2025-07-22 19:30:47,734 - INFO -   Valores: ['No', 'Sí', 'No internet service']
+2025-07-22 19:30:47,738 - INFO - 
 Variable: Soporte_Tecnico
-2025-07-21 23:14:39,399 - INFO -   Tipo: nominal
-2025-07-21 23:14:39,399 - INFO -   Valores unicos: 3
-2025-07-21 23:14:39,399 - INFO -   Estrategia: one_hot_encoding
-2025-07-21 23:14:39,399 - INFO -   Valores: ['Sí', 'No', 'No internet service']
-2025-07-21 23:14:39,401 - INFO - 
+2025-07-22 19:30:47,738 - INFO -   Tipo: nominal
+2025-07-22 19:30:47,738 - INFO -   Valores unicos: 3
+2025-07-22 19:30:47,739 - INFO -   Estrategia: one_hot_encoding
+2025-07-22 19:30:47,739 - INFO -   Valores: ['Sí', 'No', 'No internet service']
+2025-07-22 19:30:47,741 - INFO - 
 Variable: TV_Streaming
-2025-07-21 23:14:39,401 - INFO -   Tipo: nominal
-2025-07-21 23:14:39,402 - INFO -   Valores unicos: 3
-2025-07-21 23:14:39,402 - INFO -   Estrategia: one_hot_encoding
-2025-07-21 23:14:39,402 - INFO -   Valores: ['Sí', 'No', 'No internet service']
-2025-07-21 23:14:39,404 - INFO - 
+2025-07-22 19:30:47,742 - INFO -   Tipo: nominal
+2025-07-22 19:30:47,742 - INFO -   Valores unicos: 3
+2025-07-22 19:30:47,742 - INFO -   Estrategia: one_hot_encoding
+2025-07-22 19:30:47,743 - INFO -   Valores: ['Sí', 'No', 'No internet service']
+2025-07-22 19:30:47,744 - INFO - 
 Variable: Peliculas_Streaming
-2025-07-21 23:14:39,404 - INFO -   Tipo: nominal
-2025-07-21 23:14:39,404 - INFO -   Valores unicos: 3
-2025-07-21 23:14:39,404 - INFO -   Estrategia: one_hot_encoding
-2025-07-21 23:14:39,404 - INFO -   Valores: ['No', 'Sí', 'No internet service']
-2025-07-21 23:14:39,406 - INFO - 
+2025-07-22 19:30:47,745 - INFO -   Tipo: nominal
+2025-07-22 19:30:47,746 - INFO -   Valores unicos: 3
+2025-07-22 19:30:47,746 - INFO -   Estrategia: one_hot_encoding
+2025-07-22 19:30:47,746 - INFO -   Valores: ['No', 'Sí', 'No internet service']
+2025-07-22 19:30:47,748 - INFO - 
 Variable: Tipo_Contrato
-2025-07-21 23:14:39,407 - INFO -   Tipo: ordinal
-2025-07-21 23:14:39,407 - INFO -   Valores unicos: 3
-2025-07-21 23:14:39,407 - INFO -   Estrategia: ordinal_encoding
-2025-07-21 23:14:39,408 - INFO -   Valores: ['Un Año', 'Mes a Mes', 'Dos Años']
-2025-07-21 23:14:39,413 - INFO - 
+2025-07-22 19:30:47,749 - INFO -   Tipo: ordinal
+2025-07-22 19:30:47,749 - INFO -   Valores unicos: 3
+2025-07-22 19:30:47,749 - INFO -   Estrategia: ordinal_encoding
+2025-07-22 19:30:47,750 - INFO -   Valores: ['Un Año', 'Mes a Mes', 'Dos Años']
+2025-07-22 19:30:47,753 - INFO - 
 Variable: Facturacion_Digital
-2025-07-21 23:14:39,413 - INFO -   Tipo: binaria
-2025-07-21 23:14:39,413 - INFO -   Valores unicos: 2
-2025-07-21 23:14:39,413 - INFO -   Estrategia: label_encoding
-2025-07-21 23:14:39,414 - INFO -   Valores: ['Sí', 'No']
-2025-07-21 23:14:39,416 - INFO - 
+2025-07-22 19:30:47,753 - INFO -   Tipo: binaria
+2025-07-22 19:30:47,753 - INFO -   Valores unicos: 2
+2025-07-22 19:30:47,753 - INFO -   Estrategia: label_encoding
+2025-07-22 19:30:47,754 - INFO -   Valores: ['Sí', 'No']
+2025-07-22 19:30:47,756 - INFO - 
 Variable: Metodo_Pago
-2025-07-21 23:14:39,416 - INFO -   Tipo: nominal
-2025-07-21 23:14:39,416 - INFO -   Valores unicos: 4
-2025-07-21 23:14:39,416 - INFO -   Estrategia: one_hot_encoding
-2025-07-21 23:14:39,416 - INFO -   Valores: ['Cheque Postal', 'Cheque Electrónico', 'Tarjeta de Crédito', 'Transferencia Bancaria']
-2025-07-21 23:14:39,416 - INFO - EJECUTANDO ESTRATEGIAS DE ENCODING
-2025-07-21 23:14:39,417 - INFO - ============================================================
-2025-07-21 23:14:39,417 - INFO - 
+2025-07-22 19:30:47,757 - INFO -   Tipo: nominal
+2025-07-22 19:30:47,758 - INFO -   Valores unicos: 4
+2025-07-22 19:30:47,758 - INFO -   Estrategia: one_hot_encoding
+2025-07-22 19:30:47,758 - INFO -   Valores: ['Cheque Postal', 'Cheque Electrónico', 'Tarjeta de Crédito', 'Transferencia Bancaria']
+2025-07-22 19:30:47,758 - INFO - EJECUTANDO ESTRATEGIAS DE ENCODING
+2025-07-22 19:30:47,759 - INFO - ============================================================
+2025-07-22 19:30:47,759 - INFO - 
 Procesando Genero con estrategia: label_encoding
-2025-07-21 23:14:39,420 - INFO - Label encoding aplicado a Genero
-2025-07-21 23:14:39,420 - INFO -   Mapeo: {'Femenino': np.int64(0), 'Masculino': np.int64(1)}
-2025-07-21 23:14:39,421 - INFO - 
+2025-07-22 19:30:47,762 - INFO - Label encoding aplicado a Genero
+2025-07-22 19:30:47,762 - INFO -   Mapeo: {'Femenino': np.int64(0), 'Masculino': np.int64(1)}
+2025-07-22 19:30:47,763 - INFO -   Tipo de datos: int
+2025-07-22 19:30:47,763 - INFO - 
 Procesando Tiene_Pareja con estrategia: label_encoding
-2025-07-21 23:14:39,422 - INFO - Label encoding aplicado a Tiene_Pareja
-2025-07-21 23:14:39,422 - INFO -   Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
-2025-07-21 23:14:39,423 - INFO - 
+2025-07-22 19:30:47,765 - INFO - Label encoding aplicado a Tiene_Pareja
+2025-07-22 19:30:47,765 - INFO -   Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+2025-07-22 19:30:47,765 - INFO -   Tipo de datos: int
+2025-07-22 19:30:47,766 - INFO - 
 Procesando Tiene_Dependientes con estrategia: label_encoding
-2025-07-21 23:14:39,426 - INFO - Label encoding aplicado a Tiene_Dependientes
-2025-07-21 23:14:39,426 - INFO -   Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
-2025-07-21 23:14:39,427 - INFO - 
+2025-07-22 19:30:47,767 - INFO - Label encoding aplicado a Tiene_Dependientes
+2025-07-22 19:30:47,767 - INFO -   Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+2025-07-22 19:30:47,768 - INFO -   Tipo de datos: int
+2025-07-22 19:30:47,768 - INFO - 
 Procesando Servicio_Telefono con estrategia: label_encoding
-2025-07-21 23:14:39,429 - INFO - Label encoding aplicado a Servicio_Telefono
-2025-07-21 23:14:39,429 - INFO -   Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
-2025-07-21 23:14:39,429 - INFO - 
+2025-07-22 19:30:47,772 - INFO - Label encoding aplicado a Servicio_Telefono
+2025-07-22 19:30:47,772 - INFO -   Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+2025-07-22 19:30:47,772 - INFO -   Tipo de datos: int
+2025-07-22 19:30:47,773 - INFO - 
 Procesando Lineas_Multiples con estrategia: one_hot_encoding
-2025-07-21 23:14:39,432 - INFO - One-hot encoding aplicado a Lineas_Multiples
-2025-07-21 23:14:39,433 - INFO -   Columnas creadas: 4
-2025-07-21 23:14:39,433 - INFO -   Nuevas columnas: ['Lineas_Multiples_No', 'Lineas_Multiples_No phone service', 'Lineas_Multiples_Sí', 'Lineas_Multiples_nan']
-2025-07-21 23:14:39,433 - INFO - 
+2025-07-22 19:30:47,775 - INFO - One-hot encoding aplicado a Lineas_Multiples
+2025-07-22 19:30:47,776 - INFO -   Columnas creadas: 4
+2025-07-22 19:30:47,776 - INFO -   Nuevas columnas: ['Lineas_Multiples_No', 'Lineas_Multiples_No phone service', 'Lineas_Multiples_Sí', 'Lineas_Multiples_nan']
+2025-07-22 19:30:47,777 - INFO -   Tipo de datos: int (0/1)
+2025-07-22 19:30:47,777 - INFO - 
 Procesando Servicio_Internet con estrategia: one_hot_encoding
-2025-07-21 23:14:39,435 - INFO - One-hot encoding aplicado a Servicio_Internet
-2025-07-21 23:14:39,435 - INFO -   Columnas creadas: 4
-2025-07-21 23:14:39,435 - INFO -   Nuevas columnas: ['Servicio_Internet_DSL', 'Servicio_Internet_Fibra Óptica', 'Servicio_Internet_No', 'Servicio_Internet_nan']
-2025-07-21 23:14:39,435 - INFO - 
+2025-07-22 19:30:47,780 - INFO - One-hot encoding aplicado a Servicio_Internet
+2025-07-22 19:30:47,780 - INFO -   Columnas creadas: 4
+2025-07-22 19:30:47,780 - INFO -   Nuevas columnas: ['Servicio_Internet_DSL', 'Servicio_Internet_Fibra Óptica', 'Servicio_Internet_No', 'Servicio_Internet_nan']
+2025-07-22 19:30:47,780 - INFO -   Tipo de datos: int (0/1)
+2025-07-22 19:30:47,781 - INFO - 
 Procesando Seguridad_Online con estrategia: one_hot_encoding
-2025-07-21 23:14:39,437 - INFO - One-hot encoding aplicado a Seguridad_Online
-2025-07-21 23:14:39,437 - INFO -   Columnas creadas: 4
-2025-07-21 23:14:39,437 - INFO -   Nuevas columnas: ['Seguridad_Online_No', 'Seguridad_Online_No internet service', 'Seguridad_Online_Sí', 'Seguridad_Online_nan']
-2025-07-21 23:14:39,437 - INFO - 
+2025-07-22 19:30:47,783 - INFO - One-hot encoding aplicado a Seguridad_Online
+2025-07-22 19:30:47,783 - INFO -   Columnas creadas: 4
+2025-07-22 19:30:47,784 - INFO -   Nuevas columnas: ['Seguridad_Online_No', 'Seguridad_Online_No internet service', 'Seguridad_Online_Sí', 'Seguridad_Online_nan']
+2025-07-22 19:30:47,784 - INFO -   Tipo de datos: int (0/1)
+2025-07-22 19:30:47,785 - INFO - 
 Procesando Respaldo_Online con estrategia: one_hot_encoding
-2025-07-21 23:14:39,439 - INFO - One-hot encoding aplicado a Respaldo_Online
-2025-07-21 23:14:39,439 - INFO -   Columnas creadas: 4
-2025-07-21 23:14:39,439 - INFO -   Nuevas columnas: ['Respaldo_Online_No', 'Respaldo_Online_No internet service', 'Respaldo_Online_Sí', 'Respaldo_Online_nan']
-2025-07-21 23:14:39,439 - INFO - 
+2025-07-22 19:30:47,789 - INFO - One-hot encoding aplicado a Respaldo_Online
+2025-07-22 19:30:47,790 - INFO -   Columnas creadas: 4
+2025-07-22 19:30:47,791 - INFO -   Nuevas columnas: ['Respaldo_Online_No', 'Respaldo_Online_No internet service', 'Respaldo_Online_Sí', 'Respaldo_Online_nan']
+2025-07-22 19:30:47,791 - INFO -   Tipo de datos: int (0/1)
+2025-07-22 19:30:47,791 - INFO - 
 Procesando Proteccion_Dispositivo con estrategia: one_hot_encoding
-2025-07-21 23:14:39,443 - INFO - One-hot encoding aplicado a Proteccion_Dispositivo
-2025-07-21 23:14:39,443 - INFO -   Columnas creadas: 4
-2025-07-21 23:14:39,444 - INFO -   Nuevas columnas: ['Proteccion_Dispositivo_No', 'Proteccion_Dispositivo_No internet service', 'Proteccion_Dispositivo_Sí', 'Proteccion_Dispositivo_nan']
-2025-07-21 23:14:39,444 - INFO - 
+2025-07-22 19:30:47,794 - INFO - One-hot encoding aplicado a Proteccion_Dispositivo
+2025-07-22 19:30:47,795 - INFO -   Columnas creadas: 4
+2025-07-22 19:30:47,795 - INFO -   Nuevas columnas: ['Proteccion_Dispositivo_No', 'Proteccion_Dispositivo_No internet service', 'Proteccion_Dispositivo_Sí', 'Proteccion_Dispositivo_nan']
+2025-07-22 19:30:47,795 - INFO -   Tipo de datos: int (0/1)
+2025-07-22 19:30:47,796 - INFO - 
 Procesando Soporte_Tecnico con estrategia: one_hot_encoding
-2025-07-21 23:14:39,446 - INFO - One-hot encoding aplicado a Soporte_Tecnico
-2025-07-21 23:14:39,446 - INFO -   Columnas creadas: 4
-2025-07-21 23:14:39,446 - INFO -   Nuevas columnas: ['Soporte_Tecnico_No', 'Soporte_Tecnico_No internet service', 'Soporte_Tecnico_Sí', 'Soporte_Tecnico_nan']
-2025-07-21 23:14:39,447 - INFO - 
+2025-07-22 19:30:47,798 - INFO - One-hot encoding aplicado a Soporte_Tecnico
+2025-07-22 19:30:47,799 - INFO -   Columnas creadas: 4
+2025-07-22 19:30:47,799 - INFO -   Nuevas columnas: ['Soporte_Tecnico_No', 'Soporte_Tecnico_No internet service', 'Soporte_Tecnico_Sí', 'Soporte_Tecnico_nan']
+2025-07-22 19:30:47,799 - INFO -   Tipo de datos: int (0/1)
+2025-07-22 19:30:47,800 - INFO - 
 Procesando TV_Streaming con estrategia: one_hot_encoding
-2025-07-21 23:14:39,448 - INFO - One-hot encoding aplicado a TV_Streaming
-2025-07-21 23:14:39,449 - INFO -   Columnas creadas: 4
-2025-07-21 23:14:39,449 - INFO -   Nuevas columnas: ['TV_Streaming_No', 'TV_Streaming_No internet service', 'TV_Streaming_Sí', 'TV_Streaming_nan']
-2025-07-21 23:14:39,449 - INFO - 
+2025-07-22 19:30:47,805 - INFO - One-hot encoding aplicado a TV_Streaming
+2025-07-22 19:30:47,806 - INFO -   Columnas creadas: 4
+2025-07-22 19:30:47,806 - INFO -   Nuevas columnas: ['TV_Streaming_No', 'TV_Streaming_No internet service', 'TV_Streaming_Sí', 'TV_Streaming_nan']
+2025-07-22 19:30:47,806 - INFO -   Tipo de datos: int (0/1)
+2025-07-22 19:30:47,807 - INFO - 
 Procesando Peliculas_Streaming con estrategia: one_hot_encoding
-2025-07-21 23:14:39,451 - INFO - One-hot encoding aplicado a Peliculas_Streaming
-2025-07-21 23:14:39,451 - INFO -   Columnas creadas: 4
-2025-07-21 23:14:39,451 - INFO -   Nuevas columnas: ['Peliculas_Streaming_No', 'Peliculas_Streaming_No internet service', 'Peliculas_Streaming_Sí', 'Peliculas_Streaming_nan']
-2025-07-21 23:14:39,452 - INFO - 
+2025-07-22 19:30:47,809 - INFO - One-hot encoding aplicado a Peliculas_Streaming
+2025-07-22 19:30:47,810 - INFO -   Columnas creadas: 4
+2025-07-22 19:30:47,810 - INFO -   Nuevas columnas: ['Peliculas_Streaming_No', 'Peliculas_Streaming_No internet service', 'Peliculas_Streaming_Sí', 'Peliculas_Streaming_nan']
+2025-07-22 19:30:47,811 - INFO -   Tipo de datos: int (0/1)
+2025-07-22 19:30:47,811 - INFO - 
 Procesando Tipo_Contrato con estrategia: ordinal_encoding
-2025-07-21 23:14:39,455 - INFO - Ordinal encoding aplicado a Tipo_Contrato
-2025-07-21 23:14:39,455 - INFO -   Orden: ['Mes a Mes', 'Un Año', 'Dos Años']
-2025-07-21 23:14:39,455 - INFO - 
+2025-07-22 19:30:47,814 - INFO - Ordinal encoding aplicado a Tipo_Contrato
+2025-07-22 19:30:47,815 - INFO -   Orden: ['Mes a Mes', 'Un Año', 'Dos Años']
+2025-07-22 19:30:47,815 - INFO -   Tipo de datos: int
+2025-07-22 19:30:47,815 - INFO - 
 Procesando Facturacion_Digital con estrategia: label_encoding
-2025-07-21 23:14:39,456 - INFO - Label encoding aplicado a Facturacion_Digital
-2025-07-21 23:14:39,456 - INFO -   Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
-2025-07-21 23:14:39,456 - INFO - 
+2025-07-22 19:30:47,817 - INFO - Label encoding aplicado a Facturacion_Digital
+2025-07-22 19:30:47,817 - INFO -   Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+2025-07-22 19:30:47,817 - INFO -   Tipo de datos: int
+2025-07-22 19:30:47,818 - INFO - 
 Procesando Metodo_Pago con estrategia: one_hot_encoding
-2025-07-21 23:14:39,462 - INFO - One-hot encoding aplicado a Metodo_Pago
-2025-07-21 23:14:39,462 - INFO -   Columnas creadas: 5
-2025-07-21 23:14:39,462 - INFO -   Nuevas columnas: ['Metodo_Pago_Cheque Electrónico', 'Metodo_Pago_Cheque Postal', 'Metodo_Pago_Tarjeta de Crédito', 'Metodo_Pago_Transferencia Bancaria', 'Metodo_Pago_nan']
-2025-07-21 23:14:39,462 - INFO - ANALIZANDO CORRELACIONES POST-ENCODING
-2025-07-21 23:14:39,463 - INFO - ==================================================
-2025-07-21 23:14:39,467 - INFO - Variables mas correlacionadas con objetivo:
-2025-07-21 23:14:39,468 - INFO -   Abandono_Cliente: 1.0000
-2025-07-21 23:14:39,468 - INFO -   Tipo_Contrato_encoded: 0.3967
-2025-07-21 23:14:39,468 - INFO -   Meses_Cliente: 0.3522
-2025-07-21 23:14:39,469 - INFO -   Facturacion_Mensual: 0.1983
-2025-07-21 23:14:39,469 - INFO -   Facturacion_Diaria: 0.1942
-2025-07-21 23:14:39,469 - INFO -   Cargo_Total: 0.1941
-2025-07-21 23:14:39,469 - INFO -   Facturacion_Digital_encoded: 0.1918
-2025-07-21 23:14:39,469 - INFO -   Tiene_Dependientes_encoded: 0.1642
-2025-07-21 23:14:39,469 - INFO -   Ciudadano_Mayor: 0.1509
-2025-07-21 23:14:39,469 - INFO -   Tiene_Pareja_encoded: 0.1504
-2025-07-21 23:14:39,469 - WARNING - Correlaciones altas detectadas: 2
-2025-07-21 23:14:39,470 - WARNING -   Meses_Cliente - Facturacion_Mensual: 0.8262
-2025-07-21 23:14:39,470 - WARNING -   Cargo_Total - Facturacion_Diaria: 1.0000
-2025-07-21 23:14:39,470 - INFO - CALCULANDO VIF PARA DETECCION DE MULTICOLINEALIDAD
-2025-07-21 23:14:39,470 - INFO - ==================================================
-2025-07-21 23:14:39,488 - INFO - Variables con VIF mas alto:
-2025-07-21 23:14:39,489 - INFO -   Servicio_Telefono_encoded: 3.74
-2025-07-21 23:14:39,489 - INFO -   Tiene_Pareja_encoded: 2.53
-2025-07-21 23:14:39,489 - INFO -   Facturacion_Digital_encoded: 2.24
-2025-07-21 23:14:39,489 - INFO -   Genero_encoded: 1.87
-2025-07-21 23:14:39,489 - INFO -   Tipo_Contrato_encoded: 1.85
-2025-07-21 23:14:39,490 - INFO -   Tiene_Dependientes_encoded: 1.83
-2025-07-21 23:14:39,490 - INFO - VALIDANDO INTEGRIDAD DEL ENCODING
-2025-07-21 23:14:39,491 - INFO - ========================================
-2025-07-21 23:14:39,493 - INFO - Filas: 7043 -> 7043
-2025-07-21 23:14:39,494 - INFO - Columnas: 21 -> 64 (+43)
-2025-07-21 23:14:39,494 - INFO - Variables encoded: 15
-2025-07-21 23:14:39,494 - INFO - Estrategias aplicadas: {'label_encoding': 5, 'one_hot_encoding': 9, 'ordinal_encoding': 1}
-2025-07-21 23:14:39,494 - INFO - Integridad de filas: CORRECTA
-2025-07-21 23:14:39,495 - INFO - Variable objetivo: PRESERVADA
-2025-07-21 23:14:39,495 - INFO - GENERANDO VISUALIZACIONES
-2025-07-21 23:14:40,555 - INFO - Grafico de correlaciones generado
-2025-07-21 23:14:40,837 - INFO - Grafico de distribucion objetivo generado
-2025-07-21 23:14:40,926 - INFO - Dataset procesado guardado: excel/telecomx_paso2_encoding_aplicado_20250721_231439.csv
-2025-07-21 23:14:40,929 - INFO - Informe guardado: informes/paso2_encoding_variables_categoricas_informe_20250721_231439.txt
-2025-07-21 23:14:40,929 - INFO - ======================================================================
-2025-07-21 23:14:40,930 - INFO - PROCESO COMPLETADO EXITOSAMENTE
-2025-07-21 23:14:40,930 - INFO - Variables categóricas procesadas: 15
-2025-07-21 23:14:40,930 - INFO - Dimensionalidad: 21 → 64 columnas
-2025-07-21 23:14:40,930 - INFO - Archivo resultante: excel/telecomx_paso2_encoding_aplicado_20250721_231439.csv
-2025-07-21 23:14:40,931 - INFO - Informe generado: informes/paso2_encoding_variables_categoricas_informe_20250721_231439.txt
-2025-07-21 23:14:40,931 - INFO - ======================================================================
+2025-07-22 19:30:47,823 - INFO - One-hot encoding aplicado a Metodo_Pago
+2025-07-22 19:30:47,824 - INFO -   Columnas creadas: 5
+2025-07-22 19:30:47,824 - INFO -   Nuevas columnas: ['Metodo_Pago_Cheque Electrónico', 'Metodo_Pago_Cheque Postal', 'Metodo_Pago_Tarjeta de Crédito', 'Metodo_Pago_Transferencia Bancaria', 'Metodo_Pago_nan']
+2025-07-22 19:30:47,824 - INFO -   Tipo de datos: int (0/1)
+2025-07-22 19:30:47,825 - INFO - 
+============================================================
+2025-07-22 19:30:47,825 - INFO - ELIMINANDO COLUMNAS CATEGORICAS ORIGINALES
+2025-07-22 19:30:47,825 - INFO - ============================================================
+2025-07-22 19:30:47,827 - INFO - Columnas categóricas originales eliminadas: 15
+2025-07-22 19:30:47,828 - INFO -   - Genero (reemplazada por encoding)
+2025-07-22 19:30:47,828 - INFO -   - Tiene_Pareja (reemplazada por encoding)
+2025-07-22 19:30:47,828 - INFO -   - Tiene_Dependientes (reemplazada por encoding)
+2025-07-22 19:30:47,828 - INFO -   - Servicio_Telefono (reemplazada por encoding)
+2025-07-22 19:30:47,829 - INFO -   - Lineas_Multiples (reemplazada por encoding)
+2025-07-22 19:30:47,829 - INFO -   - Servicio_Internet (reemplazada por encoding)
+2025-07-22 19:30:47,829 - INFO -   - Seguridad_Online (reemplazada por encoding)
+2025-07-22 19:30:47,829 - INFO -   - Respaldo_Online (reemplazada por encoding)
+2025-07-22 19:30:47,829 - INFO -   - Proteccion_Dispositivo (reemplazada por encoding)
+2025-07-22 19:30:47,830 - INFO -   - Soporte_Tecnico (reemplazada por encoding)
+2025-07-22 19:30:47,830 - INFO -   - TV_Streaming (reemplazada por encoding)
+2025-07-22 19:30:47,830 - INFO -   - Peliculas_Streaming (reemplazada por encoding)
+2025-07-22 19:30:47,830 - INFO -   - Tipo_Contrato (reemplazada por encoding)
+2025-07-22 19:30:47,831 - INFO -   - Facturacion_Digital (reemplazada por encoding)
+2025-07-22 19:30:47,831 - INFO -   - Metodo_Pago (reemplazada por encoding)
+2025-07-22 19:30:47,831 - INFO - Dimensiones: 64 -> 49 columnas
+2025-07-22 19:30:47,831 - INFO - Variables numéricas importantes mantenidas: ['Cargo_Total', 'Facturacion_Mensual', 'Facturacion_Diaria', 'Meses_Cliente']
+2025-07-22 19:30:47,832 - INFO - Variable objetivo 'Abandono_Cliente': PRESERVADA
+2025-07-22 19:30:47,832 - INFO - ANALIZANDO CORRELACIONES POST-ENCODING
+2025-07-22 19:30:47,832 - INFO - ==================================================
+2025-07-22 19:30:47,872 - INFO - 
+DETECTANDO CORRELACIONES PERFECTAS (≥0.99)
+2025-07-22 19:30:47,873 - INFO - --------------------------------------------------
+2025-07-22 19:30:47,875 - WARNING - CORRELACION PERFECTA DETECTADA:
+2025-07-22 19:30:47,875 - WARNING -   Cargo_Total ↔ Facturacion_Diaria: 1.0000
+2025-07-22 19:30:47,875 - WARNING -   DECISION: Eliminar 'Facturacion_Diaria'
+2025-07-22 19:30:47,876 - WARNING -   JUSTIFICACION: Variable derivada matemáticamente de Cargo_Total. Eliminar para evitar multicolinealidad perfecta.
+2025-07-22 19:30:47,881 - WARNING - CORRELACION PERFECTA DETECTADA:
+2025-07-22 19:30:47,882 - WARNING -   Servicio_Telefono_encoded ↔ Lineas_Multiples_No phone service: -1.0000
+2025-07-22 19:30:47,882 - WARNING -   DECISION: Eliminar 'Servicio_Telefono_encoded'
+2025-07-22 19:30:47,882 - WARNING -   JUSTIFICACION: Correlación perfecta (-1.0000) con Lineas_Multiples_No phone service. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+2025-07-22 19:30:47,885 - WARNING - CORRELACION PERFECTA DETECTADA:
+2025-07-22 19:30:47,886 - WARNING -   Servicio_Internet_No ↔ Seguridad_Online_No internet service: 1.0000
+2025-07-22 19:30:47,886 - WARNING -   DECISION: Eliminar 'Seguridad_Online_No internet service'
+2025-07-22 19:30:47,886 - WARNING -   JUSTIFICACION: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+2025-07-22 19:30:47,887 - WARNING - CORRELACION PERFECTA DETECTADA:
+2025-07-22 19:30:47,887 - WARNING -   Servicio_Internet_No ↔ Respaldo_Online_No internet service: 1.0000
+2025-07-22 19:30:47,888 - WARNING -   DECISION: Eliminar 'Respaldo_Online_No internet service'
+2025-07-22 19:30:47,888 - WARNING -   JUSTIFICACION: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+2025-07-22 19:30:47,888 - WARNING - CORRELACION PERFECTA DETECTADA:
+2025-07-22 19:30:47,889 - WARNING -   Servicio_Internet_No ↔ Proteccion_Dispositivo_No internet service: 1.0000
+2025-07-22 19:30:47,889 - WARNING -   DECISION: Eliminar 'Proteccion_Dispositivo_No internet service'
+2025-07-22 19:30:47,889 - WARNING -   JUSTIFICACION: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+2025-07-22 19:30:47,890 - WARNING - CORRELACION PERFECTA DETECTADA:
+2025-07-22 19:30:47,890 - WARNING -   Servicio_Internet_No ↔ Soporte_Tecnico_No internet service: 1.0000
+2025-07-22 19:30:47,890 - WARNING -   DECISION: Eliminar 'Soporte_Tecnico_No internet service'
+2025-07-22 19:30:47,890 - WARNING -   JUSTIFICACION: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+2025-07-22 19:30:47,891 - WARNING - CORRELACION PERFECTA DETECTADA:
+2025-07-22 19:30:47,891 - WARNING -   Servicio_Internet_No ↔ TV_Streaming_No internet service: 1.0000
+2025-07-22 19:30:47,891 - WARNING -   DECISION: Eliminar 'TV_Streaming_No internet service'
+2025-07-22 19:30:47,892 - WARNING -   JUSTIFICACION: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+2025-07-22 19:30:47,892 - WARNING - CORRELACION PERFECTA DETECTADA:
+2025-07-22 19:30:47,892 - WARNING -   Servicio_Internet_No ↔ Peliculas_Streaming_No internet service: 1.0000
+2025-07-22 19:30:47,893 - WARNING -   DECISION: Eliminar 'Peliculas_Streaming_No internet service'
+2025-07-22 19:30:47,893 - WARNING -   JUSTIFICACION: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+2025-07-22 19:30:47,900 - INFO - 
+VARIABLES ELIMINADAS POR CORRELACION PERFECTA: 8
+2025-07-22 19:30:47,900 - INFO -   - Facturacion_Diaria
+2025-07-22 19:30:47,900 - INFO -   - Servicio_Telefono_encoded
+2025-07-22 19:30:47,901 - INFO -   - Seguridad_Online_No internet service
+2025-07-22 19:30:47,901 - INFO -   - Respaldo_Online_No internet service
+2025-07-22 19:30:47,901 - INFO -   - Proteccion_Dispositivo_No internet service
+2025-07-22 19:30:47,901 - INFO -   - Soporte_Tecnico_No internet service
+2025-07-22 19:30:47,902 - INFO -   - TV_Streaming_No internet service
+2025-07-22 19:30:47,902 - INFO -   - Peliculas_Streaming_No internet service
+2025-07-22 19:30:47,941 - INFO - 
+VARIABLES MAS CORRELACIONADAS CON OBJETIVO:
+2025-07-22 19:30:47,942 - INFO -   Abandono_Cliente: 1.0000
+2025-07-22 19:30:47,942 - INFO -   Tipo_Contrato_encoded: 0.3967
+2025-07-22 19:30:47,942 - INFO -   Meses_Cliente: 0.3522
+2025-07-22 19:30:47,942 - INFO -   Seguridad_Online_No: 0.3426
+2025-07-22 19:30:47,943 - INFO -   Soporte_Tecnico_No: 0.3373
+2025-07-22 19:30:47,943 - INFO -   Servicio_Internet_Fibra Óptica: 0.3080
+2025-07-22 19:30:47,943 - INFO -   Metodo_Pago_Cheque Electrónico: 0.3019
+2025-07-22 19:30:47,943 - INFO -   Respaldo_Online_No: 0.2680
+2025-07-22 19:30:47,943 - INFO -   Proteccion_Dispositivo_No: 0.2525
+2025-07-22 19:30:47,943 - INFO -   Servicio_Internet_No: 0.2279
+2025-07-22 19:30:47,943 - WARNING - 
+CORRELACIONES ALTAS DETECTADAS (0.8-0.99): 2
+2025-07-22 19:30:47,944 - WARNING -   Meses_Cliente - Facturacion_Mensual: 0.8262
+2025-07-22 19:30:47,944 - WARNING -   Lineas_Multiples_No - Lineas_Multiples_Sí: -0.8229
+2025-07-22 19:30:47,944 - WARNING - Considerar para feature selection en pasos posteriores
+2025-07-22 19:30:47,944 - INFO - CALCULANDO VIF PARA DETECCION DE MULTICOLINEALIDAD
+2025-07-22 19:30:47,945 - INFO - ==================================================
+2025-07-22 19:30:48,890 - INFO - Variables con VIF mas alto:
+2025-07-22 19:30:48,890 - INFO -   Lineas_Multiples_No phone service: inf
+2025-07-22 19:30:48,891 - INFO -   Lineas_Multiples_Sí: inf
+2025-07-22 19:30:48,891 - INFO -   Servicio_Internet_No: 6538025.72
+2025-07-22 19:30:48,891 - INFO -   Metodo_Pago_Transferencia Bancaria: 1470995.53
+2025-07-22 19:30:48,891 - INFO -   Proteccion_Dispositivo_Sí: 917085.41
+2025-07-22 19:30:48,892 - INFO -   Seguridad_Online_Sí: 605194.12
+2025-07-22 19:30:48,892 - INFO -   Soporte_Tecnico_No: 552168.32
+2025-07-22 19:30:48,892 - INFO -   Metodo_Pago_Cheque Postal: 377402.02
+2025-07-22 19:30:48,892 - INFO -   Respaldo_Online_Sí: 279349.44
+2025-07-22 19:30:48,893 - INFO -   TV_Streaming_Sí: 251970.94
+2025-07-22 19:30:48,893 - WARNING - Multicolinealidad detectada en 22 variables (VIF > 10)
+2025-07-22 19:30:48,893 - INFO - VALIDANDO INTEGRIDAD DEL ENCODING
+2025-07-22 19:30:48,893 - INFO - ========================================
+2025-07-22 19:30:48,894 - INFO - Filas: 7043 -> 7043
+2025-07-22 19:30:48,894 - INFO - Columnas: 21 -> 41 (+20)
+2025-07-22 19:30:48,894 - INFO - Variables categóricas procesadas: 15
+2025-07-22 19:30:48,894 - INFO - Variables categóricas eliminadas: 15
+2025-07-22 19:30:48,895 - INFO - Nuevas columnas encoded: 43
+2025-07-22 19:30:48,895 - INFO - Estrategias aplicadas: {'label_encoding': 5, 'one_hot_encoding': 9, 'ordinal_encoding': 1}
+2025-07-22 19:30:48,895 - INFO - Integridad de filas: CORRECTA
+2025-07-22 19:30:48,895 - INFO - Variable objetivo: PRESERVADA
+2025-07-22 19:30:48,895 - INFO - Dataset listo para ML: SI (sin variables categóricas sin procesar)
+2025-07-22 19:30:48,896 - INFO - GENERANDO VISUALIZACIONES
+2025-07-22 19:30:49,378 - INFO - Grafico de correlaciones generado
+2025-07-22 19:30:49,658 - INFO - Grafico de distribucion objetivo generado
+2025-07-22 19:30:49,701 - INFO - Dataset procesado guardado: excel/telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-22 19:30:49,702 - INFO - Informe guardado: informes/paso2_encoding_variables_categoricas_informe_20250722_193047.txt
+2025-07-22 19:30:49,703 - INFO - ======================================================================
+2025-07-22 19:30:49,703 - INFO - PROCESO COMPLETADO EXITOSAMENTE
+2025-07-22 19:30:49,704 - INFO - Variables categóricas procesadas: 15
+2025-07-22 19:30:49,704 - INFO - Dimensionalidad: 21 → 41 columnas
+2025-07-22 19:30:49,704 - INFO - Archivo resultante: excel/telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-22 19:30:49,705 - INFO - Informe generado: informes/paso2_encoding_variables_categoricas_informe_20250722_193047.txt
+2025-07-22 19:30:49,705 - INFO - ======================================================================

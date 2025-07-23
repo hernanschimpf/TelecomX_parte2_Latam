@@ -1,0 +1,662 @@
+
+================================================================================
+TELECOMX - INFORME DE ENCODING DE VARIABLES CATEGÓRICAS
+================================================================================
+Fecha y Hora: 20250722_193047
+Paso: 2 - Encoding de Variables Categóricas
+
+================================================================================
+RESUMEN EJECUTIVO
+================================================================================
+• Dataset Original: 7,043 filas x 21 columnas
+• Dataset Final: 7,043 filas x 41 columnas
+• Cambio Neto: +20 columnas
+• Variables Categóricas Procesadas: 15
+• Variables Categóricas Eliminadas: 15
+• Variables Eliminadas por Correlación Perfecta: 8
+• Nuevas Variables Encoded: 43
+• Integridad de Filas: ✅ CORRECTA
+• Variable Objetivo: ✅ PRESERVADA
+• Dataset Listo para ML: ✅ SÍ
+• Multicolinealidad Perfecta: ✅ CORREGIDA
+
+================================================================================
+METODOLOGÍA APLICADA - ENFOQUE MODERADO
+================================================================================
+
+🔬 ESTRATEGIAS DE ENCODING UTILIZADAS:
+
+1. LABEL ENCODING
+   • Aplicado a: Variables binarias (2 valores únicos)
+   • Justificación: Mapeo directo 0/1 para algoritmos de ML
+   • Ventaja: Mantiene simplicidad y interpretabilidad
+   • Post-proceso: Columna original eliminada
+
+2. ORDINAL ENCODING  
+   • Aplicado a: Variables con orden lógico natural
+   • Justificación: Preserva relación ordinal entre categorías
+   • Ejemplo: Mes a Mes < Un Año < Dos Años
+   • Post-proceso: Columna original eliminada
+
+3. ONE-HOT ENCODING
+   • Aplicado a: Variables nominales con ≤5 categorías
+   • Justificación: Evita asunción de orden en datos nominales
+   • Control: Limitado a baja cardinalidad para evitar explosión dimensional
+   • Post-proceso: Columna original eliminada, múltiples binarias creadas
+
+4. FREQUENCY ENCODING
+   • Aplicado a: Variables nominales con >5 categorías
+   • Justificación: Reduce dimensionalidad manteniendo información
+   • Método: Mapeo por frecuencia de aparición
+   • Post-proceso: Columna original eliminada
+
+📋 POLÍTICA DE LIMPIEZA Y TIPOS DE DATOS:
+• Todas las variables categóricas originales son ELIMINADAS después del encoding
+• Solo se mantienen las versiones encoded para evitar confusión
+• Todas las variables encoded son de tipo ENTERO (int):
+  - Label Encoding: 0, 1, 2, ... (según categorías)
+  - Ordinal Encoding: 0, 1, 2, ... (según orden lógico)
+  - One-Hot Encoding: 0, 1 (binario)
+  - Frequency Encoding: enteros (frecuencias de aparición)
+• Dataset resultante contiene únicamente variables numéricas enteras
+• Preparado para algoritmos de Machine Learning sin preprocesamiento adicional
+• Compatible con todos los algoritmos (lineales, tree-based, ensemble)
+
+================================================================================
+ANÁLISIS DETALLADO POR VARIABLE
+================================================================================
+
+📊 Genero
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Femenino', 'Masculino']
+   • Distribución: {'Masculino': 3555, 'Femenino': 3488}
+   • Mapeo: {'Femenino': np.int64(0), 'Masculino': np.int64(1)}
+
+📊 Tiene_Pareja
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No']
+   • Distribución: {'No': 3641, 'Sí': 3402}
+   • Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+
+📊 Tiene_Dependientes
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No']
+   • Distribución: {'No': 4933, 'Sí': 2110}
+   • Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+
+📊 Servicio_Telefono
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No']
+   • Distribución: {'Sí': 6361, 'No': 682}
+   • Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+
+📊 Lineas_Multiples
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['No', 'Sí', 'No phone service']
+   • Distribución: {'No': 3390, 'Sí': 2971, 'No phone service': 682}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Lineas_Multiples_No', 'Lineas_Multiples_No phone service', 'Lineas_Multiples_Sí', 'Lineas_Multiples_nan']
+
+📊 Servicio_Internet
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['DSL', 'Fibra Óptica', 'No']
+   • Distribución: {'Fibra Óptica': 3096, 'DSL': 2421, 'No': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Servicio_Internet_DSL', 'Servicio_Internet_Fibra Óptica', 'Servicio_Internet_No', 'Servicio_Internet_nan']
+
+📊 Seguridad_Online
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['No', 'Sí', 'No internet service']
+   • Distribución: {'No': 3498, 'Sí': 2019, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Seguridad_Online_No', 'Seguridad_Online_No internet service', 'Seguridad_Online_Sí', 'Seguridad_Online_nan']
+
+📊 Respaldo_Online
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No', 'No internet service']
+   • Distribución: {'No': 3088, 'Sí': 2429, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Respaldo_Online_No', 'Respaldo_Online_No internet service', 'Respaldo_Online_Sí', 'Respaldo_Online_nan']
+
+📊 Proteccion_Dispositivo
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['No', 'Sí', 'No internet service']
+   • Distribución: {'No': 3095, 'Sí': 2422, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Proteccion_Dispositivo_No', 'Proteccion_Dispositivo_No internet service', 'Proteccion_Dispositivo_Sí', 'Proteccion_Dispositivo_nan']
+
+📊 Soporte_Tecnico
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No', 'No internet service']
+   • Distribución: {'No': 3473, 'Sí': 2044, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Soporte_Tecnico_No', 'Soporte_Tecnico_No internet service', 'Soporte_Tecnico_Sí', 'Soporte_Tecnico_nan']
+
+📊 TV_Streaming
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No', 'No internet service']
+   • Distribución: {'No': 2810, 'Sí': 2707, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['TV_Streaming_No', 'TV_Streaming_No internet service', 'TV_Streaming_Sí', 'TV_Streaming_nan']
+
+📊 Peliculas_Streaming
+   • Tipo Original: nominal (3 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['No', 'Sí', 'No internet service']
+   • Distribución: {'No': 2785, 'Sí': 2732, 'No internet service': 1526}
+   • Columnas Creadas: 4
+   • Nuevas Variables: ['Peliculas_Streaming_No', 'Peliculas_Streaming_No internet service', 'Peliculas_Streaming_Sí', 'Peliculas_Streaming_nan']
+
+📊 Tipo_Contrato
+   • Tipo Original: ordinal (3 valores únicos)
+   • Estrategia Aplicada: ORDINAL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Un Año', 'Mes a Mes', 'Dos Años']
+   • Distribución: {'Mes a Mes': 3875, 'Dos Años': 1695, 'Un Año': 1473}
+   • Orden: ['Mes a Mes', 'Un Año', 'Dos Años']
+
+📊 Facturacion_Digital
+   • Tipo Original: binaria (2 valores únicos)
+   • Estrategia Aplicada: LABEL_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Sí', 'No']
+   • Distribución: {'Sí': 4171, 'No': 2872}
+   • Mapeo: {'No': np.int64(0), 'Sí': np.int64(1)}
+
+📊 Metodo_Pago
+   • Tipo Original: nominal (4 valores únicos)
+   • Estrategia Aplicada: ONE_HOT_ENCODING
+   • Valores Nulos: 0 (0.0%)
+   • Valores Únicos: ['Cheque Postal', 'Cheque Electrónico', 'Tarjeta de Crédito', 'Transferencia Bancaria']
+   • Distribución: {'Cheque Electrónico': 2365, 'Cheque Postal': 1612, 'Transferencia Bancaria': 1544}
+   • Columnas Creadas: 5
+   • Nuevas Variables: ['Metodo_Pago_Cheque Electrónico', 'Metodo_Pago_Cheque Postal', 'Metodo_Pago_Tarjeta de Crédito', 'Metodo_Pago_Transferencia Bancaria', 'Metodo_Pago_nan']
+
+================================================================================
+RESUMEN DE ESTRATEGIAS APLICADAS
+================================================================================
+• Label Encoding: 5 variables
+• One-Hot Encoding: 9 variables
+• Ordinal Encoding: 1 variables
+
+================================================================================
+ANÁLISIS DE CORRELACIONES CON VARIABLE OBJETIVO
+================================================================================
+
+Top 10 Variables Más Correlacionadas con Abandono_Cliente:
+ 1. Abandono_Cliente: 1.0000 (Positiva, Fuerte)
+ 2. Tipo_Contrato_encoded: 0.3967 (Positiva, Moderada)
+ 3. Meses_Cliente: 0.3522 (Positiva, Moderada)
+ 4. Seguridad_Online_No: 0.3426 (Positiva, Moderada)
+ 5. Soporte_Tecnico_No: 0.3373 (Positiva, Moderada)
+ 6. Servicio_Internet_Fibra Óptica: 0.3080 (Positiva, Moderada)
+ 7. Metodo_Pago_Cheque Electrónico: 0.3019 (Positiva, Moderada)
+ 8. Respaldo_Online_No: 0.2680 (Positiva, Débil)
+ 9. Proteccion_Dispositivo_No: 0.2525 (Positiva, Débil)
+10. Servicio_Internet_No: 0.2279 (Positiva, Débil)
+
+Correlaciones de Variables Encoded:
+• Lineas_Multiples_nan: nan
+• Servicio_Internet_nan: nan
+• Seguridad_Online_No: 0.3426
+• Seguridad_Online_nan: nan
+• Respaldo_Online_No: 0.2680
+• Respaldo_Online_nan: nan
+• Proteccion_Dispositivo_nan: nan
+• Soporte_Tecnico_No: 0.3373
+• Servicio_Internet_Fibra Óptica: 0.3080
+• Proteccion_Dispositivo_No: 0.2525
+• Soporte_Tecnico_Sí: 0.1647
+• Soporte_Tecnico_nan: nan
+• TV_Streaming_nan: nan
+• Peliculas_Streaming_nan: nan
+• Tipo_Contrato_encoded: 0.3967
+• Metodo_Pago_Cheque Electrónico: 0.3019
+• Servicio_Internet_No: 0.2279
+• Facturacion_Digital_encoded: 0.1918
+• Seguridad_Online_Sí: 0.1712
+• Tiene_Dependientes_encoded: 0.1642
+• Tiene_Pareja_encoded: 0.1504
+• Metodo_Pago_Tarjeta de Crédito: 0.1343
+• Peliculas_Streaming_No: 0.1308
+• TV_Streaming_No: 0.1289
+• Servicio_Internet_DSL: 0.1242
+• Metodo_Pago_Transferencia Bancaria: 0.1179
+• Respaldo_Online_Sí: 0.0823
+• Proteccion_Dispositivo_Sí: 0.0662
+• TV_Streaming_Sí: 0.0632
+• Peliculas_Streaming_Sí: 0.0614
+• Lineas_Multiples_Sí: 0.0401
+• Lineas_Multiples_No: 0.0326
+• Lineas_Multiples_No phone service: 0.0119
+• Genero_encoded: 0.0086
+• Metodo_Pago_nan: nan
+• Metodo_Pago_Cheque Postal: 0.0917
+
+================================================================================
+🚨 CORRECCIÓN AUTOMÁTICA - CORRELACIONES PERFECTAS
+================================================================================
+
+Se detectaron y corrigieron automáticamente 8 variable(s) 
+con correlación perfecta (≥0.99) que causarían multicolinealidad severa:
+
+
+🔧 VARIABLE ELIMINADA: Facturacion_Diaria
+   • Correlacionada con: Cargo_Total
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Variable derivada matemáticamente de Cargo_Total. Eliminar para evitar multicolinealidad perfecta.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Servicio_Telefono_encoded
+   • Correlacionada con: Lineas_Multiples_No phone service
+   • Correlación: -1.0000 (perfecta)
+   • Justificación: Correlación perfecta (-1.0000) con Lineas_Multiples_No phone service. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Seguridad_Online_No internet service
+   • Correlacionada con: Servicio_Internet_No
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Seguridad_Online_No internet service
+   • Correlacionada con: Respaldo_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Seguridad_Online_No internet service
+   • Correlacionada con: Proteccion_Dispositivo_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Seguridad_Online_No internet service
+   • Correlacionada con: Soporte_Tecnico_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Seguridad_Online_No internet service
+   • Correlacionada con: TV_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Seguridad_Online_No internet service
+   • Correlacionada con: Peliculas_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Respaldo_Online_No internet service
+   • Correlacionada con: Servicio_Internet_No
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Respaldo_Online_No internet service
+   • Correlacionada con: Seguridad_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Respaldo_Online_No internet service
+   • Correlacionada con: Proteccion_Dispositivo_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Respaldo_Online_No internet service
+   • Correlacionada con: Soporte_Tecnico_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Respaldo_Online_No internet service
+   • Correlacionada con: TV_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Respaldo_Online_No internet service
+   • Correlacionada con: Peliculas_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Proteccion_Dispositivo_No internet service
+   • Correlacionada con: Servicio_Internet_No
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Proteccion_Dispositivo_No internet service
+   • Correlacionada con: Seguridad_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Proteccion_Dispositivo_No internet service
+   • Correlacionada con: Respaldo_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Proteccion_Dispositivo_No internet service
+   • Correlacionada con: Soporte_Tecnico_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Proteccion_Dispositivo_No internet service
+   • Correlacionada con: TV_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Proteccion_Dispositivo_No internet service
+   • Correlacionada con: Peliculas_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Soporte_Tecnico_No internet service
+   • Correlacionada con: Servicio_Internet_No
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Soporte_Tecnico_No internet service
+   • Correlacionada con: Seguridad_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Soporte_Tecnico_No internet service
+   • Correlacionada con: Respaldo_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Soporte_Tecnico_No internet service
+   • Correlacionada con: Proteccion_Dispositivo_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Soporte_Tecnico_No internet service
+   • Correlacionada con: TV_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Soporte_Tecnico_No internet service
+   • Correlacionada con: Peliculas_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: TV_Streaming_No internet service
+   • Correlacionada con: Servicio_Internet_No
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: TV_Streaming_No internet service
+   • Correlacionada con: Seguridad_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: TV_Streaming_No internet service
+   • Correlacionada con: Respaldo_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: TV_Streaming_No internet service
+   • Correlacionada con: Proteccion_Dispositivo_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: TV_Streaming_No internet service
+   • Correlacionada con: Soporte_Tecnico_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: TV_Streaming_No internet service
+   • Correlacionada con: Peliculas_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Peliculas_Streaming_No internet service
+   • Correlacionada con: Servicio_Internet_No
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Peliculas_Streaming_No internet service
+   • Correlacionada con: Seguridad_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Peliculas_Streaming_No internet service
+   • Correlacionada con: Respaldo_Online_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Peliculas_Streaming_No internet service
+   • Correlacionada con: Proteccion_Dispositivo_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Peliculas_Streaming_No internet service
+   • Correlacionada con: Soporte_Tecnico_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+🔧 VARIABLE ELIMINADA: Peliculas_Streaming_No internet service
+   • Correlacionada con: TV_Streaming_No internet service
+   • Correlación: 1.0000 (perfecta)
+   • Justificación: Correlación perfecta (1.0000) con Servicio_Internet_No. Eliminada para prevenir multicolinealidad que puede afectar algoritmos lineales.
+   • Acción: Eliminación automática para prevenir multicolinealidad
+   • Impacto: Sin pérdida de información (variables matemáticamente dependientes)
+
+✅ RESULTADO: Dataset corregido automáticamente
+   • Multicolinealidad perfecta eliminada
+   • Preparado para algoritmos lineales y tree-based
+   • Sin pérdida de capacidad predictiva
+
+================================================================================
+⚠️ DETECCIÓN DE MULTICOLINEALIDAD MODERADA (0.8 ≤ r < 0.99)
+================================================================================
+
+Se detectaron 2 pares de variables con correlación alta pero no perfecta:
+
+1. Meses_Cliente ↔ Facturacion_Mensual: 0.8262
+   • Nivel: Alta correlación (🟡 Moderada)
+   • Interpretación: Variables relacionadas pero no idénticas
+   • Recomendación: Evaluar en feature selection (Paso 5)
+
+2. Lineas_Multiples_No ↔ Lineas_Multiples_Sí: -0.8229
+   • Nivel: Alta correlación (🟡 Moderada)
+   • Interpretación: Variables relacionadas pero no idénticas
+   • Recomendación: Evaluar en feature selection (Paso 5)
+
+📋 RECOMENDACIONES PARA CORRELACIONES MODERADAS:
+• Mantener ambas variables por ahora (pueden aportar información complementaria)
+• Evaluar importancia individual en modelos tree-based
+• Considerar eliminación en feature selection si causan overfitting
+• Monitorear performance con/sin estas variables en validación cruzada
+• Para modelos lineales: considerar regularización (L1/L2)
+
+================================================================================
+ANÁLISIS VIF - FACTOR DE INFLACIÓN DE VARIANZA
+================================================================================
+
+Interpretación VIF:
+• VIF < 5: Sin multicolinealidad
+• VIF 5-10: Multicolinealidad moderada  
+• VIF > 10: Multicolinealidad severa
+
+Top 10 Variables por VIF:
+• Lineas_Multiples_No phone service: inf (🚫 Alto)
+• Lineas_Multiples_Sí: inf (🚫 Alto)
+• Servicio_Internet_No: 6538025.72 (🚫 Alto)
+• Metodo_Pago_Transferencia Bancaria: 1470995.53 (🚫 Alto)
+• Proteccion_Dispositivo_Sí: 917085.41 (🚫 Alto)
+• Seguridad_Online_Sí: 605194.12 (🚫 Alto)
+• Soporte_Tecnico_No: 552168.32 (🚫 Alto)
+• Metodo_Pago_Cheque Postal: 377402.02 (🚫 Alto)
+• Respaldo_Online_Sí: 279349.44 (🚫 Alto)
+• TV_Streaming_Sí: 251970.94 (🚫 Alto)
+
+⚠️ ALERTA: 22 variables con VIF > 10 detectadas.
+Considerar eliminación o combinación de variables problemáticas.
+
+================================================================================
+IMPACTO EN DIMENSIONALIDAD
+================================================================================
+
+Análisis del cambio dimensional:
+• Columnas originales: 21
+• Columnas finales: 41
+• Cambio neto: +20 columnas
+
+Desglose del proceso:
+• Variables categóricas eliminadas: 15
+• Nuevas variables encoded creadas: 43
+• Variables numéricas preservadas: -2
+
+Distribución del cambio por estrategia:
+• Label Encoding: +5 columnas
+• One-Hot Encoding: +37 columnas
+• Ordinal Encoding: +1 columnas
+
+================================================================================
+VALIDACIÓN DE INTEGRIDAD DE DATOS
+================================================================================
+
+Verificaciones realizadas:
+✅ Número de filas: 7,043 → 7,043 
+   (Sin pérdida)
+
+✅ Variable objetivo preservada: Sí
+   (Distribución mantenida)
+
+✅ Variables categóricas procesadas: 15/15
+
+✅ Nuevas variables numéricas disponibles para ML: 20
+
+================================================================================
+RECOMENDACIONES PARA SIGUIENTE PASO
+================================================================================
+
+Basado en el análisis realizado:
+
+1. CORRECCIONES AUTOMÁTICAS APLICADAS:
+   • Correlaciones perfectas eliminadas: 8
+   • Dataset libre de multicolinealidad severa
+   • Preparado para algoritmos lineales y tree-based
+
+2. SELECCIÓN DE CARACTERÍSTICAS:
+   • Evaluar variables con correlación moderada en feature selection
+   • Considerar eliminar variables con correlación muy baja con objetivo (<0.1)
+   • Monitorear importancia de variables en modelos tree-based
+
+3. PREPARACIÓN PARA MODELADO:
+   • Dataset completamente numérico y listo para ML
+   • 41 características disponibles
+   • Variable objetivo preservada y balanceada
+
+4. PRÓXIMOS PASOS SUGERIDOS:
+   • Paso 3: Normalización/Escalado de variables numéricas
+   • Paso 4: División en conjuntos train/validation/test
+   • Paso 5: Feature selection con análisis de importancia
+   • Paso 6: Entrenamiento de modelos baseline
+
+5. MONITOREO DE MULTICOLINEALIDAD:
+   • Dataset actual: Multicolinealidad controlada
+   • Recomendación: Usar regularización en modelos lineales
+   • Tree-based models: Pueden manejar correlaciones restantes
+
+================================================================================
+ARCHIVOS GENERADOS
+================================================================================
+
+• Dataset procesado: excel/telecomx_paso2_encoding_aplicado_20250722_193047.csv
+• Gráficos: graficos/paso2_correlaciones_objetivo_20250722_193047.png
+• Gráficos: graficos/paso2_distribucion_objetivo_20250722_193047.png
+• Informe: informes/paso2_encoding_variables_categoricas_informe_20250722_193047.txt
+
+================================================================================
+FIN DEL INFORME
+================================================================================

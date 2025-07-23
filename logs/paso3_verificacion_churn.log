@@ -1,0 +1,47 @@
+2025-07-22 19:55:25,480 - INFO - INICIANDO PASO 3: VERIFICACION DE PROPORCION DE CHURN
+2025-07-22 19:55:25,480 - INFO - ======================================================================
+2025-07-22 19:55:25,481 - INFO - Archivo del Paso 2 encontrado: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-22 19:55:25,503 - INFO - Dataset cargado exitosamente desde: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-22 19:55:25,504 - INFO - Codificacion utilizada: utf-8-sig
+2025-07-22 19:55:25,504 - INFO - Dimensiones: 7043 filas x 41 columnas
+2025-07-22 19:55:25,504 - INFO - VERIFICANDO VARIABLE OBJETIVO 'Abandono_Cliente'
+2025-07-22 19:55:25,504 - INFO - ==================================================
+2025-07-22 19:55:25,505 - INFO - Variable objetivo ENCONTRADA y VALIDADA
+2025-07-22 19:55:25,505 - INFO -   Tipo de datos: int64
+2025-07-22 19:55:25,506 - INFO -   Valores únicos: [np.int64(0), np.int64(1)]
+2025-07-22 19:55:25,506 - INFO -   Es binaria: SI
+2025-07-22 19:55:25,506 - INFO -   Valores nulos: 0
+2025-07-22 19:55:25,506 - INFO - ANALIZANDO DISTRIBUCION DE CHURN
+2025-07-22 19:55:25,506 - INFO - ========================================
+2025-07-22 19:55:25,513 - INFO - DISTRIBUCION DE CLASES:
+2025-07-22 19:55:25,514 - INFO -   Total de clientes: 7,043
+2025-07-22 19:55:25,514 - INFO -   No Churn (0): 5,174 (73.5%)
+2025-07-22 19:55:25,514 - INFO -   Churn (1): 1,869 (26.5%)
+2025-07-22 19:55:25,514 - INFO - 
+2025-07-22 19:55:25,515 - INFO - METRICAS DE BALANCE:
+2025-07-22 19:55:25,515 - INFO -   Clase mayoría: No Churn (73.5%)
+2025-07-22 19:55:25,515 - INFO -   Clase minoría: Churn (26.5%)
+2025-07-22 19:55:25,515 - INFO -   Ratio desbalance: 2.77:1
+2025-07-22 19:55:25,515 - INFO -   Nivel de balance: Moderadamente Desbalanceado
+2025-07-22 19:55:25,515 - INFO -   Severidad: Moderado
+2025-07-22 19:55:25,516 - INFO -   Impacto en modelos: Alto
+2025-07-22 19:55:25,516 - INFO - GENERANDO VISUALIZACIONES DE CHURN
+2025-07-22 19:55:25,516 - INFO - ========================================
+2025-07-22 19:55:25,518 - INFO - Generando grafico de barras...
+2025-07-22 19:55:25,912 - INFO - Generando grafico circular...
+2025-07-22 19:55:26,268 - INFO - Generando histograma...
+2025-07-22 19:55:26,330 - ERROR - Error al generar visualizaciones: The 'color' keyword argument must have one color per dataset, but 1 datasets and 2 colors were provided
+2025-07-22 19:55:26,331 - INFO - ANALIZANDO IMPLICACIONES PARA MODELADO
+2025-07-22 19:55:26,331 - INFO - =============================================
+2025-07-22 19:55:26,331 - INFO - Requiere manejo especial: SI
+2025-07-22 19:55:26,332 - INFO - Métricas recomendadas: F1-Score, AUC-ROC, AUC-PR, Balanced Accuracy
+2025-07-22 19:55:26,332 - INFO - Enfoque recomendado: Enfoque especializado en desbalance
+2025-07-22 19:55:26,333 - INFO - Informe guardado: informes/paso3_verificacion_proporcion_churn_informe_20250722_195525.txt
+2025-07-22 19:55:26,333 - INFO - ======================================================================
+2025-07-22 19:55:26,334 - INFO - PROCESO COMPLETADO EXITOSAMENTE
+2025-07-22 19:55:26,334 - INFO - Total de clientes analizados: 7,043
+2025-07-22 19:55:26,334 - INFO - Proporcion de churn: 26.5%
+2025-07-22 19:55:26,335 - INFO - Nivel de balance: Moderadamente Desbalanceado
+2025-07-22 19:55:26,335 - INFO - Requiere manejo especial: SI
+2025-07-22 19:55:26,335 - INFO - Informe generado: informes/paso3_verificacion_proporcion_churn_informe_20250722_195525.txt
+2025-07-22 19:55:26,335 - INFO - ======================================================================
