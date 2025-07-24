@@ -256,8 +256,8 @@ def generate_churn_visualizations(df, distribution_analysis, timestamp):
     plt.style.use('default')
     sns.set_palette("husl")
     
+    # 1. GRÁFICO DE BARRAS
     try:
-        # 1. GRÁFICO DE BARRAS
         logger.info("Generando grafico de barras...")
         plt.figure(figsize=(10, 6))
         
@@ -293,8 +293,13 @@ def generate_churn_visualizations(df, distribution_analysis, timestamp):
         plt.savefig(f'graficos/paso3_distribucion_churn_barras_{timestamp}.png', 
                    dpi=300, bbox_inches='tight')
         plt.close()
+        logger.info("Grafico de barras generado exitosamente")
         
-        # 2. GRÁFICO CIRCULAR (PIE CHART)
+    except Exception as e:
+        logger.error(f"Error al generar grafico de barras: {str(e)}")
+    
+    # 2. GRÁFICO CIRCULAR (PIE CHART)
+    try:
         logger.info("Generando grafico circular...")
         plt.figure(figsize=(10, 8))
         
@@ -330,36 +335,51 @@ def generate_churn_visualizations(df, distribution_analysis, timestamp):
         plt.savefig(f'graficos/paso3_distribucion_churn_circular_{timestamp}.png', 
                    dpi=300, bbox_inches='tight')
         plt.close()
+        logger.info("Grafico circular generado exitosamente")
         
-        # 3. HISTOGRAMA DE DISTRIBUCIÓN
+    except Exception as e:
+        logger.error(f"Error al generar grafico circular: {str(e)}")
+    
+    # 3. HISTOGRAMA DE DISTRIBUCIÓN
+    try:
         logger.info("Generando histograma...")
         plt.figure(figsize=(10, 6))
         
-        # Crear datos para histograma
-        churn_data = df['Abandono_Cliente']
+        # Crear datos separados para cada clase
+        no_churn_data = df[df['Abandono_Cliente'] == 0]['Abandono_Cliente']
+        churn_data = df[df['Abandono_Cliente'] == 1]['Abandono_Cliente']
         
-        plt.hist(churn_data, bins=2, color=['#2E86AB', '#A23B72'], alpha=0.8, 
-                edgecolor='black', linewidth=1)
+        # Crear histograma con datos separados
+        plt.hist([no_churn_data, churn_data], bins=2, color=['#2E86AB', '#A23B72'], 
+                alpha=0.8, edgecolor='black', linewidth=1, 
+                label=['No Churn (0)', 'Churn (1)'])
         
-        plt.xlabel('Clase de Abandono (0 = No Churn, 1 = Churn)', fontsize=12, fontweight='bold')
+        plt.xlabel('Clase de Abandono', fontsize=12, fontweight='bold')
         plt.ylabel('Frecuencia (Número de Clientes)', fontsize=12, fontweight='bold')
         plt.title('Histograma de Distribución de Abandono de Clientes\nFrecuencia por Clase', 
                  fontsize=14, fontweight='bold', pad=20)
         
-        # Personalizar ejes
+        # Personalizar ejes y añadir leyenda
         plt.xticks([0, 1], ['No Churn (0)', 'Churn (1)'])
+        plt.legend()
         plt.grid(axis='y', alpha=0.3)
         
         # Añadir estadísticas
-        stats_text = f"Media: {churn_data.mean():.3f} | Desv. Estándar: {churn_data.std():.3f}"
+        all_data = df['Abandono_Cliente']
+        stats_text = f"Media: {all_data.mean():.3f} | Desv. Estándar: {all_data.std():.3f}"
         plt.figtext(0.02, 0.02, stats_text, fontsize=10, style='italic')
         
         plt.tight_layout()
         plt.savefig(f'graficos/paso3_distribucion_churn_histograma_{timestamp}.png', 
                    dpi=300, bbox_inches='tight')
         plt.close()
+        logger.info("Histograma generado exitosamente")
         
-        # 4. GRÁFICO COMPARATIVO CON MÉTRICAS
+    except Exception as e:
+        logger.error(f"Error al generar histograma: {str(e)}")
+    
+    # 4. GRÁFICO COMPARATIVO CON MÉTRICAS
+    try:
         logger.info("Generando grafico comparativo con metricas...")
         fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 12))
         
@@ -419,11 +439,12 @@ def generate_churn_visualizations(df, distribution_analysis, timestamp):
         plt.savefig(f'graficos/paso3_analisis_completo_churn_{timestamp}.png', 
                    dpi=300, bbox_inches='tight')
         plt.close()
-        
-        logger.info("Todas las visualizaciones generadas exitosamente")
+        logger.info("Grafico comparativo generado exitosamente")
         
     except Exception as e:
-        logger.error(f"Error al generar visualizaciones: {str(e)}")
+        logger.error(f"Error al generar grafico comparativo: {str(e)}")
+    
+    logger.info("Proceso de visualizaciones completado")
 
 def analyze_modeling_implications(distribution_analysis):
     """

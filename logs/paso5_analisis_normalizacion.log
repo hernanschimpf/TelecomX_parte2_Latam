@@ -1,0 +1,187 @@
+2025-07-24 20:15:47,498 - INFO - INICIANDO PASO 5: ANALISIS DE NECESIDAD DE NORMALIZACION
+2025-07-24 20:15:47,498 - INFO - ======================================================================
+2025-07-24 20:15:47,499 - INFO - Archivo del Paso 2 encontrado: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-24 20:15:47,520 - INFO - Dataset cargado exitosamente desde: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-24 20:15:47,520 - INFO - Codificacion utilizada: utf-8-sig
+2025-07-24 20:15:47,520 - INFO - Dimensiones: 7043 filas x 41 columnas
+2025-07-24 20:15:47,521 - INFO - ANALIZANDO TIPOS DE VARIABLES Y ESCALAS
+2025-07-24 20:15:47,521 - INFO - ==================================================
+2025-07-24 20:15:47,537 - INFO - Total de características: 40
+2025-07-24 20:15:47,537 - INFO - Variables numéricas: 40
+2025-07-24 20:15:47,538 - INFO - Variables binarias (0/1): 27
+2025-07-24 20:15:47,538 - INFO - Variables categóricas encoded: 9
+2025-07-24 20:15:47,538 - INFO - Variables numéricas originales: 4
+2025-07-24 20:15:47,538 - INFO - 
+Análisis por variable:
+2025-07-24 20:15:47,538 - INFO -   Ciudadano_Mayor: binary_encoded, Rango: 1.00, CV: 2.273
+2025-07-24 20:15:47,539 - INFO -   Meses_Cliente: original_numeric, Rango: 72.00, CV: 0.759
+2025-07-24 20:15:47,539 - INFO -   Cargo_Total: original_numeric, Rango: 118.75, CV: 0.466
+2025-07-24 20:15:47,539 - INFO -   Facturacion_Mensual: original_numeric, Rango: 8684.80, CV: 0.994
+2025-07-24 20:15:47,539 - INFO -   Genero_encoded: binary_encoded, Rango: 1.00, CV: 0.991
+2025-07-24 20:15:47,539 - INFO -   Tiene_Pareja_encoded: binary_encoded, Rango: 1.00, CV: 1.035
+2025-07-24 20:15:47,539 - INFO -   Tiene_Dependientes_encoded: binary_encoded, Rango: 1.00, CV: 1.529
+2025-07-24 20:15:47,539 - INFO -   Lineas_Multiples_No: binary_encoded, Rango: 1.00, CV: 1.038
+2025-07-24 20:15:47,540 - INFO -   Lineas_Multiples_No phone service: binary_encoded, Rango: 1.00, CV: 3.054
+2025-07-24 20:15:47,540 - INFO -   Lineas_Multiples_Sí: binary_encoded, Rango: 1.00, CV: 1.171
+2025-07-24 20:15:47,540 - INFO -   Lineas_Multiples_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:15:47,540 - INFO -   Servicio_Internet_DSL: binary_encoded, Rango: 1.00, CV: 1.382
+2025-07-24 20:15:47,540 - INFO -   Servicio_Internet_Fibra Óptica: binary_encoded, Rango: 1.00, CV: 1.129
+2025-07-24 20:15:47,540 - INFO -   Servicio_Internet_No: binary_encoded, Rango: 1.00, CV: 1.902
+2025-07-24 20:15:47,541 - INFO -   Servicio_Internet_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:15:47,541 - INFO -   Seguridad_Online_No: binary_encoded, Rango: 1.00, CV: 1.007
+2025-07-24 20:15:47,541 - INFO -   Seguridad_Online_Sí: binary_encoded, Rango: 1.00, CV: 1.578
+2025-07-24 20:15:47,541 - INFO -   Seguridad_Online_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:15:47,541 - INFO -   Respaldo_Online_No: binary_encoded, Rango: 1.00, CV: 1.132
+2025-07-24 20:15:47,541 - INFO -   Respaldo_Online_Sí: binary_encoded, Rango: 1.00, CV: 1.378
+2025-07-24 20:15:47,542 - INFO -   Respaldo_Online_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:15:47,542 - INFO -   Proteccion_Dispositivo_No: binary_encoded, Rango: 1.00, CV: 1.130
+2025-07-24 20:15:47,542 - INFO -   Proteccion_Dispositivo_Sí: binary_encoded, Rango: 1.00, CV: 1.381
+2025-07-24 20:15:47,542 - INFO -   Proteccion_Dispositivo_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:15:47,542 - INFO -   Soporte_Tecnico_No: binary_encoded, Rango: 1.00, CV: 1.014
+2025-07-24 20:15:47,542 - INFO -   Soporte_Tecnico_Sí: binary_encoded, Rango: 1.00, CV: 1.564
+2025-07-24 20:15:47,543 - INFO -   Soporte_Tecnico_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:15:47,543 - INFO -   TV_Streaming_No: binary_encoded, Rango: 1.00, CV: 1.227
+2025-07-24 20:15:47,543 - INFO -   TV_Streaming_Sí: binary_encoded, Rango: 1.00, CV: 1.266
+2025-07-24 20:15:47,543 - INFO -   TV_Streaming_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:15:47,543 - INFO -   Peliculas_Streaming_No: binary_encoded, Rango: 1.00, CV: 1.237
+2025-07-24 20:15:47,544 - INFO -   Peliculas_Streaming_Sí: binary_encoded, Rango: 1.00, CV: 1.256
+2025-07-24 20:15:47,544 - INFO -   Peliculas_Streaming_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:15:47,544 - INFO -   Tipo_Contrato_encoded: original_numeric, Rango: 2.00, CV: 1.208
+2025-07-24 20:15:47,544 - INFO -   Facturacion_Digital_encoded: binary_encoded, Rango: 1.00, CV: 0.830
+2025-07-24 20:15:47,545 - INFO -   Metodo_Pago_Cheque Electrónico: binary_encoded, Rango: 1.00, CV: 1.407
+2025-07-24 20:15:47,545 - INFO -   Metodo_Pago_Cheque Postal: binary_encoded, Rango: 1.00, CV: 1.836
+2025-07-24 20:15:47,545 - INFO -   Metodo_Pago_Tarjeta de Crédito: binary_encoded, Rango: 1.00, CV: 1.905
+2025-07-24 20:15:47,545 - INFO -   Metodo_Pago_Transferencia Bancaria: binary_encoded, Rango: 1.00, CV: 1.887
+2025-07-24 20:15:47,545 - INFO -   Metodo_Pago_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:15:47,545 - INFO - ANALIZANDO REQUERIMIENTOS POR ALGORITMO
+2025-07-24 20:15:47,546 - INFO - ==================================================
+2025-07-24 20:15:47,546 - INFO - TREE_BASED:
+2025-07-24 20:15:47,546 - INFO -   Escalado requerido: NO
+2025-07-24 20:15:47,546 - INFO -   Impacto: NONE
+2025-07-24 20:15:47,546 - INFO -   Recomendado para proyecto: SÍ
+2025-07-24 20:15:47,546 - INFO - DISTANCE_BASED:
+2025-07-24 20:15:47,546 - INFO -   Escalado requerido: SÍ
+2025-07-24 20:15:47,547 - INFO -   Impacto: CRITICAL
+2025-07-24 20:15:47,547 - INFO -   Recomendado para proyecto: NO
+2025-07-24 20:15:47,547 - INFO - LINEAR_MODELS:
+2025-07-24 20:15:47,547 - INFO -   Escalado requerido: SÍ
+2025-07-24 20:15:47,547 - INFO -   Impacto: HIGH
+2025-07-24 20:15:47,547 - INFO -   Recomendado para proyecto: NO
+2025-07-24 20:15:47,547 - INFO - NEURAL_NETWORKS:
+2025-07-24 20:15:47,547 - INFO -   Escalado requerido: SÍ
+2025-07-24 20:15:47,547 - INFO -   Impacto: CRITICAL
+2025-07-24 20:15:47,548 - INFO -   Recomendado para proyecto: NO
+2025-07-24 20:15:47,548 - INFO - ENSEMBLE_METHODS:
+2025-07-24 20:15:47,548 - INFO -   Escalado requerido: NO
+2025-07-24 20:15:47,548 - INFO -   Impacto: DEPENDS
+2025-07-24 20:15:47,548 - INFO -   Recomendado para proyecto: SÍ
+2025-07-24 20:15:47,548 - INFO - EVALUANDO IMPACTO DE NORMALIZACION
+2025-07-24 20:15:47,548 - INFO - ========================================
+2025-07-24 20:15:47,564 - INFO - Ratio de rangos: 4342.40
+2025-07-24 20:15:47,564 - INFO - Recomendación: HIGH
+2025-07-24 20:15:47,564 - INFO - GENERANDO MATRIZ DE DECISION
+2025-07-24 20:15:47,564 - INFO - ========================================
+2025-07-24 20:15:47,565 - INFO - Score de decisión: -10
+2025-07-24 20:15:47,565 - INFO - Recomendación final: DO NOT NORMALIZE
+2025-07-24 20:15:47,565 - INFO - GENERANDO VISUALIZACIONES COMPARATIVAS
+2025-07-24 20:15:47,565 - INFO - ==================================================
+2025-07-24 20:15:49,682 - INFO - Visualizaciones generadas exitosamente
+2025-07-24 20:15:49,683 - ERROR - ERROR EN EL PROCESO: Invalid format specifier ' 1.0, 1: 2.5' for object of type 'int'
+2025-07-24 20:18:47,831 - INFO - INICIANDO PASO 5: ANALISIS DE NECESIDAD DE NORMALIZACION
+2025-07-24 20:18:47,831 - INFO - ======================================================================
+2025-07-24 20:18:47,832 - INFO - Archivo del Paso 2 encontrado: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-24 20:18:47,846 - INFO - Dataset cargado exitosamente desde: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-24 20:18:47,847 - INFO - Codificacion utilizada: utf-8-sig
+2025-07-24 20:18:47,847 - INFO - Dimensiones: 7043 filas x 41 columnas
+2025-07-24 20:18:47,847 - INFO - ANALIZANDO TIPOS DE VARIABLES Y ESCALAS
+2025-07-24 20:18:47,848 - INFO - ==================================================
+2025-07-24 20:18:47,861 - INFO - Total de características: 40
+2025-07-24 20:18:47,862 - INFO - Variables numéricas: 40
+2025-07-24 20:18:47,862 - INFO - Variables binarias (0/1): 27
+2025-07-24 20:18:47,862 - INFO - Variables categóricas encoded: 9
+2025-07-24 20:18:47,863 - INFO - Variables numéricas originales: 4
+2025-07-24 20:18:47,863 - INFO - 
+Análisis por variable:
+2025-07-24 20:18:47,863 - INFO -   Ciudadano_Mayor: binary_encoded, Rango: 1.00, CV: 2.273
+2025-07-24 20:18:47,864 - INFO -   Meses_Cliente: original_numeric, Rango: 72.00, CV: 0.759
+2025-07-24 20:18:47,864 - INFO -   Cargo_Total: original_numeric, Rango: 118.75, CV: 0.466
+2025-07-24 20:18:47,864 - INFO -   Facturacion_Mensual: original_numeric, Rango: 8684.80, CV: 0.994
+2025-07-24 20:18:47,864 - INFO -   Genero_encoded: binary_encoded, Rango: 1.00, CV: 0.991
+2025-07-24 20:18:47,865 - INFO -   Tiene_Pareja_encoded: binary_encoded, Rango: 1.00, CV: 1.035
+2025-07-24 20:18:47,865 - INFO -   Tiene_Dependientes_encoded: binary_encoded, Rango: 1.00, CV: 1.529
+2025-07-24 20:18:47,865 - INFO -   Lineas_Multiples_No: binary_encoded, Rango: 1.00, CV: 1.038
+2025-07-24 20:18:47,866 - INFO -   Lineas_Multiples_No phone service: binary_encoded, Rango: 1.00, CV: 3.054
+2025-07-24 20:18:47,866 - INFO -   Lineas_Multiples_Sí: binary_encoded, Rango: 1.00, CV: 1.171
+2025-07-24 20:18:47,866 - INFO -   Lineas_Multiples_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:18:47,867 - INFO -   Servicio_Internet_DSL: binary_encoded, Rango: 1.00, CV: 1.382
+2025-07-24 20:18:47,867 - INFO -   Servicio_Internet_Fibra Óptica: binary_encoded, Rango: 1.00, CV: 1.129
+2025-07-24 20:18:47,867 - INFO -   Servicio_Internet_No: binary_encoded, Rango: 1.00, CV: 1.902
+2025-07-24 20:18:47,867 - INFO -   Servicio_Internet_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:18:47,868 - INFO -   Seguridad_Online_No: binary_encoded, Rango: 1.00, CV: 1.007
+2025-07-24 20:18:47,868 - INFO -   Seguridad_Online_Sí: binary_encoded, Rango: 1.00, CV: 1.578
+2025-07-24 20:18:47,868 - INFO -   Seguridad_Online_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:18:47,868 - INFO -   Respaldo_Online_No: binary_encoded, Rango: 1.00, CV: 1.132
+2025-07-24 20:18:47,868 - INFO -   Respaldo_Online_Sí: binary_encoded, Rango: 1.00, CV: 1.378
+2025-07-24 20:18:47,869 - INFO -   Respaldo_Online_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:18:47,869 - INFO -   Proteccion_Dispositivo_No: binary_encoded, Rango: 1.00, CV: 1.130
+2025-07-24 20:18:47,869 - INFO -   Proteccion_Dispositivo_Sí: binary_encoded, Rango: 1.00, CV: 1.381
+2025-07-24 20:18:47,869 - INFO -   Proteccion_Dispositivo_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:18:47,869 - INFO -   Soporte_Tecnico_No: binary_encoded, Rango: 1.00, CV: 1.014
+2025-07-24 20:18:47,870 - INFO -   Soporte_Tecnico_Sí: binary_encoded, Rango: 1.00, CV: 1.564
+2025-07-24 20:18:47,870 - INFO -   Soporte_Tecnico_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:18:47,870 - INFO -   TV_Streaming_No: binary_encoded, Rango: 1.00, CV: 1.227
+2025-07-24 20:18:47,870 - INFO -   TV_Streaming_Sí: binary_encoded, Rango: 1.00, CV: 1.266
+2025-07-24 20:18:47,870 - INFO -   TV_Streaming_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:18:47,871 - INFO -   Peliculas_Streaming_No: binary_encoded, Rango: 1.00, CV: 1.237
+2025-07-24 20:18:47,871 - INFO -   Peliculas_Streaming_Sí: binary_encoded, Rango: 1.00, CV: 1.256
+2025-07-24 20:18:47,871 - INFO -   Peliculas_Streaming_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:18:47,871 - INFO -   Tipo_Contrato_encoded: original_numeric, Rango: 2.00, CV: 1.208
+2025-07-24 20:18:47,872 - INFO -   Facturacion_Digital_encoded: binary_encoded, Rango: 1.00, CV: 0.830
+2025-07-24 20:18:47,872 - INFO -   Metodo_Pago_Cheque Electrónico: binary_encoded, Rango: 1.00, CV: 1.407
+2025-07-24 20:18:47,872 - INFO -   Metodo_Pago_Cheque Postal: binary_encoded, Rango: 1.00, CV: 1.836
+2025-07-24 20:18:47,872 - INFO -   Metodo_Pago_Tarjeta de Crédito: binary_encoded, Rango: 1.00, CV: 1.905
+2025-07-24 20:18:47,873 - INFO -   Metodo_Pago_Transferencia Bancaria: binary_encoded, Rango: 1.00, CV: 1.887
+2025-07-24 20:18:47,873 - INFO -   Metodo_Pago_nan: categorical_encoded, Rango: 0.00, CV: 0.000
+2025-07-24 20:18:47,873 - INFO - ANALIZANDO REQUERIMIENTOS POR ALGORITMO
+2025-07-24 20:18:47,873 - INFO - ==================================================
+2025-07-24 20:18:47,873 - INFO - TREE_BASED:
+2025-07-24 20:18:47,873 - INFO -   Escalado requerido: NO
+2025-07-24 20:18:47,874 - INFO -   Impacto: NONE
+2025-07-24 20:18:47,874 - INFO -   Recomendado para proyecto: SÍ
+2025-07-24 20:18:47,874 - INFO - DISTANCE_BASED:
+2025-07-24 20:18:47,874 - INFO -   Escalado requerido: SÍ
+2025-07-24 20:18:47,874 - INFO -   Impacto: CRITICAL
+2025-07-24 20:18:47,874 - INFO -   Recomendado para proyecto: NO
+2025-07-24 20:18:47,874 - INFO - LINEAR_MODELS:
+2025-07-24 20:18:47,874 - INFO -   Escalado requerido: SÍ
+2025-07-24 20:18:47,874 - INFO -   Impacto: HIGH
+2025-07-24 20:18:47,875 - INFO -   Recomendado para proyecto: NO
+2025-07-24 20:18:47,875 - INFO - NEURAL_NETWORKS:
+2025-07-24 20:18:47,875 - INFO -   Escalado requerido: SÍ
+2025-07-24 20:18:47,875 - INFO -   Impacto: CRITICAL
+2025-07-24 20:18:47,875 - INFO -   Recomendado para proyecto: NO
+2025-07-24 20:18:47,875 - INFO - ENSEMBLE_METHODS:
+2025-07-24 20:18:47,875 - INFO -   Escalado requerido: NO
+2025-07-24 20:18:47,875 - INFO -   Impacto: DEPENDS
+2025-07-24 20:18:47,875 - INFO -   Recomendado para proyecto: SÍ
+2025-07-24 20:18:47,876 - INFO - EVALUANDO IMPACTO DE NORMALIZACION
+2025-07-24 20:18:47,876 - INFO - ========================================
+2025-07-24 20:18:47,892 - INFO - Ratio de rangos: 4342.40
+2025-07-24 20:18:47,892 - INFO - Recomendación: HIGH
+2025-07-24 20:18:47,892 - INFO - GENERANDO MATRIZ DE DECISION
+2025-07-24 20:18:47,892 - INFO - ========================================
+2025-07-24 20:18:47,893 - INFO - Score de decisión: -10
+2025-07-24 20:18:47,893 - INFO - Recomendación final: DO NOT NORMALIZE
+2025-07-24 20:18:47,893 - INFO - GENERANDO VISUALIZACIONES COMPARATIVAS
+2025-07-24 20:18:47,893 - INFO - ==================================================
+2025-07-24 20:18:50,009 - INFO - Visualizaciones generadas exitosamente
+2025-07-24 20:18:50,011 - INFO - Informe guardado: informes/paso5_analisis_normalizacion_informe_20250724_201847.txt
+2025-07-24 20:18:50,011 - INFO - ======================================================================
+2025-07-24 20:18:50,011 - INFO - PROCESO COMPLETADO EXITOSAMENTE
+2025-07-24 20:18:50,011 - INFO - Decision final: DO NOT NORMALIZE
+2025-07-24 20:18:50,012 - INFO - Confianza: HIGH
+2025-07-24 20:18:50,012 - INFO - Variables ya normalizadas: 36
+2025-07-24 20:18:50,012 - INFO - Variables numericas originales: 4
+2025-07-24 20:18:50,012 - INFO - Algoritmos compatibles: Tree-based (Random Forest, XGBoost)
+2025-07-24 20:18:50,012 - INFO - Informe generado: informes/paso5_analisis_normalizacion_informe_20250724_201847.txt
+2025-07-24 20:18:50,012 - INFO - ======================================================================

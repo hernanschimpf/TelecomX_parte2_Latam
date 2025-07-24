@@ -1,0 +1,157 @@
+{
+  "algorithm_configs": {
+    "random_forest": {
+      "sklearn_params": {
+        "conservative": {
+          "class_weight": {
+            "0": 1.0,
+            "1": 2.7683253076511503
+          }
+        },
+        "balanced": {
+          "class_weight": "balanced"
+        },
+        "custom": {
+          "class_weight": {
+            "0": 1,
+            "1": 2.5
+          }
+        }
+      },
+      "recommended": "conservative",
+      "notes": "Random Forest maneja bien el desbalance. Conservative weighting recomendado."
+    },
+    "xgboost": {
+      "scale_pos_weight": {
+        "conservative": 2.7683253076511503,
+        "balanced": 2.7683253076511503,
+        "sqrt": 1.6638285090871445
+      },
+      "recommended": "conservative",
+      "notes": "XGBoost usa scale_pos_weight. Valor 2.5-3.0 óptimo para tu caso."
+    },
+    "lightgbm": {
+      "sklearn_params": {
+        "conservative": {
+          "class_weight": {
+            "0": 1.0,
+            "1": 2.7683253076511503
+          }
+        },
+        "balanced": {
+          "class_weight": "balanced"
+        },
+        "is_unbalance": {
+          "is_unbalance": true
+        }
+      },
+      "recommended": "conservative",
+      "notes": "LightGBM tiene parámetro is_unbalance específico para desbalance."
+    },
+    "logistic_regression": {
+      "sklearn_params": {
+        "conservative": {
+          "class_weight": {
+            "0": 1.0,
+            "1": 2.7683253076511503
+          }
+        },
+        "balanced": {
+          "class_weight": "balanced"
+        },
+        "custom": {
+          "class_weight": {
+            "0": 1,
+            "1": 2.8
+          }
+        }
+      },
+      "recommended": "balanced",
+      "notes": "Logistic Regression sensible a desbalance. Balanced weighting recomendado."
+    },
+    "svm": {
+      "sklearn_params": {
+        "conservative": {
+          "class_weight": {
+            "0": 1.0,
+            "1": 2.7683253076511503
+          }
+        },
+        "balanced": {
+          "class_weight": "balanced"
+        }
+      },
+      "recommended": "balanced",
+      "notes": "SVM muy sensible a desbalance. Siempre usar class_weight."
+    },
+    "gradient_boosting": {
+      "sklearn_params": {
+        "conservative": {
+          "class_weight": {
+            "0": 1.0,
+            "1": 2.7683253076511503
+          }
+        },
+        "custom": {
+          "class_weight": {
+            "0": 1,
+            "1": 2.5
+          }
+        }
+      },
+      "recommended": "conservative",
+      "notes": "Gradient Boosting robusto. Conservative weighting suficiente."
+    }
+  },
+  "metrics_config": {
+    "primary_metrics": [
+      "f1_score",
+      "roc_auc",
+      "average_precision",
+      "balanced_accuracy"
+    ],
+    "secondary_metrics": [
+      "precision",
+      "recall",
+      "accuracy"
+    ],
+    "business_metrics": [
+      "precision_at_recall_70",
+      "recall_at_precision_80",
+      "false_positive_rate",
+      "false_negative_rate"
+    ],
+    "metric_priorities": {
+      "f1_score": "HIGH",
+      "average_precision": "HIGH",
+      "recall": "HIGH",
+      "roc_auc": "MEDIUM",
+      "precision": "MEDIUM",
+      "accuracy": "LOW"
+    },
+    "target_thresholds": {
+      "f1_score": 0.6,
+      "average_precision": 0.65,
+      "recall": 0.7,
+      "precision": 0.6,
+      "roc_auc": 0.75
+    }
+  },
+  "pipeline_info": {
+    "split_info": {
+      "train_size": 4225,
+      "val_size": 1409,
+      "test_size": 1409,
+      "train_churn_rate": 0.26532544378698225,
+      "val_churn_rate": 0.2654364797728886,
+      "test_churn_rate": 0.2654364797728886
+    },
+    "cv_strategy": {
+      "method": "StratifiedKFold",
+      "n_splits": 5,
+      "shuffle": true,
+      "random_state": 42
+    }
+  },
+  "timestamp": "20250724_194446"
+}

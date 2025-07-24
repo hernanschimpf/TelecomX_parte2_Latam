@@ -1,0 +1,91 @@
+2025-07-24 20:37:57,587 - INFO - INICIANDO PASO 6: ANALISIS DE CORRELACION
+2025-07-24 20:37:57,588 - INFO - ======================================================================
+2025-07-24 20:37:57,588 - INFO - Archivo del Paso 2 encontrado: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-24 20:37:57,603 - INFO - Dataset cargado exitosamente desde: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-24 20:37:57,604 - INFO - Codificacion utilizada: utf-8-sig
+2025-07-24 20:37:57,604 - INFO - Dimensiones: 7043 filas x 41 columnas
+2025-07-24 20:37:57,607 - INFO - VERIFICANDO VARIABLE OBJETIVO
+2025-07-24 20:37:57,607 - INFO - ========================================
+2025-07-24 20:37:57,608 - INFO - Variable objetivo verificada: 2 valores únicos
+2025-07-24 20:37:57,608 - INFO - Valores: [np.int64(0), np.int64(1)]
+2025-07-24 20:37:57,608 - INFO - CALCULANDO MATRIZ DE CORRELACION
+2025-07-24 20:37:57,608 - INFO - ========================================
+2025-07-24 20:37:57,609 - INFO - Variables numéricas encontradas: 41
+2025-07-24 20:37:57,610 - INFO - Variables: ['Abandono_Cliente', 'Ciudadano_Mayor', 'Meses_Cliente', 'Cargo_Total', 'Facturacion_Mensual', 'Genero_encoded', 'Tiene_Pareja_encoded', 'Tiene_Dependientes_encoded', 'Lineas_Multiples_No', 'Lineas_Multiples_No phone service', 'Lineas_Multiples_Sí', 'Lineas_Multiples_nan', 'Servicio_Internet_DSL', 'Servicio_Internet_Fibra Óptica', 'Servicio_Internet_No', 'Servicio_Internet_nan', 'Seguridad_Online_No', 'Seguridad_Online_Sí', 'Seguridad_Online_nan', 'Respaldo_Online_No', 'Respaldo_Online_Sí', 'Respaldo_Online_nan', 'Proteccion_Dispositivo_No', 'Proteccion_Dispositivo_Sí', 'Proteccion_Dispositivo_nan', 'Soporte_Tecnico_No', 'Soporte_Tecnico_Sí', 'Soporte_Tecnico_nan', 'TV_Streaming_No', 'TV_Streaming_Sí', 'TV_Streaming_nan', 'Peliculas_Streaming_No', 'Peliculas_Streaming_Sí', 'Peliculas_Streaming_nan', 'Tipo_Contrato_encoded', 'Facturacion_Digital_encoded', 'Metodo_Pago_Cheque Electrónico', 'Metodo_Pago_Cheque Postal', 'Metodo_Pago_Tarjeta de Crédito', 'Metodo_Pago_Transferencia Bancaria', 'Metodo_Pago_nan']
+2025-07-24 20:37:57,635 - INFO - Matriz de correlación calculada exitosamente
+2025-07-24 20:37:57,636 - INFO - Dimensiones: (41, 41)
+2025-07-24 20:37:57,636 - INFO - ANALIZANDO CORRELACIONES CON VARIABLE OBJETIVO
+2025-07-24 20:37:57,636 - INFO - ==================================================
+2025-07-24 20:37:57,640 - INFO - Umbral de significancia: |r| >= 0.3
+2025-07-24 20:37:57,640 - INFO - Variables con correlación significativa: 6
+2025-07-24 20:37:57,640 - INFO - Correlaciones positivas significativas: 4
+2025-07-24 20:37:57,640 - INFO - Correlaciones negativas significativas: 2
+2025-07-24 20:37:57,640 - INFO - Predictor más fuerte: Tipo_Contrato_encoded
+2025-07-24 20:37:57,641 - INFO - Correlación: 0.3967
+2025-07-24 20:37:57,641 - INFO - 
+Top 10 correlaciones con Abandono_Cliente:
+2025-07-24 20:37:57,641 - INFO -    1. Tipo_Contrato_encoded: -0.3967 (negativa)
+2025-07-24 20:37:57,642 - INFO -    2. Meses_Cliente: -0.3522 (negativa)
+2025-07-24 20:37:57,642 - INFO -    3. Seguridad_Online_No: +0.3426 (positiva)
+2025-07-24 20:37:57,642 - INFO -    4. Soporte_Tecnico_No: +0.3373 (positiva)
+2025-07-24 20:37:57,642 - INFO -    5. Servicio_Internet_Fibra Óptica: +0.3080 (positiva)
+2025-07-24 20:37:57,643 - INFO -    6. Metodo_Pago_Cheque Electrónico: +0.3019 (positiva)
+2025-07-24 20:37:57,643 - INFO -    7. Respaldo_Online_No: +0.2680 (positiva)
+2025-07-24 20:37:57,643 - INFO -    8. Proteccion_Dispositivo_No: +0.2525 (positiva)
+2025-07-24 20:37:57,643 - INFO -    9. Servicio_Internet_No: -0.2279 (negativa)
+2025-07-24 20:37:57,643 - INFO -   10. Facturacion_Mensual: -0.1983 (negativa)
+2025-07-24 20:37:57,643 - INFO - DETECTANDO MULTICOLINEALIDAD
+2025-07-24 20:37:57,644 - INFO - ===================================
+2025-07-24 20:37:57,688 - INFO - Umbral de multicolinealidad: |r| >= 0.8
+2025-07-24 20:37:57,688 - INFO - Pares con alta correlación: 2
+2025-07-24 20:37:57,689 - INFO - Variables problemáticas: 4
+2025-07-24 20:37:57,689 - INFO - 
+Pares con multicolinealidad detectada:
+2025-07-24 20:37:57,689 - INFO -   1. Meses_Cliente ↔ Facturacion_Mensual: +0.8262
+2025-07-24 20:37:57,689 - INFO -   2. Lineas_Multiples_No ↔ Lineas_Multiples_Sí: -0.8229
+2025-07-24 20:37:57,690 - INFO - GENERANDO RECOMENDACIONES DE VARIABLES
+2025-07-24 20:37:57,690 - INFO - =============================================
+2025-07-24 20:37:57,691 - INFO - Variables de alta prioridad: 5
+2025-07-24 20:37:57,691 - INFO - Variables de prioridad media: 15
+2025-07-24 20:37:57,692 - INFO - Variables de baja prioridad: 16
+2025-07-24 20:37:57,693 - INFO - Variables a considerar eliminación: 4
+2025-07-24 20:37:57,694 - INFO - 
+Variables de ALTA PRIORIDAD:
+2025-07-24 20:37:57,695 - INFO -   • Servicio_Internet_Fibra Óptica
+2025-07-24 20:37:57,695 - INFO -   • Seguridad_Online_No
+2025-07-24 20:37:57,695 - INFO -   • Soporte_Tecnico_No
+2025-07-24 20:37:57,695 - INFO -   • Tipo_Contrato_encoded
+2025-07-24 20:37:57,695 - INFO -   • Metodo_Pago_Cheque Electrónico
+2025-07-24 20:37:57,696 - INFO - 
+Variables a CONSIDERAR ELIMINACIÓN:
+2025-07-24 20:37:57,696 - INFO -   • Meses_Cliente
+2025-07-24 20:37:57,696 - INFO -   • Facturacion_Mensual
+2025-07-24 20:37:57,696 - INFO -   • Lineas_Multiples_No
+2025-07-24 20:37:57,697 - INFO -   • Lineas_Multiples_Sí
+2025-07-24 20:37:57,697 - INFO - GENERANDO LISTA OPTIMIZADA DE VARIABLES
+2025-07-24 20:37:57,697 - INFO - ==================================================
+2025-07-24 20:37:57,701 - INFO - Configuraciones generadas:
+2025-07-24 20:37:57,701 - INFO -   full_features: 40 variables - Todas las variables disponibles
+2025-07-24 20:37:57,701 - INFO -   optimized_features: 20 variables - Variables con correlación significativa (alta y media prioridad)
+2025-07-24 20:37:57,702 - INFO -   high_priority_only: 5 variables - Solo variables de alta prioridad (correlación >= 0.3)
+2025-07-24 20:37:57,702 - INFO -   top_10_features: 10 variables - Top 10 variables más correlacionadas con target
+2025-07-24 20:37:57,702 - INFO - 
+Configuración recomendada: optimized_features
+2025-07-24 20:37:57,702 - INFO - Reducción de dimensionalidad: 50.0%
+2025-07-24 20:37:57,702 - INFO - GENERANDO VISUALIZACIONES DE CORRELACION
+2025-07-24 20:37:57,702 - INFO - ==================================================
+2025-07-24 20:38:00,872 - INFO - Todas las visualizaciones generadas exitosamente
+2025-07-24 20:38:00,874 - INFO - Informe guardado: informes/paso6_analisis_correlacion_informe_20250724_203757.txt
+2025-07-24 20:38:00,875 - INFO - Configuraciones guardadas: informes/paso6_configuraciones_optimizadas_20250724_203757.json
+2025-07-24 20:38:00,875 - INFO - ======================================================================
+2025-07-24 20:38:00,875 - INFO - PROCESO COMPLETADO EXITOSAMENTE
+2025-07-24 20:38:00,875 - INFO - Variables analizadas: 41
+2025-07-24 20:38:00,875 - INFO - Correlaciones significativas: 6
+2025-07-24 20:38:00,875 - INFO - Predictor más fuerte: Tipo_Contrato_encoded
+2025-07-24 20:38:00,876 - INFO - Correlación más fuerte: 0.3967
+2025-07-24 20:38:00,876 - INFO - Pares multicolineales: 2
+2025-07-24 20:38:00,876 - INFO - Variables optimizadas: 20
+2025-07-24 20:38:00,876 - INFO - Reducción: 50.0%
+2025-07-24 20:38:00,876 - INFO - Informe generado: informes/paso6_analisis_correlacion_informe_20250724_203757.txt
+2025-07-24 20:38:00,876 - INFO - Configuraciones: informes/paso6_configuraciones_optimizadas_20250724_203757.json
+2025-07-24 20:38:00,876 - INFO - ======================================================================

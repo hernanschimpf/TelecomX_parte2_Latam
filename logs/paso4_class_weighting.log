@@ -1,0 +1,69 @@
+2025-07-24 19:44:46,114 - INFO - INICIANDO PASO 4: CONFIGURACION DE CLASS WEIGHTING
+2025-07-24 19:44:46,114 - INFO - ======================================================================
+2025-07-24 19:44:46,115 - INFO - Archivo del Paso 2 encontrado: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-24 19:44:46,129 - INFO - Dataset cargado exitosamente desde: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-07-24 19:44:46,129 - INFO - Codificacion utilizada: utf-8-sig
+2025-07-24 19:44:46,130 - INFO - Dimensiones: 7043 filas x 41 columnas
+2025-07-24 19:44:46,131 - INFO - ANALIZANDO DISTRIBUCION ACTUAL DE CLASES
+2025-07-24 19:44:46,132 - INFO - ==================================================
+2025-07-24 19:44:46,133 - INFO - Total de muestras: 7,043
+2025-07-24 19:44:46,134 - INFO - Clase 0 (No Churn): 5,174 (73.5%)
+2025-07-24 19:44:46,134 - INFO - Clase 1 (Churn): 1,869 (26.5%)
+2025-07-24 19:44:46,134 - INFO - Ratio de desbalance: 2.77:1
+2025-07-24 19:44:46,134 - INFO - Clase minoritaria: 1
+2025-07-24 19:44:46,135 - INFO - CALCULANDO ESTRATEGIAS DE CLASS WEIGHTING
+2025-07-24 19:44:46,135 - INFO - ==================================================
+2025-07-24 19:44:46,135 - INFO - Estrategias de class weighting calculadas:
+2025-07-24 19:44:46,135 - INFO -   balanced: Clase 0 = 0.681, Clase 1 = 1.884 (Ratio: 1.88:1)
+2025-07-24 19:44:46,136 - INFO -   inverse: Clase 0 = 1.000, Clase 1 = 2.768 (Ratio: 2.77:1)
+2025-07-24 19:44:46,136 - INFO -   sqrt: Clase 0 = 1.000, Clase 1 = 1.664 (Ratio: 1.66:1)
+2025-07-24 19:44:46,136 - INFO -   conservative: Clase 0 = 1.000, Clase 1 = 2.768 (Ratio: 2.77:1)
+2025-07-24 19:44:46,136 - INFO -   log: Clase 0 = 1.000, Clase 1 = 2.018 (Ratio: 2.02:1)
+2025-07-24 19:44:46,136 - INFO - GENERANDO CONFIGURACIONES POR ALGORITMO
+2025-07-24 19:44:46,136 - INFO - ==================================================
+2025-07-24 19:44:46,137 - INFO - RANDOM_FOREST:
+2025-07-24 19:44:46,137 - INFO -   Configuración recomendada: conservative
+2025-07-24 19:44:46,137 - INFO -   Notas: Random Forest maneja bien el desbalance. Conservative weighting recomendado.
+2025-07-24 19:44:46,137 - INFO - XGBOOST:
+2025-07-24 19:44:46,138 - INFO -   Configuración recomendada: conservative
+2025-07-24 19:44:46,138 - INFO -   Notas: XGBoost usa scale_pos_weight. Valor 2.5-3.0 óptimo para tu caso.
+2025-07-24 19:44:46,138 - INFO - LIGHTGBM:
+2025-07-24 19:44:46,139 - INFO -   Configuración recomendada: conservative
+2025-07-24 19:44:46,139 - INFO -   Notas: LightGBM tiene parámetro is_unbalance específico para desbalance.
+2025-07-24 19:44:46,139 - INFO - LOGISTIC_REGRESSION:
+2025-07-24 19:44:46,140 - INFO -   Configuración recomendada: balanced
+2025-07-24 19:44:46,140 - INFO -   Notas: Logistic Regression sensible a desbalance. Balanced weighting recomendado.
+2025-07-24 19:44:46,140 - INFO - SVM:
+2025-07-24 19:44:46,141 - INFO -   Configuración recomendada: balanced
+2025-07-24 19:44:46,141 - INFO -   Notas: SVM muy sensible a desbalance. Siempre usar class_weight.
+2025-07-24 19:44:46,141 - INFO - GRADIENT_BOOSTING:
+2025-07-24 19:44:46,141 - INFO -   Configuración recomendada: conservative
+2025-07-24 19:44:46,142 - INFO -   Notas: Gradient Boosting robusto. Conservative weighting suficiente.
+2025-07-24 19:44:46,142 - INFO - CONFIGURANDO METRICAS DE EVALUACION
+2025-07-24 19:44:46,142 - INFO - ========================================
+2025-07-24 19:44:46,142 - INFO - Métricas primarias configuradas:
+2025-07-24 19:44:46,143 - INFO -   f1_score: Prioridad HIGH, Objetivo 0.6
+2025-07-24 19:44:46,143 - INFO -   roc_auc: Prioridad MEDIUM, Objetivo 0.75
+2025-07-24 19:44:46,143 - INFO -   average_precision: Prioridad HIGH, Objetivo 0.65
+2025-07-24 19:44:46,143 - INFO -   balanced_accuracy: Prioridad MEDIUM, Objetivo N/A
+2025-07-24 19:44:46,144 - INFO - CREANDO PIPELINE DE EVALUACION
+2025-07-24 19:44:46,144 - INFO - ========================================
+2025-07-24 19:44:46,163 - INFO - Configuración de splits:
+2025-07-24 19:44:46,163 - INFO -   Train: 4,225 muestras (26.5% churn)
+2025-07-24 19:44:46,164 - INFO -   Validation: 1,409 muestras (26.5% churn)
+2025-07-24 19:44:46,164 - INFO -   Test: 1,409 muestras (26.5% churn)
+2025-07-24 19:44:46,165 - INFO -   Validación cruzada: 5 folds estratificados
+2025-07-24 19:44:46,165 - INFO - GENERANDO VISUALIZACIONES DE CLASS WEIGHTING
+2025-07-24 19:44:46,165 - INFO - ==================================================
+2025-07-24 19:44:47,188 - INFO - Visualizaciones generadas exitosamente
+2025-07-24 19:44:47,189 - INFO - Informe guardado: informes/paso4_configuracion_class_weighting_informe_20250724_194446.txt
+2025-07-24 19:44:47,191 - INFO - Configuraciones guardadas: informes/paso4_configuraciones_20250724_194446.json
+2025-07-24 19:44:47,191 - INFO - ======================================================================
+2025-07-24 19:44:47,191 - INFO - PROCESO COMPLETADO EXITOSAMENTE
+2025-07-24 19:44:47,192 - INFO - Ratio de desbalance: 2.77:1
+2025-07-24 19:44:47,192 - INFO - Enfoque: Conservador con class weighting
+2025-07-24 19:44:47,192 - INFO - Configuraciones generadas: 6 algoritmos
+2025-07-24 19:44:47,192 - INFO - Estrategias de weighting: 5
+2025-07-24 19:44:47,192 - INFO - Informe generado: informes/paso4_configuracion_class_weighting_informe_20250724_194446.txt
+2025-07-24 19:44:47,192 - INFO - Configuraciones JSON: informes/paso4_configuraciones_20250724_194446.json
+2025-07-24 19:44:47,193 - INFO - ======================================================================

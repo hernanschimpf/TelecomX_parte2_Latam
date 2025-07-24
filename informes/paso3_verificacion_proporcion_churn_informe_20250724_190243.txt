@@ -2,7 +2,7 @@
 ================================================================================
 TELECOMX - INFORME DE VERIFICACIÓN DE PROPORCIÓN DE CHURN
 ================================================================================
-Fecha y Hora: 20250722_195525
+Fecha y Hora: 20250724_190243
 Paso: 3 - Verificación de la Proporción de Cancelación (Churn)
 
 ================================================================================
@@ -215,13 +215,13 @@ ARCHIVOS GENERADOS
 ================================================================================
 
 📊 VISUALIZACIONES:
-• Gráfico de barras: graficos/paso3_distribucion_churn_barras_20250722_195525.png
-• Gráfico circular: graficos/paso3_distribucion_churn_circular_20250722_195525.png
-• Histograma: graficos/paso3_distribucion_churn_histograma_20250722_195525.png
-• Análisis completo: graficos/paso3_analisis_completo_churn_20250722_195525.png
+• Gráfico de barras: graficos/paso3_distribucion_churn_barras_20250724_190243.png
+• Gráfico circular: graficos/paso3_distribucion_churn_circular_20250724_190243.png
+• Histograma: graficos/paso3_distribucion_churn_histograma_20250724_190243.png
+• Análisis completo: graficos/paso3_analisis_completo_churn_20250724_190243.png
 
 📄 DOCUMENTACIÓN:
-• Informe completo: informes/paso3_verificacion_proporcion_churn_informe_20250722_195525.txt
+• Informe completo: informes/paso3_verificacion_proporcion_churn_informe_20250724_190243.txt
 • Log del proceso: logs/paso3_verificacion_churn.log
 
 ================================================================================

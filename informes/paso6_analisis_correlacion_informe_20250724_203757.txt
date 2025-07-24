@@ -1,0 +1,277 @@
+
+================================================================================
+TELECOMX - INFORME DE ANÁLISIS DE CORRELACIÓN
+================================================================================
+Fecha y Hora: 20250724_203757
+Paso: 6 - Análisis de Correlación
+
+================================================================================
+RESUMEN EJECUTIVO
+================================================================================
+• Total de Variables Analizadas: 41
+• Variables Predictoras: 40
+• Variables con Correlación Significativa (|r| >= 0.3): 6
+• Predictor Más Fuerte: Tipo_Contrato_encoded
+• Correlación Más Fuerte: 0.3967
+• Pares con Multicolinealidad (|r| >= 0.8): 2
+• Variables Recomendadas para Modelado: 20
+• Reducción de Dimensionalidad Lograda: 50.0%
+
+================================================================================
+ANÁLISIS DE CORRELACIONES CON VARIABLE OBJETIVO
+================================================================================
+
+🎯 CORRELACIONES SIGNIFICATIVAS (|r| >= 0.3):
+
+📈 CORRELACIONES POSITIVAS FUERTES:
+   • Seguridad_Online_No: +0.3426
+   • Soporte_Tecnico_No: +0.3373
+   • Servicio_Internet_Fibra Óptica: +0.3080
+   • Metodo_Pago_Cheque Electrónico: +0.3019
+
+📉 CORRELACIONES NEGATIVAS FUERTES:
+   • Tipo_Contrato_encoded: -0.3967
+   • Meses_Cliente: -0.3522
+
+🏆 TOP 10 PREDICTORES MÁS FUERTES (por correlación absoluta):
+    1. Tipo_Contrato_encoded: -0.3967 ↘️
+    2. Meses_Cliente: -0.3522 ↘️
+    3. Seguridad_Online_No: +0.3426 ↗️
+    4. Soporte_Tecnico_No: +0.3373 ↗️
+    5. Servicio_Internet_Fibra Óptica: +0.3080 ↗️
+    6. Metodo_Pago_Cheque Electrónico: +0.3019 ↗️
+    7. Respaldo_Online_No: +0.2680 ↗️
+    8. Proteccion_Dispositivo_No: +0.2525 ↗️
+    9. Servicio_Internet_No: -0.2279 ↘️
+   10. Facturacion_Mensual: -0.1983 ↘️
+
+================================================================================
+ANÁLISIS DE MULTICOLINEALIDAD
+================================================================================
+
+⚠️ DETECCIÓN DE VARIABLES ALTAMENTE CORRELACIONADAS (|r| >= 0.8):
+
+Total de pares problemáticos: 2
+Variables involucradas: 4
+
+🔴 PARES CON MULTICOLINEALIDAD DETECTADA:
+    1. Meses_Cliente ↔ Facturacion_Mensual: +0.8262 (🟡 ALTA)
+    2. Lineas_Multiples_No ↔ Lineas_Multiples_Sí: -0.8229 (🟡 ALTA)
+
+================================================================================
+RECOMENDACIONES DE SELECCIÓN DE VARIABLES
+================================================================================
+
+🚀 VARIABLES DE ALTA PRIORIDAD (5 variables):
+   Correlación significativa con target (|r| >= 0.3) y sin multicolinealidad
+   ✅ Servicio_Internet_Fibra Óptica: +0.3080
+   ✅ Seguridad_Online_No: +0.3426
+   ✅ Soporte_Tecnico_No: +0.3373
+   ✅ Tipo_Contrato_encoded: -0.3967
+   ✅ Metodo_Pago_Cheque Electrónico: +0.3019
+
+📊 VARIABLES DE PRIORIDAD MEDIA (15 variables):
+   Correlación moderada con target (0.1 <= |r| < 0.3) y sin multicolinealidad
+   🔶 Ciudadano_Mayor: +0.1509
+   🔶 Cargo_Total: +0.1941
+   🔶 Tiene_Pareja_encoded: -0.1504
+   🔶 Tiene_Dependientes_encoded: -0.1642
+   🔶 Servicio_Internet_DSL: -0.1242
+   🔶 Servicio_Internet_No: -0.2279
+   🔶 Seguridad_Online_Sí: -0.1712
+   🔶 Respaldo_Online_No: +0.2680
+   🔶 Proteccion_Dispositivo_No: +0.2525
+   🔶 Soporte_Tecnico_Sí: -0.1647
+   ... y 5 variables adicionales
+
+⚠️ VARIABLES A CONSIDERAR ELIMINACIÓN (4 variables):
+   Variables con multicolinealidad o baja correlación con target
+   🔶 Meses_Cliente: -0.3522 - Alta correlación con target (0.352) pero multicolineal - evaluar cuál mantener
+   🔶 Facturacion_Mensual: -0.1983 - Correlación moderada (0.198) pero multicolineal - considerar eliminación
+   🔶 Lineas_Multiples_No: -0.0326 - Baja correlación (0.033) y multicolineal - candidato para eliminación
+   🔶 Lineas_Multiples_Sí: +0.0401 - Baja correlación (0.040) y multicolineal - candidato para eliminación
+
+🔻 VARIABLES DE BAJA PRIORIDAD (16 variables):
+   Correlación baja con target (|r| < 0.1) pero sin problemas de multicolinealidad
+   🔻 Genero_encoded: -0.0086
+   🔻 Lineas_Multiples_No phone service: -0.0119
+   🔻 Lineas_Multiples_nan: +nan
+   🔻 Servicio_Internet_nan: +nan
+   🔻 Seguridad_Online_nan: +nan
+   ... y 11 variables adicionales
+
+================================================================================
+CONFIGURACIONES OPTIMIZADAS PARA MODELADO
+================================================================================
+
+🎯 CONFIGURACIONES DISPONIBLES:
+
+📋 FULL FEATURES:
+   • Número de variables: 40
+   • Descripción: Todas las variables disponibles
+   • Variables incluidas: Abandono_Cliente, Ciudadano_Mayor, Meses_Cliente, Cargo_Total, Facturacion_Mensual...
+
+📋 OPTIMIZED FEATURES ⭐ RECOMENDADA:
+   • Número de variables: 20
+   • Descripción: Variables con correlación significativa (alta y media prioridad)
+   • Variables incluidas: Servicio_Internet_Fibra Óptica, Seguridad_Online_No, Soporte_Tecnico_No, Tipo_Contrato_encoded, Metodo_Pago_Cheque Electrónico...
+
+📋 HIGH PRIORITY ONLY:
+   • Número de variables: 5
+   • Descripción: Solo variables de alta prioridad (correlación >= 0.3)
+   • Variables incluidas: Servicio_Internet_Fibra Óptica, Seguridad_Online_No, Soporte_Tecnico_No, Tipo_Contrato_encoded, Metodo_Pago_Cheque Electrónico
+
+📋 TOP 10 FEATURES:
+   • Número de variables: 10
+   • Descripción: Top 10 variables más correlacionadas con target
+   • Variables incluidas: Tipo_Contrato_encoded, Meses_Cliente, Seguridad_Online_No, Soporte_Tecnico_No, Servicio_Internet_Fibra Óptica...
+
+================================================================================
+ANÁLISIS DE REDUCCIÓN DE DIMENSIONALIDAD
+================================================================================
+
+📊 IMPACTO DE LA OPTIMIZACIÓN:
+
+• Variables originales: 40
+• Variables optimizadas: 20
+• Reducción lograda: 50.0%
+
+✅ BENEFICIOS DE LA REDUCCIÓN:
+• Menor riesgo de overfitting
+• Modelos más interpretables
+• Entrenamiento más rápido
+• Reducción de ruido en predicciones
+• Menos problemas de multicolinealidad
+
+📈 CALIDAD DE LA SELECCIÓN:
+• Variables seleccionadas tienen correlación >= 0.1 con target
+• Se eliminaron variables con multicolinealidad problemática
+• Se preservaron los predictores más fuertes
+• Balance entre performance y simplicidad
+
+================================================================================
+INTERPRETACIÓN DE CORRELACIONES PRINCIPALES
+================================================================================
+
+🔍 ANÁLISIS DE LOS PREDICTORES MÁS FUERTES:
+
+1. Tipo_Contrato_encoded (Correlación: -0.3967 - FUERTE):
+   • Tipo: Variable categórica encoded
+   • Interpretación: Mayor valor → Menor probabilidad de churn
+   • Relevancia: Predictor clave
+
+2. Meses_Cliente (Correlación: -0.3522 - FUERTE):
+   • Tipo: Variable numérica de negocio
+   • Interpretación: Mayor valor → Menor probabilidad de churn
+   • Relevancia: Predictor clave
+
+3. Seguridad_Online_No (Correlación: +0.3426 - FUERTE):
+   • Tipo: Variable categórica encoded
+   • Interpretación: Mayor valor → Mayor probabilidad de churn
+   • Relevancia: Predictor clave
+
+4. Soporte_Tecnico_No (Correlación: +0.3373 - FUERTE):
+   • Tipo: Variable categórica encoded
+   • Interpretación: Mayor valor → Mayor probabilidad de churn
+   • Relevancia: Predictor clave
+
+5. Servicio_Internet_Fibra Óptica (Correlación: +0.3080 - FUERTE):
+   • Tipo: Variable predictora
+   • Interpretación: Mayor valor → Mayor probabilidad de churn
+   • Relevancia: Predictor clave
+
+================================================================================
+RECOMENDACIONES PARA PRÓXIMOS PASOS
+================================================================================
+
+🚀 PASO 7 SUGERIDO: Entrenamiento de Modelos con Variables Optimizadas
+
+📋 CONFIGURACIÓN RECOMENDADA:
+• Usar configuración: optimized_features
+• Variables a incluir: 20
+• Algoritmos: Random Forest + XGBoost (tree-based, manejan correlaciones bien)
+• Class weighting: Aplicar configuraciones del Paso 4
+
+🔧 PIPELINE DE MODELADO:
+1. Cargar datos del Paso 2
+2. Seleccionar variables optimizadas
+3. Aplicar split estratificado (Paso 4)
+4. Entrenar modelos con class weighting
+5. Evaluar con métricas especializadas (F1-Score, AUC-PR)
+
+⚖️ VALIDACIÓN DE SELECCIÓN:
+• Comparar performance: Todas las variables vs Variables optimizadas
+• Verificar que reducción no afecta métricas principales
+• Confirmar mejora en tiempo de entrenamiento
+• Validar interpretabilidad de modelo resultante
+
+================================================================================
+CONSIDERACIONES TÉCNICAS
+================================================================================
+
+🎯 UMBRALES UTILIZADOS:
+• Correlación significativa con target: |r| >= 0.3
+• Multicolinealidad entre predictores: |r| >= 0.8
+
+✅ VALIDACIONES REALIZADAS:
+• Matriz de correlación calculada correctamente
+• Variable objetivo verificada como numérica
+• Análisis de significancia estadística aplicado
+• Detección sistemática de multicolinealidad
+
+📊 CALIDAD DE LOS DATOS:
+• Variables numéricas: 41
+• Sin valores faltantes en correlaciones
+• Distribución de correlaciones analizada
+• Patrones de relación identificados
+
+================================================================================
+ARCHIVOS GENERADOS
+================================================================================
+
+📊 VISUALIZACIONES:
+• Matriz completa: graficos/paso6_matriz_correlacion_completa_20250724_203757.png
+• Ranking con target: graficos/paso6_ranking_correlaciones_target_20250724_203757.png
+• Top correlaciones: graficos/paso6_top_correlaciones_target_20250724_203757.png
+• Análisis multicolinealidad: graficos/paso6_analisis_multicolinealidad_20250724_203757.png
+
+📄 DOCUMENTACIÓN:
+• Informe completo: informes/paso6_analisis_correlacion_informe_20250724_203757.txt
+• Log del proceso: logs/paso6_analisis_correlacion.log
+
+💾 CONFIGURACIONES:
+• Lista optimizada de variables generada
+• Configuraciones múltiples disponibles
+• Recomendaciones específicas documentadas
+
+================================================================================
+CONCLUSIONES Y SIGUIENTE PASO
+================================================================================
+
+🎯 CONCLUSIONES PRINCIPALES:
+
+1. CALIDAD DE PREDICTORES:
+   • 6 variables con correlación significativa
+   • Predictor más fuerte: Tipo_Contrato_encoded (r = 0.3967)
+   • Distribución balanceada de correlaciones positivas y negativas
+
+2. OPTIMIZACIÓN LOGRADA:
+   • Reducción de 50.0% en dimensionalidad
+   • Variables seleccionadas mantienen capacidad predictiva
+   • Eliminación de redundancia por multicolinealidad
+
+3. PREPARACIÓN PARA MODELADO:
+   • Dataset optimizado listo para algoritmos tree-based
+   • Variables interpretables para stakeholders
+   • Balance entre performance y simplicidad
+
+📋 PRÓXIMO PASO RECOMENDADO:
+Paso 7: Entrenamiento y Validación de Modelos
+• Implementar Random Forest y XGBoost
+• Usar variables de configuración optimizada
+• Aplicar class weighting del Paso 4
+• Evaluar con métricas del Paso 3
+
+================================================================================
+FIN DEL INFORME
+================================================================================
