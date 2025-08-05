@@ -1,0 +1,25 @@
+================================================================================
+TELECOMX - RECOMENDACIONES BÁSICAS DE RETENCIÓN
+================================================================================
+
+ESTRATEGIAS BASADAS EN TIEMPO:
+----------------------------------------
+• Nuevos (0-12m): Programa de onboarding intensivo
+  Acción: Seguimiento personalizado en primeros 90 días
+
+ESTRATEGIAS BASADAS EN GASTO:
+----------------------------------------
+• Alto Gasto: Atención personalizada VIP
+  Acción: Gestor de cuenta dedicado y soporte premium
+
+RECOMENDACIONES GENERALES:
+----------------------------------------
+• Retención Temprana: Enfocar esfuerzos en los primeros 12 meses
+  Justificación: Período crítico identificado en análisis
+
+• Segmentación: Estrategias diferenciadas por nivel de gasto
+  Justificación: Patrones distintos entre segmentos de gasto
+
+• Monitoreo: Sistema de alertas basado en tiempo y gasto
+  Justificación: Variables clave para predicción de churn
+

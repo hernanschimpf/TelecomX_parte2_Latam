@@ -1,0 +1,158 @@
+{
+  "timestamp": "20250804_205009",
+  "total_variables": 21,
+  "variables_optimizadas": [
+    {
+      "variable": "Tipo_Contrato_encoded",
+      "correlacion_con_target": 0.3967126292098438,
+      "correlacion_absoluta": 0.3967126292098438,
+      "prioridad": "ALTA"
+    },
+    {
+      "variable": "Meses_Cliente",
+      "correlacion_con_target": 0.3522286701130792,
+      "correlacion_absoluta": 0.3522286701130792,
+      "prioridad": "ALTA"
+    },
+    {
+      "variable": "Seguridad_Online_No",
+      "correlacion_con_target": 0.3426367998511234,
+      "correlacion_absoluta": 0.3426367998511234,
+      "prioridad": "ALTA"
+    },
+    {
+      "variable": "Soporte_Tecnico_No",
+      "correlacion_con_target": 0.3372807277351978,
+      "correlacion_absoluta": 0.3372807277351978,
+      "prioridad": "ALTA"
+    },
+    {
+      "variable": "Servicio_Internet_Fibra Óptica",
+      "correlacion_con_target": 0.30801974494482387,
+      "correlacion_absoluta": 0.30801974494482387,
+      "prioridad": "ALTA"
+    },
+    {
+      "variable": "Metodo_Pago_Cheque Electrónico",
+      "correlacion_con_target": 0.3019187490112847,
+      "correlacion_absoluta": 0.3019187490112847,
+      "prioridad": "ALTA"
+    },
+    {
+      "variable": "Respaldo_Online_No",
+      "correlacion_con_target": 0.2680051809623607,
+      "correlacion_absoluta": 0.2680051809623607,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Proteccion_Dispositivo_No",
+      "correlacion_con_target": 0.252481360595685,
+      "correlacion_absoluta": 0.252481360595685,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Servicio_Internet_No",
+      "correlacion_con_target": 0.2278904497560931,
+      "correlacion_absoluta": 0.2278904497560931,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Cargo_Total",
+      "correlacion_con_target": 0.19412514712794673,
+      "correlacion_absoluta": 0.19412514712794673,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Facturacion_Digital_encoded",
+      "correlacion_con_target": 0.1918253316664679,
+      "correlacion_absoluta": 0.1918253316664679,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Seguridad_Online_Sí",
+      "correlacion_con_target": 0.17122629194855238,
+      "correlacion_absoluta": 0.17122629194855238,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Soporte_Tecnico_Sí",
+      "correlacion_con_target": 0.16467355590159388,
+      "correlacion_absoluta": 0.16467355590159388,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Tiene_Dependientes_encoded",
+      "correlacion_con_target": 0.1642214015797256,
+      "correlacion_absoluta": 0.1642214015797256,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Ciudadano_Mayor",
+      "correlacion_con_target": 0.15088932817647277,
+      "correlacion_absoluta": 0.15088932817647277,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Tiene_Pareja_encoded",
+      "correlacion_con_target": 0.15044754495917698,
+      "correlacion_absoluta": 0.15044754495917698,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Metodo_Pago_Tarjeta de Crédito",
+      "correlacion_con_target": 0.13430175066262812,
+      "correlacion_absoluta": 0.13430175066262812,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Peliculas_Streaming_No",
+      "correlacion_con_target": 0.13084502938616735,
+      "correlacion_absoluta": 0.13084502938616735,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "TV_Streaming_No",
+      "correlacion_con_target": 0.12891588111510918,
+      "correlacion_absoluta": 0.12891588111510918,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Servicio_Internet_DSL",
+      "correlacion_con_target": 0.12421382390260381,
+      "correlacion_absoluta": 0.12421382390260381,
+      "prioridad": "MEDIA"
+    },
+    {
+      "variable": "Metodo_Pago_Transferencia Bancaria",
+      "correlacion_con_target": 0.11793667192853842,
+      "correlacion_absoluta": 0.11793667192853842,
+      "prioridad": "MEDIA"
+    }
+  ],
+  "variables_alta_prioridad": [
+    "Tipo_Contrato_encoded",
+    "Meses_Cliente",
+    "Seguridad_Online_No",
+    "Soporte_Tecnico_No",
+    "Servicio_Internet_Fibra Óptica",
+    "Metodo_Pago_Cheque Electrónico"
+  ],
+  "variables_media_prioridad": [
+    "Respaldo_Online_No",
+    "Proteccion_Dispositivo_No",
+    "Servicio_Internet_No",
+    "Cargo_Total",
+    "Facturacion_Digital_encoded",
+    "Seguridad_Online_Sí",
+    "Soporte_Tecnico_Sí",
+    "Tiene_Dependientes_encoded",
+    "Ciudadano_Mayor",
+    "Tiene_Pareja_encoded",
+    "Metodo_Pago_Tarjeta de Crédito",
+    "Peliculas_Streaming_No",
+    "TV_Streaming_No",
+    "Servicio_Internet_DSL",
+    "Metodo_Pago_Transferencia Bancaria"
+  ],
+  "variables_baja_prioridad": []
+}

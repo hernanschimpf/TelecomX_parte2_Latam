@@ -1,0 +1,161 @@
+
+================================================================================
+TELECOMX - INFORME PASO 8: ANÁLISIS DIRIGIDO BÁSICO
+================================================================================
+Fecha y Hora: 20250804_222045
+Paso: 8 - Análisis Dirigido (Versión Básica)
+
+================================================================================
+RESUMEN EJECUTIVO
+================================================================================
+• Análisis realizados: 2 (Tiempo de Contrato y Gasto Total)
+• Variables analizadas: Meses_Cliente y Cargo_Total
+• Recomendaciones generadas: 5
+• Enfoque: Identificación de patrones simples y claros
+
+================================================================================
+ANÁLISIS 1: TIEMPO DE CONTRATO × CANCELACIÓN
+================================================================================
+
+🎯 VARIABLE: Meses_Cliente
+
+📊 ESTADÍSTICAS COMPARATIVAS:
+
+NO CHURN:
+   • Promedio: 37.6 meses
+   • Mediana: 38.0 meses
+   • Rango: 0 - 72 meses
+
+CHURN:
+   • Promedio: 18.0 meses
+   • Mediana: 10.0 meses
+   • Rango: 1 - 72 meses
+
+📈 ANÁLISIS ESTADÍSTICO:
+• Test: Mann-Whitney U
+• P-valor: 0.000000
+• Resultado: SIGNIFICATIVO
+• Conclusión: El tiempo como cliente SÍ influye en el churn
+
+🔍 SEGMENTACIÓN POR TIEMPO:
+
+Nuevos (0-12m): 🔴 ALTO RIESGO
+   • Total Clientes: 2,175.0
+   • Tasa de Churn: 47.7%
+   • Clientes perdidos: 1,037.0
+Intermedios (12-36m): 🟡 RIESGO MEDIO
+   • Total Clientes: 1,856.0
+   • Tasa de Churn: 25.5%
+   • Clientes perdidos: 474.0
+Veteranos (36m+): 🟢 BAJO RIESGO
+   • Total Clientes: 3,001.0
+   • Tasa de Churn: 11.9%
+   • Clientes perdidos: 358.0
+
+================================================================================
+ANÁLISIS 2: GASTO TOTAL × CANCELACIÓN
+================================================================================
+
+🎯 VARIABLE: Cargo_Total
+
+📊 ESTADÍSTICAS COMPARATIVAS:
+
+NO CHURN:
+   • Promedio: $61.18
+   • Mediana: $64.40
+   • Rango: $0.00 - $118.75
+
+CHURN:
+   • Promedio: $74.44
+   • Mediana: $79.65
+   • Rango: $18.85 - $118.35
+
+📈 ANÁLISIS ESTADÍSTICO:
+• Test: Mann-Whitney U
+• P-valor: 0.000000
+• Resultado: SIGNIFICATIVO
+• Conclusión: El gasto total SÍ influye en el churn
+
+🔍 SEGMENTACIÓN POR GASTO:
+
+Bajo Gasto: 🟢 BAJO RIESGO
+   • Total Clientes: 2,327.0
+   • Tasa de Churn: 15.8%
+   • Clientes perdidos: 367.0
+Gasto Medio: 🟡 RIESGO MEDIO
+   • Total Clientes: 2,324.0
+   • Tasa de Churn: 29.4%
+   • Clientes perdidos: 684.0
+Alto Gasto: 🔴 ALTO RIESGO
+   • Total Clientes: 2,392.0
+   • Tasa de Churn: 34.2%
+   • Clientes perdidos: 818.0
+
+================================================================================
+RECOMENDACIONES PARA RETENCIÓN
+================================================================================
+
+🕐 ESTRATEGIAS BASADAS EN TIEMPO:
+
+• Nuevos (0-12m):
+  - Problema: Alta tasa de churn: 47.7%
+  - Recomendación: Programa de onboarding intensivo
+  - Acción: Seguimiento personalizado en primeros 90 días
+
+💰 ESTRATEGIAS BASADAS EN GASTO:
+
+• Alto Gasto:
+  - Problema: Pérdida de clientes valiosos: 34.2%
+  - Recomendación: Atención personalizada VIP
+  - Acción: Gestor de cuenta dedicado y soporte premium
+
+🎯 RECOMENDACIONES GENERALES:
+
+• Retención Temprana: Enfocar esfuerzos en los primeros 12 meses
+  - Justificación: Período crítico identificado en análisis
+• Segmentación: Estrategias diferenciadas por nivel de gasto
+  - Justificación: Patrones distintos entre segmentos de gasto
+• Monitoreo: Sistema de alertas basado en tiempo y gasto
+  - Justificación: Variables clave para predicción de churn
+
+================================================================================
+CONCLUSIONES PRINCIPALES
+================================================================================
+
+🔍 INSIGHTS CLAVE:
+• Tiempo como cliente: Factor significativo en el churn
+• Gasto total: Factor significativo en el churn
+• Segmento más crítico por tiempo: Nuevos (0-12m)
+• Segmento más crítico por gasto: Alto Gasto
+
+📊 MÉTRICAS DE IMPACTO:
+• Tasa de churn más alta por tiempo: 47.7%
+• Tasa de churn más alta por gasto: 34.2%
+• Diferencia entre mejor y peor segmento (tiempo): 35.8%
+• Diferencia entre mejor y peor segmento (gasto): 18.4%
+
+================================================================================
+PRÓXIMO PASO RECOMENDADO
+================================================================================
+
+Paso 9: Entrenamiento de Modelos Predictivos
+• Usar variables Meses_Cliente y Cargo_Total como predictores clave
+• Aplicar segmentaciones identificadas para mejorar predicciones
+• Validar modelos contra patrones encontrados en este análisis
+
+================================================================================
+ARCHIVOS GENERADOS
+================================================================================
+
+📊 VISUALIZACIONES:
+• Análisis tiempo: graficos/paso8_analisis_tiempo_simple_20250804_222045.png
+• Análisis gasto: graficos/paso8_analisis_gasto_simple_20250804_222045.png
+• Relación tiempo-gasto: graficos/paso8_relacion_tiempo_gasto_20250804_222045.png
+
+📄 DOCUMENTACIÓN:
+• Informe: informes/paso8_analisis_dirigido_informe_20250804_222045.txt
+• Log del proceso: logs/paso8_analisis_dirigido.log
+
+================================================================================
+FIN DEL INFORME
+================================================================================

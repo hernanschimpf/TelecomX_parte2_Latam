@@ -1,0 +1,55 @@
+2025-08-04 22:20:45,236 - INFO - ================================================================================
+2025-08-04 22:20:45,236 - INFO - INICIANDO PASO 8: ANÁLISIS DIRIGIDO BÁSICO
+2025-08-04 22:20:45,236 - INFO - ================================================================================
+2025-08-04 22:20:45,237 - INFO - Carpeta verificada/creada: excel
+2025-08-04 22:20:45,237 - INFO - Carpeta verificada/creada: informes
+2025-08-04 22:20:45,238 - INFO - Carpeta verificada/creada: graficos
+2025-08-04 22:20:45,238 - INFO - Carpeta verificada/creada: logs
+2025-08-04 22:20:45,241 - INFO - Cargando archivo: excel\telecomx_paso7_variables_optimizadas_20250804_205009.csv
+2025-08-04 22:20:45,250 - INFO - Archivo cargado exitosamente:
+2025-08-04 22:20:45,251 - INFO -   Codificación: utf-8-sig
+2025-08-04 22:20:45,251 - INFO -   Separador: ','
+2025-08-04 22:20:45,251 - INFO -   Dimensiones: 7043 filas, 22 columnas
+2025-08-04 22:20:45,252 - INFO - Dataset cargado: 7043 filas, 22 columnas
+2025-08-04 22:20:45,252 - INFO - Dataset cargado desde: excel\telecomx_paso7_variables_optimizadas_20250804_205009.csv
+2025-08-04 22:20:45,252 - INFO - Realizando análisis dirigidos básicos...
+2025-08-04 22:20:45,253 - INFO - Analizando Tiempo de Contrato × Cancelación...
+2025-08-04 22:20:45,262 - INFO - Análisis de tiempo completado. Diferencia significativa: True
+2025-08-04 22:20:45,262 - INFO - Analizando Gasto Total × Cancelación...
+2025-08-04 22:20:45,269 - INFO - Análisis de gasto completado. Diferencia significativa: True
+2025-08-04 22:20:45,269 - INFO - Generando visualizaciones simples...
+2025-08-04 22:20:46,893 - INFO - Visualizaciones simples generadas exitosamente
+2025-08-04 22:20:46,894 - INFO - Generando recomendaciones básicas...
+2025-08-04 22:20:46,895 - INFO - Recomendaciones básicas generadas exitosamente
+2025-08-04 22:20:46,898 - INFO - Informe guardado: informes/paso8_analisis_dirigido_informe_20250804_222045.txt
+2025-08-04 22:20:46,899 - INFO - Recomendaciones guardadas: informes/paso8_recomendaciones_basicas_20250804_222045.txt
+2025-08-04 22:20:46,900 - INFO - ================================================================================
+2025-08-04 22:20:46,900 - INFO - PASO 8 BÁSICO COMPLETADO EXITOSAMENTE
+2025-08-04 22:20:46,900 - INFO - ================================================================================
+2025-08-04 22:20:46,900 - INFO - RESUMEN DE RESULTADOS:
+2025-08-04 22:20:46,900 - INFO -   • Tiempo influye en churn: SÍ
+2025-08-04 22:20:46,901 - INFO -   • Gasto influye en churn: SÍ
+2025-08-04 22:20:46,901 - INFO -   • Segmentos de tiempo analizados: 3
+2025-08-04 22:20:46,901 - INFO -   • Segmentos de gasto analizados: 3
+2025-08-04 22:20:46,901 - INFO -   • Recomendaciones generadas: 5
+2025-08-04 22:20:46,901 - INFO - 
+2025-08-04 22:20:46,901 - INFO - SEGMENTOS CRÍTICOS IDENTIFICADOS:
+2025-08-04 22:20:46,901 - INFO -   • Tiempo: Nuevos (0-12m) (47.7% churn)
+2025-08-04 22:20:46,901 - INFO -   • Gasto: Alto Gasto (34.2% churn)
+2025-08-04 22:20:46,902 - INFO - 
+2025-08-04 22:20:46,902 - INFO - ARCHIVOS GENERADOS:
+2025-08-04 22:20:46,902 - INFO -   • Informe detallado: informes/paso8_analisis_dirigido_informe_20250804_222045.txt
+2025-08-04 22:20:46,902 - INFO -   • Recomendaciones: informes/paso8_recomendaciones_basicas_20250804_222045.txt
+2025-08-04 22:20:46,902 - INFO -   • Visualizaciones: 3 gráficos simples en carpeta graficos/
+2025-08-04 22:20:46,902 - INFO - 
+2025-08-04 22:20:46,902 - INFO - VISUALIZACIONES GENERADAS:
+2025-08-04 22:20:46,902 - INFO -   • Análisis de tiempo: Boxplot + tasas por segmento
+2025-08-04 22:20:46,902 - INFO -   • Análisis de gasto: Boxplot + tasas por segmento
+2025-08-04 22:20:46,902 - INFO -   • Relación tiempo-gasto: Scatter plot con patrones de churn
+2025-08-04 22:20:46,902 - INFO - 
+2025-08-04 22:20:46,903 - INFO - PRÓXIMO PASO SUGERIDO:
+2025-08-04 22:20:46,903 - INFO -   Paso 9: Entrenamiento de Modelos Predictivos
+2025-08-04 22:20:46,903 - INFO -   - Usar Meses_Cliente y Cargo_Total como predictores principales
+2025-08-04 22:20:46,903 - INFO -   - Aplicar insights de segmentación en feature engineering
+2025-08-04 22:20:46,903 - INFO -   - Validar modelos contra patrones identificados
+2025-08-04 22:20:46,903 - INFO - ================================================================================

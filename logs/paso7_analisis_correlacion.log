@@ -1,0 +1,73 @@
+2025-08-04 20:50:09,955 - INFO - ================================================================================
+2025-08-04 20:50:09,956 - INFO - INICIANDO PASO 7: ANÁLISIS DE CORRELACIÓN Y OPTIMIZACIÓN DE VARIABLES
+2025-08-04 20:50:09,956 - INFO - ================================================================================
+2025-08-04 20:50:09,957 - INFO - Carpeta verificada/creada: excel
+2025-08-04 20:50:09,957 - INFO - Carpeta verificada/creada: informes
+2025-08-04 20:50:09,958 - INFO - Carpeta verificada/creada: graficos
+2025-08-04 20:50:09,958 - INFO - Carpeta verificada/creada: logs
+2025-08-04 20:50:09,961 - INFO - Cargando archivo: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-08-04 20:50:09,988 - INFO - Archivo cargado exitosamente:
+2025-08-04 20:50:09,988 - INFO -   Codificación: utf-8-sig
+2025-08-04 20:50:09,989 - INFO -   Separador: ';'
+2025-08-04 20:50:09,989 - INFO -   Dimensiones: 7043 filas, 41 columnas
+2025-08-04 20:50:09,989 - INFO - Dataset cargado: 7043 filas, 41 columnas
+2025-08-04 20:50:09,989 - INFO - Dataset cargado desde: excel\telecomx_paso2_encoding_aplicado_20250722_193047.csv
+2025-08-04 20:50:09,990 - INFO - Iniciando análisis de correlaciones...
+2025-08-04 20:50:09,991 - INFO - Variables numéricas encontradas: 41
+2025-08-04 20:50:10,021 - INFO - Análisis completado: 40 correlaciones calculadas
+2025-08-04 20:50:10,021 - INFO - Pares multicolineales detectados: 2
+2025-08-04 20:50:10,021 - INFO - Identificando variables a eliminar...
+2025-08-04 20:50:10,022 - INFO - Variables identificadas para eliminación: 19
+2025-08-04 20:50:10,022 - INFO - Optimizando dataset...
+2025-08-04 20:50:10,023 - INFO - Variable eliminada: TV_Streaming_Sí
+2025-08-04 20:50:10,024 - INFO - Variable eliminada: Servicio_Internet_nan
+2025-08-04 20:50:10,026 - INFO - Variable eliminada: Metodo_Pago_Cheque Postal
+2025-08-04 20:50:10,027 - INFO - Variable eliminada: Respaldo_Online_Sí
+2025-08-04 20:50:10,028 - INFO - Variable eliminada: Lineas_Multiples_nan
+2025-08-04 20:50:10,029 - INFO - Variable eliminada: Lineas_Multiples_No phone service
+2025-08-04 20:50:10,032 - INFO - Variable eliminada: Facturacion_Mensual
+2025-08-04 20:50:10,033 - INFO - Variable eliminada: Soporte_Tecnico_nan
+2025-08-04 20:50:10,034 - INFO - Variable eliminada: Proteccion_Dispositivo_Sí
+2025-08-04 20:50:10,036 - INFO - Variable eliminada: Seguridad_Online_nan
+2025-08-04 20:50:10,037 - INFO - Variable eliminada: Lineas_Multiples_No
+2025-08-04 20:50:10,038 - INFO - Variable eliminada: Respaldo_Online_nan
+2025-08-04 20:50:10,039 - INFO - Variable eliminada: Proteccion_Dispositivo_nan
+2025-08-04 20:50:10,039 - INFO - Variable eliminada: Genero_encoded
+2025-08-04 20:50:10,040 - INFO - Variable eliminada: Metodo_Pago_nan
+2025-08-04 20:50:10,041 - INFO - Variable eliminada: Peliculas_Streaming_Sí
+2025-08-04 20:50:10,042 - INFO - Variable eliminada: Lineas_Multiples_Sí
+2025-08-04 20:50:10,043 - INFO - Variable eliminada: TV_Streaming_nan
+2025-08-04 20:50:10,044 - INFO - Variable eliminada: Peliculas_Streaming_nan
+2025-08-04 20:50:10,044 - INFO - Optimización completada:
+2025-08-04 20:50:10,045 - INFO -   Variables originales: 40
+2025-08-04 20:50:10,045 - INFO -   Variables optimizadas: 21
+2025-08-04 20:50:10,045 - INFO -   Reducción: 47.5%
+2025-08-04 20:50:10,045 - INFO - Validando optimización...
+2025-08-04 20:50:10,046 - INFO - ✅ Todas las variables significativas fueron preservadas
+2025-08-04 20:50:10,047 - INFO - ✅ Validación de optimización completada
+2025-08-04 20:50:10,048 - INFO - Generando visualizaciones...
+2025-08-04 20:50:12,865 - INFO - Visualizaciones mejoradas generadas exitosamente
+2025-08-04 20:50:12,892 - INFO - Dataset optimizado guardado: excel/telecomx_paso7_variables_optimizadas_20250804_205009.csv
+2025-08-04 20:50:12,893 - INFO - Informe guardado: informes/paso7_analisis_de_correlacion_informe_20250804_205009.txt
+2025-08-04 20:50:12,894 - INFO - Configuración JSON guardada: informes/paso7_configuracion_variables_optimizadas_20250804_205009.json
+2025-08-04 20:50:12,895 - INFO - ================================================================================
+2025-08-04 20:50:12,895 - INFO - PASO 7 COMPLETADO EXITOSAMENTE
+2025-08-04 20:50:12,895 - INFO - ================================================================================
+2025-08-04 20:50:12,895 - INFO - RESUMEN DE RESULTADOS:
+2025-08-04 20:50:12,895 - INFO -   • Variables originales: 40
+2025-08-04 20:50:12,896 - INFO -   • Variables optimizadas: 21
+2025-08-04 20:50:12,896 - INFO -   • Variables eliminadas: 19
+2025-08-04 20:50:12,897 - INFO -   • Reducción lograda: 47.5%
+2025-08-04 20:50:12,897 - INFO - 
+2025-08-04 20:50:12,897 - INFO - ARCHIVOS GENERADOS:
+2025-08-04 20:50:12,897 - INFO -   • Dataset optimizado: excel/telecomx_paso7_variables_optimizadas_20250804_205009.csv
+2025-08-04 20:50:12,898 - INFO -   • Informe detallado: informes/paso7_analisis_de_correlacion_informe_20250804_205009.txt
+2025-08-04 20:50:12,898 - INFO -   • Configuración JSON: informes/paso7_configuracion_variables_optimizadas_20250804_205009.json
+2025-08-04 20:50:12,898 - INFO -   • Visualizaciones: 4 gráficos en carpeta graficos/
+2025-08-04 20:50:12,898 - INFO - 
+2025-08-04 20:50:12,899 - INFO - PRÓXIMO PASO SUGERIDO:
+2025-08-04 20:50:12,899 - INFO -   Paso 8: Entrenamiento de Modelos Predictivos
+2025-08-04 20:50:12,899 - INFO -   - Usar el dataset optimizado generado
+2025-08-04 20:50:12,899 - INFO -   - Aplicar configuraciones de class weighting del Paso 4
+2025-08-04 20:50:12,900 - INFO -   - Implementar Random Forest y XGBoost
+2025-08-04 20:50:12,900 - INFO - ================================================================================
