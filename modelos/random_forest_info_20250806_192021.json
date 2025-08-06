@@ -1,0 +1,107 @@
+{
+  "model_type": "RandomForest",
+  "parameters": {
+    "n_estimators": 100,
+    "max_depth": 15,
+    "min_samples_split": 10,
+    "min_samples_leaf": 5,
+    "class_weight": {
+      "0": 1.0,
+      "1": 2.4920606601248885
+    },
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "feature_importance": [
+    {
+      "feature": "Meses_Cliente",
+      "importance": 0.2015529144328673
+    },
+    {
+      "feature": "Tipo_Contrato_encoded",
+      "importance": 0.1935267538144223
+    },
+    {
+      "feature": "Cargo_Total",
+      "importance": 0.12274502942922044
+    },
+    {
+      "feature": "Soporte_Tecnico_No",
+      "importance": 0.08036790667866758
+    },
+    {
+      "feature": "Seguridad_Online_No",
+      "importance": 0.07497443967002577
+    },
+    {
+      "feature": "Metodo_Pago_Cheque Electrónico",
+      "importance": 0.05065928016125003
+    },
+    {
+      "feature": "Servicio_Internet_Fibra Óptica",
+      "importance": 0.0469287840763583
+    },
+    {
+      "feature": "Respaldo_Online_No",
+      "importance": 0.032353375255255744
+    },
+    {
+      "feature": "Facturacion_Digital_encoded",
+      "importance": 0.023275933085510053
+    },
+    {
+      "feature": "Proteccion_Dispositivo_No",
+      "importance": 0.022138289457804772
+    },
+    {
+      "feature": "Tiene_Pareja_encoded",
+      "importance": 0.018708251212451156
+    },
+    {
+      "feature": "Soporte_Tecnico_Sí",
+      "importance": 0.016083673829336592
+    },
+    {
+      "feature": "Servicio_Internet_DSL",
+      "importance": 0.015065640236310025
+    },
+    {
+      "feature": "TV_Streaming_No",
+      "importance": 0.014492828073766248
+    },
+    {
+      "feature": "Seguridad_Online_Sí",
+      "importance": 0.014071519461645256
+    },
+    {
+      "feature": "Servicio_Internet_No",
+      "importance": 0.013935997210721175
+    },
+    {
+      "feature": "Tiene_Dependientes_encoded",
+      "importance": 0.013808241593092943
+    },
+    {
+      "feature": "Peliculas_Streaming_No",
+      "importance": 0.012095683576956952
+    },
+    {
+      "feature": "Metodo_Pago_Transferencia Bancaria",
+      "importance": 0.011887670505551803
+    },
+    {
+      "feature": "Metodo_Pago_Tarjeta de Crédito",
+      "importance": 0.010931617016571473
+    },
+    {
+      "feature": "Ciudadano_Mayor",
+      "importance": 0.010396171222214052
+    }
+  ],
+  "n_features": 21,
+  "training_samples": 4225,
+  "class_weights": {
+    "0": 1.0,
+    "1": 2.4920606601248885
+  }
+}

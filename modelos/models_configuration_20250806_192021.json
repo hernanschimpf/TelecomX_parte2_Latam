@@ -1,0 +1,14 @@
+{
+  "timestamp": "20250806_192021",
+  "random_seed": 42,
+  "models_created": [
+    "RandomForest",
+    "LogisticRegression"
+  ],
+  "class_weights": {
+    "0": 1.0,
+    "1": 2.4920606601248885
+  },
+  "training_samples": 4225,
+  "n_features": 21
+}

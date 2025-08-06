@@ -1,0 +1,21 @@
+{
+  "timestamp": "20250806_194916",
+  "best_model": {
+    "name": "Regresión Logística",
+    "score": 0.6504720075868541,
+    "file_pattern": "*regresión_logística*",
+    "status": "BIEN AJUSTADO"
+  },
+  "ranking": [
+    [
+      "Regresión Logística",
+      0.6504720075868541
+    ],
+    [
+      "Random Forest",
+      0.6027872661948996
+    ]
+  ],
+  "ready_for_production": true,
+  "recommended_threshold": 0.5
+}

@@ -1,0 +1,125 @@
+2025-08-06 19:20:21,358 - INFO - ================================================================================
+2025-08-06 19:20:21,359 - INFO - INICIANDO PASO 10: CREACIÓN DE MODELOS PREDICTIVOS
+2025-08-06 19:20:21,359 - INFO - ================================================================================
+2025-08-06 19:20:21,359 - INFO - Modelos a crear: Random Forest (sin normalización) + Regresión Logística (con normalización)
+2025-08-06 19:20:21,359 - INFO - Semilla aleatoria: 42
+2025-08-06 19:20:21,360 - INFO - Carpeta verificada/creada: excel
+2025-08-06 19:20:21,360 - INFO - Carpeta verificada/creada: informes
+2025-08-06 19:20:21,361 - INFO - Carpeta verificada/creada: graficos
+2025-08-06 19:20:21,362 - INFO - Carpeta verificada/creada: logs
+2025-08-06 19:20:21,362 - INFO - Carpeta verificada/creada: datos
+2025-08-06 19:20:21,362 - INFO - Carpeta verificada/creada: modelos
+2025-08-06 19:20:21,363 - INFO - Cargando datos de entrenamiento: datos\telecomx_train_dataset_20250806_184718.csv
+2025-08-06 19:20:21,403 - INFO - Datos cargados con encoding: utf-8-sig
+2025-08-06 19:20:21,405 - INFO - Datos de entrenamiento cargados:
+2025-08-06 19:20:21,405 - INFO -   Muestras: 4,225
+2025-08-06 19:20:21,405 - INFO -   Características: 21
+2025-08-06 19:20:21,406 - INFO -   Balance de clases: {0: 3104, 1: 1121}
+2025-08-06 19:20:21,407 - INFO -   Tasa de churn: 0.265
+2025-08-06 19:20:21,407 - INFO - Calculando class weights...
+2025-08-06 19:20:21,408 - INFO - Distribución de clases:
+2025-08-06 19:20:21,408 - INFO -   Clase 0 (No churn): 3,104 (73.5%)
+2025-08-06 19:20:21,409 - INFO -   Clase 1 (Churn): 1,121 (26.5%)
+2025-08-06 19:20:21,409 - INFO -   Ratio: 2.77:1
+2025-08-06 19:20:21,409 - INFO - Class weights calculados: {0: 1.0, 1: np.float64(2.4920606601248885)}
+2025-08-06 19:20:21,409 - INFO - ==================================================
+2025-08-06 19:20:21,410 - INFO - Creando modelo Random Forest...
+2025-08-06 19:20:21,410 - INFO - Entrenando Random Forest con parámetros: {'n_estimators': 100, 'max_depth': 15, 'min_samples_split': 10, 'min_samples_leaf': 5, 'class_weight': {0: 1.0, 1: np.float64(2.4920606601248885)}, 'random_state': 42, 'n_jobs': -1}
+2025-08-06 19:20:21,596 - INFO - Random Forest entrenado exitosamente
+2025-08-06 19:20:21,596 - INFO - Top 5 características importantes:
+2025-08-06 19:20:21,597 - INFO -   Meses_Cliente: 0.2016
+2025-08-06 19:20:21,597 - INFO -   Tipo_Contrato_encoded: 0.1935
+2025-08-06 19:20:21,597 - INFO -   Cargo_Total: 0.1227
+2025-08-06 19:20:21,598 - INFO -   Soporte_Tecnico_No: 0.0804
+2025-08-06 19:20:21,598 - INFO -   Seguridad_Online_No: 0.0750
+2025-08-06 19:20:21,599 - INFO - Validando entrenamiento de Random Forest...
+2025-08-06 19:20:21,656 - INFO - Validación de Random Forest exitosa:
+2025-08-06 19:20:21,656 - INFO -   Predicciones únicas: {0: 2814, 1: 1411}
+2025-08-06 19:20:21,657 - INFO -   Rango de probabilidades: 0.000 - 0.964
+2025-08-06 19:20:21,657 - INFO - ==================================================
+2025-08-06 19:20:21,657 - INFO - Creando modelo Regresión Logística con normalización...
+2025-08-06 19:20:21,657 - INFO - Entrenando Regresión Logística con normalización
+2025-08-06 19:20:21,657 - INFO - Parámetros del clasificador: {'class_weight': {0: 1.0, 1: np.float64(2.4920606601248885)}, 'random_state': 42, 'max_iter': 1000, 'solver': 'liblinear'}
+2025-08-06 19:20:21,676 - INFO - Regresión Logística entrenada exitosamente
+2025-08-06 19:20:21,676 - INFO - Top 5 características por coeficiente absoluto:
+2025-08-06 19:20:21,678 - INFO -   Meses_Cliente: -0.7265 ↓
+2025-08-06 19:20:21,679 - INFO -   Tipo_Contrato_encoded: -0.6350 ↓
+2025-08-06 19:20:21,679 - INFO -   Servicio_Internet_Fibra Óptica: 0.3852 ↑
+2025-08-06 19:20:21,679 - INFO -   Servicio_Internet_No: -0.3476 ↓
+2025-08-06 19:20:21,680 - INFO -   TV_Streaming_No: -0.2638 ↓
+2025-08-06 19:20:21,681 - INFO - Validando entrenamiento de Regresión Logística...
+2025-08-06 19:20:21,685 - INFO - Validación de Regresión Logística exitosa:
+2025-08-06 19:20:21,686 - INFO -   Predicciones únicas: {0: 2601, 1: 1624}
+2025-08-06 19:20:21,686 - INFO -   Rango de probabilidades: 0.009 - 0.944
+2025-08-06 19:20:21,687 - INFO - ==================================================
+2025-08-06 19:20:21,687 - INFO - Guardando modelos entrenados...
+2025-08-06 19:20:21,696 - INFO - Modelos guardados exitosamente:
+2025-08-06 19:20:21,697 - INFO -   random_forest_model: modelos/random_forest_model_20250806_192021.pkl
+2025-08-06 19:20:21,697 - INFO -   random_forest_info: modelos/random_forest_info_20250806_192021.json
+2025-08-06 19:20:21,697 - INFO -   logistic_regression_model: modelos/logistic_regression_pipeline_20250806_192021.pkl
+2025-08-06 19:20:21,698 - INFO -   logistic_regression_info: modelos/logistic_regression_info_20250806_192021.json
+2025-08-06 19:20:21,698 - INFO -   configuration: modelos/models_configuration_20250806_192021.json
+2025-08-06 19:20:21,698 - INFO - Generando visualizaciones...
+2025-08-06 19:20:21,698 - INFO - Generando visualización de feature importance...
+2025-08-06 19:20:22,195 - INFO - Visualización guardada: graficos/paso10_feature_importance_20250806_192021.png
+2025-08-06 19:20:22,196 - INFO - Generando visualización de coeficientes...
+2025-08-06 19:20:22,731 - INFO - Visualización de coeficientes guardada: graficos/paso10_coeficientes_logistica_20250806_192021.png
+2025-08-06 19:20:22,732 - INFO - Generando informe completo...
+2025-08-06 19:20:22,733 - INFO - Informe guardado: informes/paso10_creacion_modelos_informe_20250806_192021.txt
+2025-08-06 19:20:22,733 - INFO - ================================================================================
+2025-08-06 19:20:22,733 - INFO - PASO 10 COMPLETADO EXITOSAMENTE
+2025-08-06 19:20:22,733 - INFO - ================================================================================
+2025-08-06 19:20:22,733 - INFO - RESUMEN DE MODELOS CREADOS:
+2025-08-06 19:20:22,734 - INFO - 
+2025-08-06 19:20:22,734 - INFO - 🌳 RANDOM FOREST:
+2025-08-06 19:20:22,734 - INFO -   • N° árboles: 100
+2025-08-06 19:20:22,734 - INFO -   • Profundidad máxima: 15
+2025-08-06 19:20:22,734 - INFO -   • Class weight: {0: 1.0, 1: np.float64(2.4920606601248885)}
+2025-08-06 19:20:22,734 - INFO -   • Normalización: No aplicada
+2025-08-06 19:20:22,734 - INFO -   • Archivo: modelos/random_forest_model_20250806_192021.pkl
+2025-08-06 19:20:22,735 - INFO -   • Top 3 características:
+2025-08-06 19:20:22,735 - INFO -     1. Meses_Cliente: 0.2016
+2025-08-06 19:20:22,735 - INFO -     2. Tipo_Contrato_encoded: 0.1935
+2025-08-06 19:20:22,735 - INFO -     3. Cargo_Total: 0.1227
+2025-08-06 19:20:22,735 - INFO - 
+2025-08-06 19:20:22,735 - INFO - 📈 REGRESIÓN LOGÍSTICA:
+2025-08-06 19:20:22,735 - INFO -   • Solver: liblinear
+2025-08-06 19:20:22,735 - INFO -   • Max iteraciones: 1000
+2025-08-06 19:20:22,735 - INFO -   • Class weight: {0: 1.0, 1: np.float64(2.4920606601248885)}
+2025-08-06 19:20:22,735 - INFO -   • Normalización: StandardScaler aplicado
+2025-08-06 19:20:22,736 - INFO -   • Archivo: modelos/logistic_regression_pipeline_20250806_192021.pkl
+2025-08-06 19:20:22,736 - INFO -   • Top 3 coeficientes (magnitud):
+2025-08-06 19:20:22,736 - INFO -     1. Meses_Cliente: -0.7265 ↓
+2025-08-06 19:20:22,736 - INFO -     2. Tipo_Contrato_encoded: -0.6350 ↓
+2025-08-06 19:20:22,736 - INFO -     3. Servicio_Internet_Fibra Óptica: +0.3852 ↑
+2025-08-06 19:20:22,736 - INFO - 
+2025-08-06 19:20:22,736 - INFO - 📊 CONFIGURACIÓN DE ENTRENAMIENTO:
+2025-08-06 19:20:22,736 - INFO -   • Muestras de entrenamiento: 4,225
+2025-08-06 19:20:22,736 - INFO -   • Número de características: 21
+2025-08-06 19:20:22,736 - INFO -   • Ratio de clases: 2.77:1
+2025-08-06 19:20:22,737 - INFO -   • Tasa de churn: 26.5%
+2025-08-06 19:20:22,737 - INFO - 
+2025-08-06 19:20:22,737 - INFO - 📁 ARCHIVOS GENERADOS:
+2025-08-06 19:20:22,737 - INFO -   • Modelos entrenados: 2
+2025-08-06 19:20:22,737 - INFO -   • Archivos de información: 2
+2025-08-06 19:20:22,737 - INFO -   • Visualizaciones: 2
+2025-08-06 19:20:22,737 - INFO -   • Informe detallado: informes/paso10_creacion_modelos_informe_20250806_192021.txt
+2025-08-06 19:20:22,737 - INFO - 
+2025-08-06 19:20:22,738 - INFO - ✅ VALIDACIONES COMPLETADAS:
+2025-08-06 19:20:22,738 - INFO -   • Random Forest: ✅ Exitosa
+2025-08-06 19:20:22,738 - INFO -   • Regresión Logística: ✅ Exitosa
+2025-08-06 19:20:22,738 - INFO -   • Guardado de modelos: ✅ Exitoso
+2025-08-06 19:20:22,738 - INFO -   • Generación de visualizaciones: ✅ Exitosa
+2025-08-06 19:20:22,738 - INFO - 
+2025-08-06 19:20:22,738 - INFO - 🚀 MODELOS LISTOS PARA EVALUACIÓN:
+2025-08-06 19:20:22,738 - INFO -   • Random Forest: modelos/random_forest_model_20250806_192021.pkl
+2025-08-06 19:20:22,739 - INFO -   • Regresión Logística: modelos/logistic_regression_pipeline_20250806_192021.pkl
+2025-08-06 19:20:22,739 - INFO - 
+2025-08-06 19:20:22,739 - INFO - 📊 PRÓXIMO PASO SUGERIDO:
+2025-08-06 19:20:22,739 - INFO -   Paso 11: Evaluación de Modelos
+2025-08-06 19:20:22,739 - INFO -   - Cargar modelos entrenados
+2025-08-06 19:20:22,739 - INFO -   - Evaluar en conjuntos de validación y test
+2025-08-06 19:20:22,739 - INFO -   - Comparar rendimiento con métricas especializadas
+2025-08-06 19:20:22,740 - INFO -   - Generar matrices de confusión y curvas ROC/PR
+2025-08-06 19:20:22,740 - INFO -   - Seleccionar modelo final basado en performance
+2025-08-06 19:20:22,740 - INFO - ================================================================================

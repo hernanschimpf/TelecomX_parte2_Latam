@@ -1,0 +1,95 @@
+2025-08-06 18:47:18,110 - INFO - ================================================================================
+2025-08-06 18:47:18,111 - INFO - INICIANDO PASO 9: SEPARACIÓN DE DATOS PARA MODELADO
+2025-08-06 18:47:18,111 - INFO - ================================================================================
+2025-08-06 18:47:18,111 - INFO - Configuración: Train (60%) / Validation (20%) / Test (20%)
+2025-08-06 18:47:18,112 - INFO - Semilla aleatoria: 42
+2025-08-06 18:47:18,112 - INFO - Carpeta verificada/creada: excel
+2025-08-06 18:47:18,113 - INFO - Carpeta verificada/creada: informes
+2025-08-06 18:47:18,114 - INFO - Carpeta verificada/creada: graficos
+2025-08-06 18:47:18,114 - INFO - Carpeta verificada/creada: logs
+2025-08-06 18:47:18,114 - INFO - Carpeta verificada/creada: datos
+2025-08-06 18:47:18,115 - INFO - Cargando archivo: excel\telecomx_paso7_variables_optimizadas_20250804_205009.csv
+2025-08-06 18:47:18,128 - INFO - Archivo cargado exitosamente:
+2025-08-06 18:47:18,129 - INFO -   Codificación: utf-8-sig
+2025-08-06 18:47:18,129 - INFO -   Separador: ','
+2025-08-06 18:47:18,129 - INFO -   Dimensiones: 7043 filas, 22 columnas
+2025-08-06 18:47:18,130 - INFO - Dataset cargado: 7043 filas, 22 columnas
+2025-08-06 18:47:18,131 - INFO - Balance de clases original: {0: 5174, 1: 1869}
+2025-08-06 18:47:18,131 - INFO - Dataset cargado desde: excel\telecomx_paso7_variables_optimizadas_20250804_205009.csv
+2025-08-06 18:47:18,131 - INFO - Realizando división estratificada de datos...
+2025-08-06 18:47:18,181 - INFO - División estratificada completada:
+2025-08-06 18:47:18,182 - INFO -   Train: 4,225 (60.0%)
+2025-08-06 18:47:18,182 - INFO -   Validation: 1,409 (20.0%)
+2025-08-06 18:47:18,182 - INFO -   Test: 1,409 (20.0%)
+2025-08-06 18:47:18,183 - INFO - Validando estratificación de clases...
+2025-08-06 18:47:18,184 - INFO -   Train:
+2025-08-06 18:47:18,184 - INFO -     Total: 4,225 muestras
+2025-08-06 18:47:18,185 - INFO -     No Churn: 3,104 (73.47%)
+2025-08-06 18:47:18,185 - INFO -     Churn: 1,121 (26.53%)
+2025-08-06 18:47:18,186 - INFO -   Validation:
+2025-08-06 18:47:18,187 - INFO -     Total: 1,409 muestras
+2025-08-06 18:47:18,187 - INFO -     No Churn: 1,035 (73.46%)
+2025-08-06 18:47:18,187 - INFO -     Churn: 374 (26.54%)
+2025-08-06 18:47:18,188 - INFO -   Test:
+2025-08-06 18:47:18,188 - INFO -     Total: 1,409 muestras
+2025-08-06 18:47:18,188 - INFO -     No Churn: 1,035 (73.46%)
+2025-08-06 18:47:18,189 - INFO -     Churn: 374 (26.54%)
+2025-08-06 18:47:18,189 - INFO - Calidad de estratificación: EXCELENTE
+2025-08-06 18:47:18,189 - INFO - Diferencia máxima en distribución: 0.01%
+2025-08-06 18:47:18,190 - INFO - Validando distribuciones por segmentos...
+2025-08-06 18:47:18,204 - INFO - Consistencia de segmentos entre conjuntos:
+2025-08-06 18:47:18,205 - INFO -   Calidad de representatividad: EXCELENTE
+2025-08-06 18:47:18,205 - INFO -   Desviación estándar promedio: 0.0071
+2025-08-06 18:47:18,205 - INFO -   Rango máximo entre conjuntos: 0.0260
+2025-08-06 18:47:18,205 - INFO - Realizando tests estadísticos de representatividad...
+2025-08-06 18:47:18,213 - INFO -   Meses_Cliente:
+2025-08-06 18:47:18,213 - INFO -     Train vs Validation: similares (p=0.3216)
+2025-08-06 18:47:18,214 - INFO -     Train vs Test: similares (p=0.9992)
+2025-08-06 18:47:18,214 - INFO -     Validation vs Test: similares (p=0.8068)
+2025-08-06 18:47:18,221 - INFO -   Cargo_Total:
+2025-08-06 18:47:18,221 - INFO -     Train vs Validation: similares (p=0.1276)
+2025-08-06 18:47:18,221 - INFO -     Train vs Test: similares (p=0.2027)
+2025-08-06 18:47:18,221 - INFO -     Validation vs Test: similares (p=0.5587)
+2025-08-06 18:47:18,223 - INFO -   Distribución de variable objetivo: similares (p=0.9999)
+2025-08-06 18:47:18,224 - INFO - Generando visualizaciones...
+2025-08-06 18:47:20,217 - INFO - Visualizaciones generadas exitosamente
+2025-08-06 18:47:20,218 - INFO - Guardando datasets separados...
+2025-08-06 18:47:20,238 - INFO -   Train: datos/telecomx_train_dataset_20250806_184718.csv (4,225 filas)
+2025-08-06 18:47:20,248 - INFO -   Validation: datos/telecomx_validation_dataset_20250806_184718.csv (1,409 filas)
+2025-08-06 18:47:20,254 - INFO -   Test: datos/telecomx_test_dataset_20250806_184718.csv (1,409 filas)
+2025-08-06 18:47:20,281 - INFO -   Combinado: datos/telecomx_datasets_combinados_20250806_184718.csv (7,043 filas)
+2025-08-06 18:47:20,281 - INFO - Datasets guardados exitosamente
+2025-08-06 18:47:20,288 - INFO - Informe guardado: informes/paso9_separacion_datos_informe_20250806_184718.txt
+2025-08-06 18:47:20,289 - INFO - Configuración guardada: informes/paso9_configuracion_division_20250806_184718.json
+2025-08-06 18:47:20,289 - INFO - ================================================================================
+2025-08-06 18:47:20,289 - INFO - PASO 9 COMPLETADO EXITOSAMENTE
+2025-08-06 18:47:20,290 - INFO - ================================================================================
+2025-08-06 18:47:20,290 - INFO - RESUMEN DE RESULTADOS:
+2025-08-06 18:47:20,290 - INFO -   • Total de registros procesados: 7,043
+2025-08-06 18:47:20,291 - INFO -   • Train: 4,225 (60.0%)
+2025-08-06 18:47:20,291 - INFO -   • Validation: 1,409 (20.0%)
+2025-08-06 18:47:20,291 - INFO -   • Test: 1,409 (20.0%)
+2025-08-06 18:47:20,292 - INFO - 
+2025-08-06 18:47:20,292 - INFO - VALIDACIÓN DE CALIDAD:
+2025-08-06 18:47:20,292 - INFO -   • Estratificación: EXCELENTE
+2025-08-06 18:47:20,293 - INFO -   • Representatividad por segmentos: EXCELENTE
+2025-08-06 18:47:20,293 - INFO -   • Distribución objetivo consistente: SÍ
+2025-08-06 18:47:20,293 - INFO - 
+2025-08-06 18:47:20,294 - INFO - ARCHIVOS GENERADOS:
+2025-08-06 18:47:20,294 - INFO -   • Datasets individuales: 3
+2025-08-06 18:47:20,294 - INFO -   • Dataset combinado: datos/telecomx_datasets_combinados_20250806_184718.csv
+2025-08-06 18:47:20,295 - INFO -   • Informe detallado: informes/paso9_separacion_datos_informe_20250806_184718.txt
+2025-08-06 18:47:20,295 - INFO -   • Configuración: informes/paso9_configuracion_division_20250806_184718.json
+2025-08-06 18:47:20,295 - INFO -   • Visualizaciones: 2 gráficos en carpeta graficos/
+2025-08-06 18:47:20,295 - INFO - 
+2025-08-06 18:47:20,296 - INFO - DATASETS LISTOS PARA MODELADO:
+2025-08-06 18:47:20,296 - INFO -   • Train: datos/telecomx_train_dataset_20250806_184718.csv
+2025-08-06 18:47:20,296 - INFO -   • Validation: datos/telecomx_validation_dataset_20250806_184718.csv
+2025-08-06 18:47:20,296 - INFO -   • Test: datos/telecomx_test_dataset_20250806_184718.csv
+2025-08-06 18:47:20,296 - INFO - 
+2025-08-06 18:47:20,297 - INFO - PRÓXIMO PASO SUGERIDO:
+2025-08-06 18:47:20,297 - INFO -   Paso 10: Entrenamiento de Modelos Predictivos
+2025-08-06 18:47:20,297 - INFO -   - Usar datasets de la carpeta datos/
+2025-08-06 18:47:20,297 - INFO -   - Implementar Random Forest y XGBoost
+2025-08-06 18:47:20,297 - INFO -   - Aplicar class weighting del Paso 4
+2025-08-06 18:47:20,298 - INFO - ================================================================================

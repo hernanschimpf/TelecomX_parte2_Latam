@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250806_184718",
+  "random_seed": 42,
+  "split_ratios": {
+    "train": 0.6,
+    "validation": 0.2,
+    "test": 0.2
+  },
+  "stratification_variable": "Abandono_Cliente",
+  "total_samples": 7043,
+  "split_sizes": {
+    "train": 4225,
+    "validation": 1409,
+    "test": 1409
+  }
+}

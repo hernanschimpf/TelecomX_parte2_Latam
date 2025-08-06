@@ -1,0 +1,291 @@
+
+================================================================================
+TELECOMX - INFORME PASO 9: SEPARACIÓN DE DATOS PARA MODELADO
+================================================================================
+Fecha y Hora: 20250806_184718
+Paso: 9 - Separación de Datos
+Semilla Aleatoria: 42
+
+================================================================================
+RESUMEN EJECUTIVO
+================================================================================
+• División Realizada: Train (60%) / Validation (20%) / Test (20%)
+• Total de Registros: 7,043
+• Estratificación: EXITOSA
+• Representatividad por Segmentos: EXCELENTE
+• Archivos Generados: 4
+
+================================================================================
+DISTRIBUCIÓN DE CONJUNTOS
+================================================================================
+
+📊 TAMAÑOS DE CONJUNTOS:
+• Train: 4,225 registros (60.0%)
+• Validation: 1,409 registros (20.0%)
+• Test: 1,409 registros (20.0%)
+• Total: 7,043 registros
+
+⚖️ CONFIGURACIÓN UTILIZADA:
+• Método: train_test_split con estratificación
+• Semilla aleatoria: 42
+• Variable de estratificación: Abandono_Cliente
+• División: 60% train, 20% validation, 20% test
+
+================================================================================
+VALIDACIÓN DE ESTRATIFICACIÓN
+================================================================================
+
+🎯 CALIDAD DE ESTRATIFICACIÓN: EXCELENTE
+• Diferencia máxima entre conjuntos: 0.010%
+
+📊 DISTRIBUCIÓN DE CLASES POR CONJUNTO:
+
+TRAIN:
+   • Total: 4,225 registros
+   • No Churn: 3,104 (73.47%)
+   • Churn: 1,121 (26.53%)
+VALIDATION:
+   • Total: 1,409 registros
+   • No Churn: 1,035 (73.46%)
+   • Churn: 374 (26.54%)
+TEST:
+   • Total: 1,409 registros
+   • No Churn: 1,035 (73.46%)
+   • Churn: 374 (26.54%)
+
+✅ EVALUACIÓN DE BALANCE:
+• Estratificación: Correcta
+• Variación entre conjuntos: Mínima
+• Recomendación: Proceder con modelado
+
+================================================================================
+VALIDACIÓN POR SEGMENTOS DEL PASO 8
+================================================================================
+
+🎯 CALIDAD DE REPRESENTATIVIDAD: EXCELENTE
+• Desviación estándar promedio: 0.0071
+• Rango máximo entre conjuntos: 0.0260
+
+📊 ANÁLISIS POR SEGMENTOS DE TIEMPO:
+
+Nuevos (0-12m):
+   • Tasas de churn: 0.482 | 0.459 | 0.478 (T|V|Te)
+   • Desviación estándar: 0.0100
+   • Rango: 0.0230
+Intermedios (12-36m):
+   • Tasas de churn: 0.252 | 0.261 | 0.261 (T|V|Te)
+   • Desviación estándar: 0.0042
+   • Rango: 0.0090
+Veteranos (36m+):
+   • Tasas de churn: 0.118 | 0.125 | 0.118 (T|V|Te)
+   • Desviación estándar: 0.0033
+   • Rango: 0.0070
+
+📊 ANÁLISIS POR SEGMENTOS DE GASTO:
+
+Bajo Gasto:
+   • Tasas de churn: 0.164 | 0.138 | 0.159 (T|V|Te)
+   • Desviación estándar: 0.0113
+   • Rango: 0.0260
+Gasto Medio:
+   • Tasas de churn: 0.295 | 0.316 | 0.292 (T|V|Te)
+   • Desviación estándar: 0.0107
+   • Rango: 0.0240
+Alto Gasto:
+   • Tasas de churn: 0.335 | 0.340 | 0.343 (T|V|Te)
+   • Desviación estándar: 0.0033
+   • Rango: 0.0080
+
+================================================================================
+TESTS ESTADÍSTICOS DE REPRESENTATIVIDAD
+================================================================================
+
+🔬 TESTS DE KOLMOGOROV-SMIRNOV:
+
+Meses_Cliente:
+   • Train vs Validation: Similares (p=0.3216)
+   • Train vs Test: Similares (p=0.9992)
+   • Validation vs Test: Similares (p=0.8068)
+Cargo_Total:
+   • Train vs Validation: Similares (p=0.1276)
+   • Train vs Test: Similares (p=0.2027)
+   • Validation vs Test: Similares (p=0.5587)
+
+🎯 TEST CHI-CUADRADO PARA VARIABLE OBJETIVO:
+• Distribución entre conjuntos: Similares (p=0.9999)
+• Interpretación: Las proporciones de churn son consistentes entre conjuntos
+
+================================================================================
+ANÁLISIS DE VARIABLES CLAVE
+================================================================================
+
+📊 ESTADÍSTICAS DESCRIPTIVAS POR CONJUNTO:
+
+MESES_CLIENTE:
+
+TRAIN:
+   • Promedio: 32.6 meses
+   • Mediana: 29.0 meses
+   • Desviación: 24.8 meses
+   • Rango: 0 - 72 meses
+VALIDATION:
+   • Promedio: 31.7 meses
+   • Mediana: 29.0 meses
+   • Desviación: 24.1 meses
+   • Rango: 0 - 72 meses
+TEST:
+   • Promedio: 32.5 meses
+   • Mediana: 28.0 meses
+   • Desviación: 24.5 meses
+   • Rango: 0 - 72 meses
+
+CARGO_TOTAL:
+
+TRAIN:
+   • Promedio: $65.22
+   • Mediana: $70.75
+   • Desviación: $30.31
+   • Rango: $0.00 - $118.75
+VALIDATION:
+   • Promedio: $64.22
+   • Mediana: $70.05
+   • Desviación: $29.53
+   • Rango: $0.00 - $117.60
+TEST:
+   • Promedio: $63.62
+   • Mediana: $69.75
+   • Desviación: $30.39
+   • Rango: $0.00 - $118.60
+
+📈 CORRELACIONES CON VARIABLE OBJETIVO POR CONJUNTO:
+
+TRAIN:
+   • Meses_Cliente: -0.3602
+   • Cargo_Total: +0.1796
+VALIDATION:
+   • Meses_Cliente: -0.3267
+   • Cargo_Total: +0.2208
+TEST:
+   • Meses_Cliente: -0.3534
+   • Cargo_Total: +0.2121
+
+================================================================================
+EVALUACIÓN GENERAL DE LA DIVISIÓN
+================================================================================
+
+✅ CRITERIOS DE CALIDAD EVALUADOS:
+
+1. ESTRATIFICACIÓN DE CLASES:
+   • Estado: ✅ EXITOSA
+   • Diferencia máxima: 0.010% (objetivo: <2.0%)
+   • Calidad: EXCELENTE
+
+2. REPRESENTATIVIDAD POR SEGMENTOS:
+   • Estado: ✅ EXITOSA
+   • Desviación promedio: 0.0071 (objetivo: <0.05)
+   • Calidad: EXCELENTE
+
+3. SIMILARIDAD ESTADÍSTICA:
+   • Variables numéricas: ✅ SIMILARES
+   • Variable objetivo: ✅ SIMILAR
+
+🏆 EVALUACIÓN GENERAL:
+
+• Criterios cumplidos: 3/3
+• Calidad general: EXCELENTE
+• Recomendación: Proceder con entrenamiento de modelos
+
+================================================================================
+ARCHIVOS GENERADOS
+================================================================================
+
+📊 DATASETS INDIVIDUALES:
+
+• Train: datos/telecomx_train_dataset_20250806_184718.csv
+  - Registros: 4,225
+  - Uso: Entrenamiento de modelos
+• Validation: datos/telecomx_validation_dataset_20250806_184718.csv
+  - Registros: 1,409
+  - Uso: Validación de hiperparámetros
+• Test: datos/telecomx_test_dataset_20250806_184718.csv
+  - Registros: 1,409
+  - Uso: Evaluación final
+
+📄 ARCHIVO COMBINADO:
+• Combinado: datos/telecomx_datasets_combinados_20250806_184718.csv
+  - Registros: 7,043
+  - Uso: Análisis conjunto con columna identificadora
+
+📊 VISUALIZACIONES:
+• Distribución conjuntos: graficos/paso9_distribucion_conjuntos_20250806_184718.png
+• Análisis representatividad: graficos/paso9_analisis_representatividad_20250806_184718.png
+
+📄 DOCUMENTACIÓN:
+• Informe completo: informes/paso9_separacion_datos_informe_20250806_184718.txt
+• Log del proceso: logs/paso9_separacion_datos.log
+
+================================================================================
+RECOMENDACIONES PARA MODELADO
+================================================================================
+
+🎯 ESTRATEGIA DE MODELADO SUGERIDA:
+
+1. ENTRENAMIENTO:
+   • Usar dataset: datos/telecomx_train_dataset_20250806_184718.csv
+   • Registros: 4,225
+   • Aplicar class weighting del Paso 4
+
+2. VALIDACIÓN:
+   • Usar dataset: datos/telecomx_validation_dataset_20250806_184718.csv
+   • Registros: 1,409
+   • Para ajuste de hiperparámetros y early stopping
+
+3. EVALUACIÓN FINAL:
+   • Usar dataset: datos/telecomx_test_dataset_20250806_184718.csv
+   • Registros: 1,409
+   • Solo para evaluación final del modelo seleccionado
+
+⚖️ MÉTRICAS RECOMENDADAS:
+• Primarias: F1-Score, AUC-PR (por desbalance de clases)
+• Secundarias: Precision, Recall, AUC-ROC
+• Evitar: Accuracy como métrica principal
+
+🔄 VALIDACIÓN CRUZADA:
+• Aplicar sobre conjunto de entrenamiento únicamente
+• Usar estratificación: StratifiedKFold
+• Folds recomendados: 5
+
+================================================================================
+PRÓXIMO PASO RECOMENDADO
+================================================================================
+
+Paso 10: Entrenamiento de Modelos Predictivos
+• Cargar datasets desde carpeta datos/
+• Implementar algoritmos: Random Forest, XGBoost
+• Aplicar configuraciones de class weighting del Paso 4
+• Usar insights del Paso 8 para feature engineering adicional
+• Evaluar con métricas especializadas para datos desbalanceados
+
+================================================================================
+CONSIDERACIONES TÉCNICAS
+================================================================================
+
+🔧 CONFIGURACIÓN REPRODUCIBLE:
+• Semilla aleatoria fija: 42
+• Estratificación aplicada en todas las divisiones
+• Tests estadísticos con nivel de confianza 95%
+
+✅ VALIDACIONES APLICADAS:
+• Kolmogorov-Smirnov para variables numéricas
+• Chi-cuadrado para variable objetivo
+• Análisis de consistencia por segmentos
+• Verificación de balance de clases
+
+📊 CONTROL DE CALIDAD:
+• ✅ División cumple estándares de calidad
+• ✅ Estratificación dentro de tolerancias
+• ✅ Representatividad por segmentos adecuada
+
+================================================================================
+FIN DEL INFORME
+================================================================================

@@ -1,0 +1,127 @@
+{
+  "model_type": "LogisticRegression",
+  "parameters": {
+    "class_weight": {
+      "0": 1.0,
+      "1": 2.4920606601248885
+    },
+    "random_state": 42,
+    "max_iter": 1000,
+    "solver": "liblinear"
+  },
+  "coefficients": [
+    {
+      "feature": "Meses_Cliente",
+      "coefficient": -0.7264535440784273,
+      "abs_coefficient": 0.7264535440784273
+    },
+    {
+      "feature": "Tipo_Contrato_encoded",
+      "coefficient": -0.6350405303783491,
+      "abs_coefficient": 0.6350405303783491
+    },
+    {
+      "feature": "Servicio_Internet_Fibra Óptica",
+      "coefficient": 0.3851906543113992,
+      "abs_coefficient": 0.3851906543113992
+    },
+    {
+      "feature": "Servicio_Internet_No",
+      "coefficient": -0.34764812404746503,
+      "abs_coefficient": 0.34764812404746503
+    },
+    {
+      "feature": "TV_Streaming_No",
+      "coefficient": -0.2637856710035984,
+      "abs_coefficient": 0.2637856710035984
+    },
+    {
+      "feature": "Soporte_Tecnico_No",
+      "coefficient": 0.23641943795478865,
+      "abs_coefficient": 0.23641943795478865
+    },
+    {
+      "feature": "Facturacion_Digital_encoded",
+      "coefficient": 0.2205167940921461,
+      "abs_coefficient": 0.2205167940921461
+    },
+    {
+      "feature": "Seguridad_Online_No",
+      "coefficient": 0.2116541103775615,
+      "abs_coefficient": 0.2116541103775615
+    },
+    {
+      "feature": "Metodo_Pago_Cheque Electrónico",
+      "coefficient": 0.19542131710489388,
+      "abs_coefficient": 0.19542131710489388
+    },
+    {
+      "feature": "Cargo_Total",
+      "coefficient": -0.1690667491281995,
+      "abs_coefficient": 0.1690667491281995
+    },
+    {
+      "feature": "Peliculas_Streaming_No",
+      "coefficient": -0.10339191127232455,
+      "abs_coefficient": 0.10339191127232455
+    },
+    {
+      "feature": "Servicio_Internet_DSL",
+      "coefficient": -0.10292285611399263,
+      "abs_coefficient": 0.10292285611399263
+    },
+    {
+      "feature": "Respaldo_Online_No",
+      "coefficient": 0.09173830993293071,
+      "abs_coefficient": 0.09173830993293071
+    },
+    {
+      "feature": "Ciudadano_Mayor",
+      "coefficient": 0.08380902022426773,
+      "abs_coefficient": 0.08380902022426773
+    },
+    {
+      "feature": "Seguridad_Online_Sí",
+      "coefficient": 0.08147340067606523,
+      "abs_coefficient": 0.08147340067606523
+    },
+    {
+      "feature": "Tiene_Pareja_encoded",
+      "coefficient": -0.07901153874350154,
+      "abs_coefficient": 0.07901153874350154
+    },
+    {
+      "feature": "Soporte_Tecnico_Sí",
+      "coefficient": 0.05371050152877385,
+      "abs_coefficient": 0.05371050152877385
+    },
+    {
+      "feature": "Tiene_Dependientes_encoded",
+      "coefficient": -0.047217951697127156,
+      "abs_coefficient": 0.047217951697127156
+    },
+    {
+      "feature": "Metodo_Pago_Transferencia Bancaria",
+      "coefficient": -0.037653959976026136,
+      "abs_coefficient": 0.037653959976026136
+    },
+    {
+      "feature": "Proteccion_Dispositivo_No",
+      "coefficient": 0.02319114122460111,
+      "abs_coefficient": 0.02319114122460111
+    },
+    {
+      "feature": "Metodo_Pago_Tarjeta de Crédito",
+      "coefficient": -0.02018782000238268,
+      "abs_coefficient": 0.02018782000238268
+    }
+  ],
+  "intercept": -0.7541782867057805,
+  "n_features": 21,
+  "training_samples": 4225,
+  "normalized": true,
+  "class_weights": {
+    "0": 1.0,
+    "1": 2.4920606601248885
+  }
+}

@@ -1,0 +1,277 @@
+
+================================================================================
+TELECOMX - INFORME PASO 10: CREACIÓN DE MODELOS PREDICTIVOS
+================================================================================
+Fecha y Hora: 20250806_192021
+Paso: 10 - Creación de Modelos
+Semilla Aleatoria: 42
+
+================================================================================
+RESUMEN EJECUTIVO
+================================================================================
+• Modelos Creados: 2 (Random Forest + Regresión Logística)
+• Datos de Entrenamiento: 4,225 muestras
+• Características Utilizadas: 21
+• Class Weighting Aplicado: Configuración conservadora (Paso 4)
+• Normalización: Solo en Regresión Logística
+• Estado: Modelos entrenados y guardados exitosamente
+
+================================================================================
+CONFIGURACIÓN DE DATOS
+================================================================================
+
+📊 DATASET DE ENTRENAMIENTO:
+• Archivo utilizado: datos\telecomx_train_dataset_20250806_184718.csv
+• Total de muestras: 4,225
+• Número de características: 21
+• Variable objetivo: Abandono_Cliente
+
+⚖️ DISTRIBUCIÓN DE CLASES:
+• Ratio detectado: 2.77:1 (No Churn : Churn)
+• Class weights aplicados:
+  - Clase 0 (No Churn): 1.0
+  - Clase 1 (Churn): 2.5
+• Estrategia: Conservadora basada en análisis del Paso 4
+
+================================================================================
+MODELO 1: RANDOM FOREST
+================================================================================
+
+🌳 CONFIGURACIÓN DEL MODELO:
+• Tipo: Ensemble - Random Forest
+• N° de árboles: 100
+• Profundidad máxima: 15
+• Min. muestras split: 10
+• Min. muestras hoja: 5
+• Class weight: Personalizado {0: 1.0, 1: np.float64(2.4920606601248885)}
+• Normalización: No requerida
+
+🎯 CARACTERÍSTICAS PRINCIPALES:
+• No sensible a escala de variables
+• Maneja bien datos desbalanceados
+• Proporciona feature importance interpretable
+• Robusto a outliers y ruido
+
+📊 TOP 10 CARACTERÍSTICAS MÁS IMPORTANTES:
+
+ 1. Meses_Cliente: 0.2016
+ 2. Tipo_Contrato_encoded: 0.1935
+ 3. Cargo_Total: 0.1227
+ 4. Soporte_Tecnico_No: 0.0804
+ 5. Seguridad_Online_No: 0.0750
+ 6. Metodo_Pago_Cheque Electrónico: 0.0507
+ 7. Servicio_Internet_Fibra Óptica: 0.0469
+ 8. Respaldo_Online_No: 0.0324
+ 9. Facturacion_Digital_encoded: 0.0233
+10. Proteccion_Dispositivo_No: 0.0221
+
+✅ ESTADO DEL MODELO:
+• Entrenamiento: Exitoso
+• Validación básica: Aprobada
+• Archivo guardado: modelos/random_forest_model_20250806_192021.pkl
+• Información guardada: modelos/random_forest_info_20250806_192021.json
+
+================================================================================
+MODELO 2: REGRESIÓN LOGÍSTICA
+================================================================================
+
+📈 CONFIGURACIÓN DEL MODELO:
+• Tipo: Lineal - Regresión Logística
+• Solver: liblinear
+• Max iteraciones: 1000
+• Class weight: Personalizado {0: 1.0, 1: np.float64(2.4920606601248885)}
+• Normalización: StandardScaler aplicado
+
+🎯 CARACTERÍSTICAS PRINCIPALES:
+• Sensible a escala → Normalización aplicada
+• Interpretable mediante coeficientes
+• Rápido entrenamiento e inferencia
+• Baseline sólido para comparación
+
+📊 TOP 10 COEFICIENTES POR MAGNITUD ABSOLUTA:
+
+ 1. Meses_Cliente: -0.7265 (↓ Disminuye probabilidad de churn)
+ 2. Tipo_Contrato_encoded: -0.6350 (↓ Disminuye probabilidad de churn)
+ 3. Servicio_Internet_Fibra Óptica: +0.3852 (↑ Aumenta probabilidad de churn)
+ 4. Servicio_Internet_No: -0.3476 (↓ Disminuye probabilidad de churn)
+ 5. TV_Streaming_No: -0.2638 (↓ Disminuye probabilidad de churn)
+ 6. Soporte_Tecnico_No: +0.2364 (↑ Aumenta probabilidad de churn)
+ 7. Facturacion_Digital_encoded: +0.2205 (↑ Aumenta probabilidad de churn)
+ 8. Seguridad_Online_No: +0.2117 (↑ Aumenta probabilidad de churn)
+ 9. Metodo_Pago_Cheque Electrónico: +0.1954 (↑ Aumenta probabilidad de churn)
+10. Cargo_Total: -0.1691 (↓ Disminuye probabilidad de churn)
+
+📐 PARÁMETROS DEL MODELO:
+• Intercepto: -0.7542
+• Pipeline: StandardScaler → LogisticRegression
+• Número de coeficientes: 21
+
+✅ ESTADO DEL MODELO:
+• Entrenamiento: Exitoso
+• Normalización: Aplicada correctamente
+• Validación básica: Aprobada
+• Archivo guardado: modelos/logistic_regression_pipeline_20250806_192021.pkl
+• Información guardada: modelos/logistic_regression_info_20250806_192021.json
+
+================================================================================
+JUSTIFICACIÓN DE NORMALIZACIÓN
+================================================================================
+
+🔬 ANÁLISIS POR MODELO:
+
+RANDOM FOREST (Sin normalización):
+✅ Razones para NO normalizar:
+• Los árboles de decisión no dependen de la escala de variables
+• Las divisiones se basan en valores relativos dentro de cada característica
+• La distancia euclidiana no es relevante para el algoritmo
+• Mantiene interpretabilidad original de las variables
+
+REGRESIÓN LOGÍSTICA (Con normalización):
+✅ Razones para SÍ normalizar:
+• Los coeficientes son sensibles a la magnitud de las variables
+• Variables con escalas grandes dominan la función de costo
+• La optimización (gradiente descendente) converge mejor con datos normalizados
+• Los coeficientes normalizados son más interpretables
+
+⚖️ IMPACTO DE LA NORMALIZACIÓN:
+• Variables financieras (Cargo_Total): Rango ~0-8000 → Normalizado a ~(-2, +3)
+• Variables temporales (Meses_Cliente): Rango ~0-72 → Normalizado a ~(-2, +2)  
+• Variables binarias (encoding): Rango 0-1 → Mantenido similar
+• Resultado: Todas las variables contribuyen equitativamente al modelo lineal
+
+================================================================================
+CONFIGURACIONES APLICADAS DE PASOS ANTERIORES
+================================================================================
+
+🔗 INTEGRACIÓN CON PIPELINE ANTERIOR:
+
+PASO 4 - CLASS WEIGHTING:
+• Configuración conservadora aplicada
+• Ratio original detectado: 2.77:1
+• Peso ajustado para clase minoritaria: 2.5
+
+PASO 7 - VARIABLES OPTIMIZADAS:
+• Variables utilizadas: 21 (tras eliminación de columnas irrelevantes)
+• Variables multicolineales eliminadas
+• Solo predictores relevantes mantenidos
+
+PASO 8 - INSIGHTS DIRIGIDOS:
+• Variables clave identificadas: Meses_Cliente, Cargo_Total
+• Patrones de segmentación considerados en feature importance
+
+PASO 9 - DATOS SEPARADOS:
+• Solo datos de entrenamiento utilizados
+• Validación y test reservados para evaluación
+• Estratificación mantenida
+
+================================================================================
+ARCHIVOS GENERADOS
+================================================================================
+
+🤖 MODELOS ENTRENADOS:
+• Random Forest: modelos/random_forest_model_20250806_192021.pkl
+• Regresión Logística: modelos/logistic_regression_pipeline_20250806_192021.pkl
+
+📊 INFORMACIÓN DE MODELOS:
+• Random Forest info: modelos/random_forest_info_20250806_192021.json
+• Regresión Logística info: modelos/logistic_regression_info_20250806_192021.json
+• Configuración general: modelos/models_configuration_20250806_192021.json
+
+📈 VISUALIZACIONES:
+• Feature Importance: graficos/paso10_feature_importance_20250806_192021.png
+• Coeficientes Logística: graficos/paso10_coeficientes_logistica_20250806_192021.png
+
+📄 DOCUMENTACIÓN:
+• Informe completo: informes/paso10_creacion_modelos_informe_20250806_192021.txt
+• Log del proceso: logs/paso10_creacion_modelos.log
+
+================================================================================
+CARACTERÍSTICAS TÉCNICAS
+================================================================================
+
+🔧 ESPECIFICACIONES DE ENTRENAMIENTO:
+• Semilla aleatoria: 42 (reproducibilidad garantizada)
+• Paralelización: Random Forest usa todos los cores disponibles
+• Memoria utilizada: Optimizada para dataset de tamaño medio
+• Tiempo de entrenamiento: < 1 minuto por modelo
+
+✅ VALIDACIONES REALIZADAS:
+• Estructura de datos verificada
+• Predicciones en rango válido [0, 1]
+• Probabilidades suman 1.0
+• Modelos serializados correctamente
+
+🎯 PREPARACIÓN PARA EVALUACIÓN:
+• Modelos listos para inference
+• Compatible con datos del Paso 9
+• Formatos estándar para métricas
+• Pipeline completo preservado
+
+================================================================================
+PRÓXIMO PASO RECOMENDADO
+================================================================================
+
+Paso 11: Evaluación de Modelos
+• Cargar modelos desde carpeta modelos/
+• Evaluar en conjuntos de validación y test
+• Comparar rendimiento: Random Forest vs Regresión Logística
+• Métricas especializadas: F1-Score, AUC-PR, Recall
+• Matrices de confusión y curvas ROC/PR
+• Selección del modelo final
+
+🎯 ARCHIVOS NECESARIOS PARA EL PASO 11:
+• Modelos: modelos/random_forest_model_20250806_192021.pkl
+• Modelos: modelos/logistic_regression_pipeline_20250806_192021.pkl  
+• Datos validación: datos/telecomx_validation_dataset_*.csv
+• Datos test: datos/telecomx_test_dataset_*.csv
+
+================================================================================
+RECOMENDACIONES
+================================================================================
+
+💡 CONSIDERACIONES PARA LA EVALUACIÓN:
+
+1. MÉTRICAS PRINCIPALES:
+   • F1-Score: Balance entre precision y recall
+   • AUC-PR: Mejor que AUC-ROC para datos desbalanceados
+   • Recall: Importante para capturar todos los churns
+
+2. COMPARACIÓN DE MODELOS:
+   • Random Forest: Esperado mejor en datos complejos
+   • Regresión Logística: Baseline interpretable
+   • Considerar ensemble si ambos son competitivos
+
+3. INTERPRETABILIDAD:
+   • Random Forest: Feature importance ya calculada
+   • Regresión Logística: Coeficientes ya interpretados
+   • Validar consistencia entre importancias
+
+4. VALIDACIÓN DE ROBUSTEZ:
+   • Verificar performance en conjunto de validación
+   • Evaluar generalización en conjunto de test
+   • Detectar posible overfitting
+
+================================================================================
+CONSIDERACIONES DE PRODUCCIÓN
+================================================================================
+
+🚀 PREPARACIÓN PARA DESPLIEGUE:
+
+PERFORMANCE:
+• Random Forest: Mayor tiempo de inferencia pero más robusto
+• Regresión Logística: Inferencia rápida, ideal para tiempo real
+• Ambos modelos optimizados para el tamaño del dataset
+
+MANTENIMIENTO:
+• Modelos guardados en formato pickle estándar
+• Pipeline de Regresión Logística incluye normalización automática
+• Configuraciones documentadas para reentrenamiento
+
+ESCALABILIDAD:
+• Compatible con nuevos datos del mismo formato
+• Fácil integración en sistemas de producción
+• Monitoreo de drift recomendado
+
+================================================================================
+FIN DEL INFORME
+================================================================================

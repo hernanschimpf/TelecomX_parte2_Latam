@@ -1,0 +1,125 @@
+2025-08-06 19:49:16,684 - INFO - ================================================================================
+2025-08-06 19:49:16,685 - INFO - INICIANDO PASO 11: EVALUACIÓN DE MODELOS PREDICTIVOS
+2025-08-06 19:49:16,685 - INFO - ================================================================================
+2025-08-06 19:49:16,685 - INFO - Evaluación exhaustiva: métricas + overfitting + comparación + selección final
+2025-08-06 19:49:16,685 - INFO - Carpeta verificada/creada: excel
+2025-08-06 19:49:16,686 - INFO - Carpeta verificada/creada: informes
+2025-08-06 19:49:16,689 - INFO - Carpeta verificada/creada: graficos
+2025-08-06 19:49:16,689 - INFO - Carpeta verificada/creada: logs
+2025-08-06 19:49:16,690 - INFO - Carpeta verificada/creada: datos
+2025-08-06 19:49:16,690 - INFO - Carpeta verificada/creada: modelos
+2025-08-06 19:49:16,690 - INFO - Cargando modelos entrenados del Paso 10...
+2025-08-06 19:49:16,882 - INFO - Random Forest cargado: modelos\random_forest_model_20250806_192021.pkl
+2025-08-06 19:49:16,894 - INFO - Regresión Logística cargada: modelos\logistic_regression_pipeline_20250806_192021.pkl
+2025-08-06 19:49:16,918 - INFO - Modelos cargados exitosamente
+2025-08-06 19:49:16,918 - INFO - Modelos cargados: ['Random Forest', 'Regresión Logística']
+2025-08-06 19:49:16,919 - INFO - Cargando datasets del Paso 9...
+2025-08-06 19:49:16,932 - INFO - Train: 4,225 muestras, 26.5% churn
+2025-08-06 19:49:16,960 - INFO - Validation: 1,409 muestras, 26.5% churn
+2025-08-06 19:49:16,981 - INFO - Test: 1,409 muestras, 26.5% churn
+2025-08-06 19:49:16,981 - INFO - Datasets cargados: ['train', 'validation', 'test']
+2025-08-06 19:49:16,982 - INFO - ==================================================
+2025-08-06 19:49:16,982 - INFO - INICIANDO EVALUACIÓN DETALLADA
+2025-08-06 19:49:16,982 - INFO - Evaluando Random Forest en conjunto train...
+2025-08-06 19:49:17,075 - INFO - Random Forest en train:
+2025-08-06 19:49:17,075 - INFO -   Exactitud: 0.8452
+2025-08-06 19:49:17,076 - INFO -   F1-Score: 0.7417
+2025-08-06 19:49:17,076 - INFO -   AUC-ROC: 0.9268
+2025-08-06 19:49:17,076 - INFO -   AUC-PR: 0.8156
+2025-08-06 19:49:17,077 - INFO - Evaluando Random Forest en conjunto validation...
+2025-08-06 19:49:17,147 - INFO - Random Forest en validation:
+2025-08-06 19:49:17,148 - INFO -   Exactitud: 0.7559
+2025-08-06 19:49:17,148 - INFO -   F1-Score: 0.6028
+2025-08-06 19:49:17,149 - INFO -   AUC-ROC: 0.8203
+2025-08-06 19:49:17,149 - INFO -   AUC-PR: 0.6110
+2025-08-06 19:49:17,149 - INFO - Evaluando Random Forest en conjunto test...
+2025-08-06 19:49:17,221 - INFO - Random Forest en test:
+2025-08-06 19:49:17,221 - INFO -   Exactitud: 0.7736
+2025-08-06 19:49:17,222 - INFO -   F1-Score: 0.6225
+2025-08-06 19:49:17,222 - INFO -   AUC-ROC: 0.8410
+2025-08-06 19:49:17,223 - INFO -   AUC-PR: 0.6539
+2025-08-06 19:49:17,223 - INFO - Evaluando Regresión Logística en conjunto train...
+2025-08-06 19:49:17,240 - INFO - Regresión Logística en train:
+2025-08-06 19:49:17,241 - INFO -   Exactitud: 0.7659
+2025-08-06 19:49:17,241 - INFO -   F1-Score: 0.6397
+2025-08-06 19:49:17,241 - INFO -   AUC-ROC: 0.8519
+2025-08-06 19:49:17,242 - INFO -   AUC-PR: 0.6589
+2025-08-06 19:49:17,242 - INFO - Evaluando Regresión Logística en conjunto validation...
+2025-08-06 19:49:17,256 - INFO - Regresión Logística en validation:
+2025-08-06 19:49:17,257 - INFO -   Exactitud: 0.7452
+2025-08-06 19:49:17,257 - INFO -   F1-Score: 0.6085
+2025-08-06 19:49:17,257 - INFO -   AUC-ROC: 0.8236
+2025-08-06 19:49:17,257 - INFO -   AUC-PR: 0.6018
+2025-08-06 19:49:17,258 - INFO - Evaluando Regresión Logística en conjunto test...
+2025-08-06 19:49:17,274 - INFO - Regresión Logística en test:
+2025-08-06 19:49:17,274 - INFO -   Exactitud: 0.7651
+2025-08-06 19:49:17,275 - INFO -   F1-Score: 0.6351
+2025-08-06 19:49:17,275 - INFO -   AUC-ROC: 0.8398
+2025-08-06 19:49:17,275 - INFO -   AUC-PR: 0.6497
+2025-08-06 19:49:17,275 - INFO - Evaluaciones completadas: 6
+2025-08-06 19:49:17,275 - INFO - ==================================================
+2025-08-06 19:49:17,276 - INFO - Analizando overfitting y underfitting...
+2025-08-06 19:49:17,276 - INFO - Random Forest:
+2025-08-06 19:49:17,276 - INFO -   Estado: OVERFITTING SIGNIFICATIVO
+2025-08-06 19:49:17,276 - INFO -   Score overfitting: 0.1227
+2025-08-06 19:49:17,276 - INFO -   F1 Train→Val: +0.1389
+2025-08-06 19:49:17,277 - INFO -   Recomendación: Reducir complejidad, regularización, más datos
+2025-08-06 19:49:17,277 - INFO - Regresión Logística:
+2025-08-06 19:49:17,277 - INFO -   Estado: BIEN AJUSTADO
+2025-08-06 19:49:17,278 - INFO -   Score overfitting: 0.0297
+2025-08-06 19:49:17,278 - INFO -   F1 Train→Val: +0.0312
+2025-08-06 19:49:17,278 - INFO -   Recomendación: Performance adecuada, listo para producción
+2025-08-06 19:49:17,278 - INFO - ==================================================
+2025-08-06 19:49:17,279 - INFO - Comparando modelos...
+2025-08-06 19:49:17,279 - INFO - Ranking de modelos:
+2025-08-06 19:49:17,279 - INFO -   1. Regresión Logística: 0.6505 (BIEN AJUSTADO)
+2025-08-06 19:49:17,280 - INFO -   2. Random Forest: 0.6028 (OVERFITTING SIGNIFICATIVO)
+2025-08-06 19:49:17,280 - INFO - Mejor modelo: Regresión Logística con score 0.6505
+2025-08-06 19:49:17,280 - INFO - ==================================================
+2025-08-06 19:49:17,280 - INFO - Generando visualizaciones...
+2025-08-06 19:49:20,483 - INFO - Generadas 5 visualizaciones
+2025-08-06 19:49:20,483 - INFO - Generando informe completo...
+2025-08-06 19:49:20,509 - INFO - Informe completo guardado: informes/paso11_evaluacion_modelos_informe_20250806_194916.txt
+2025-08-06 19:49:20,511 - INFO - Recomendación de modelo guardada: informes/paso11_modelo_recomendado_20250806_194916.json
+2025-08-06 19:49:20,511 - INFO - ================================================================================
+2025-08-06 19:49:20,511 - INFO - PASO 11 COMPLETADO EXITOSAMENTE
+2025-08-06 19:49:20,512 - INFO - ================================================================================
+2025-08-06 19:49:20,512 - INFO - RESULTADOS DE EVALUACIÓN:
+2025-08-06 19:49:20,513 - INFO - 
+2025-08-06 19:49:20,513 - INFO - 🏆 RANKING FINAL DE MODELOS:
+2025-08-06 19:49:20,513 - INFO -   🥇 1. Regresión Logística: 0.6505 (BIEN AJUSTADO)
+2025-08-06 19:49:20,513 - INFO -   🥈 2. Random Forest: 0.6028 (OVERFITTING SIGNIFICATIVO)
+2025-08-06 19:49:20,514 - INFO - 
+2025-08-06 19:49:20,514 - INFO - 🎯 MODELO GANADOR: Regresión Logística
+2025-08-06 19:49:20,514 - INFO -   • Score final: 0.6505
+2025-08-06 19:49:20,514 - INFO -   • Estado: BIEN AJUSTADO
+2025-08-06 19:49:20,515 - INFO -   • Performance en Test:
+2025-08-06 19:49:20,515 - INFO -     - F1-Score: 0.6351
+2025-08-06 19:49:20,515 - INFO -     - Precisión: 0.5403
+2025-08-06 19:49:20,515 - INFO -     - Recall: 0.7701
+2025-08-06 19:49:20,515 - INFO -     - AUC-PR: 0.6497
+2025-08-06 19:49:20,516 - INFO - 
+2025-08-06 19:49:20,516 - INFO - 🔍 ANÁLISIS DE OVERFITTING:
+2025-08-06 19:49:20,516 - INFO -   🔴 Random Forest: OVERFITTING SIGNIFICATIVO
+2025-08-06 19:49:20,516 - INFO -     Score: 0.1227
+2025-08-06 19:49:20,517 - INFO -   ✅ Regresión Logística: BIEN AJUSTADO
+2025-08-06 19:49:20,517 - INFO -     Score: 0.0297
+2025-08-06 19:49:20,517 - INFO - 
+2025-08-06 19:49:20,517 - INFO - 📁 ARCHIVOS GENERADOS:
+2025-08-06 19:49:20,518 - INFO -   • Informe completo: informes/paso11_evaluacion_modelos_informe_20250806_194916.txt
+2025-08-06 19:49:20,518 - INFO -   • Recomendación final: informes/paso11_modelo_recomendado_20250806_194916.json
+2025-08-06 19:49:20,518 - INFO -   • Visualizaciones: 5 gráficos en graficos/
+2025-08-06 19:49:20,518 - INFO - 
+2025-08-06 19:49:20,518 - INFO - 🚀 ESTADO PARA PRODUCCIÓN:
+2025-08-06 19:49:20,553 - INFO -   • Modelo recomendado: Regresión Logística
+2025-08-06 19:49:20,554 - INFO -   • Performance validada: ✅
+2025-08-06 19:49:20,554 - INFO -   • Overfitting controlado: ✅
+2025-08-06 19:49:20,554 - INFO -   • Listo para despliegue: ✅
+2025-08-06 19:49:20,554 - INFO - 
+2025-08-06 19:49:20,555 - INFO - 📊 PRÓXIMOS PASOS RECOMENDADOS:
+2025-08-06 19:49:20,555 - INFO -   1. Implementar modelo en sistema de producción
+2025-08-06 19:49:20,555 - INFO -   2. Configurar scoring automático de clientes
+2025-08-06 19:49:20,555 - INFO -   3. Establecer campañas de retención basadas en predicciones
+2025-08-06 19:49:20,555 - INFO -   4. Monitorear performance en tiempo real
+2025-08-06 19:49:20,556 - INFO -   5. Planificar reentrenamiento periódico
+2025-08-06 19:49:20,556 - INFO - ================================================================================
