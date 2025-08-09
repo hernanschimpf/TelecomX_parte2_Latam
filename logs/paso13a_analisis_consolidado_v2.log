@@ -1,0 +1,84 @@
+2025-08-07 23:12:20,652 - INFO - ================================================================================
+2025-08-07 23:12:20,652 - INFO - INICIANDO PASO 13A: ANÁLISIS CONSOLIDADO DE FACTORES DE CHURN - V2
+2025-08-07 23:12:20,652 - INFO - ================================================================================
+2025-08-07 23:12:20,652 - INFO - Versión mejorada con visualizaciones optimizadas
+2025-08-07 23:12:20,653 - INFO - Carpeta verificada/creada: excel
+2025-08-07 23:12:20,653 - INFO - Carpeta verificada/creada: informes
+2025-08-07 23:12:20,653 - INFO - Carpeta verificada/creada: graficos
+2025-08-07 23:12:20,656 - INFO - Carpeta verificada/creada: logs
+2025-08-07 23:12:20,656 - INFO - Carpeta verificada/creada: datos
+2025-08-07 23:12:20,657 - INFO - ==================================================
+2025-08-07 23:12:20,657 - INFO - CARGANDO RESULTADOS DE PASOS ANTERIORES
+2025-08-07 23:12:20,657 - INFO - Cargando resultados de pasos anteriores...
+2025-08-07 23:12:20,658 - INFO - Paso 11 cargado - Mejor modelo: Regresión Logística
+2025-08-07 23:12:20,896 - INFO - Paso 12 cargado - Variables analizadas: 21
+2025-08-07 23:12:20,905 - INFO - Dataset base cargado: 4,225 registros, 26.5% churn
+2025-08-07 23:12:20,905 - INFO - ==================================================
+2025-08-07 23:12:20,905 - INFO - IDENTIFICANDO FACTORES CRÍTICOS DE CHURN
+2025-08-07 23:12:20,905 - INFO - Identificando factores críticos de churn...
+2025-08-07 23:12:20,909 - INFO - Variable no mapeada: 'Servicio_Internet_Fibra Óptica' - asignando score por patrón
+2025-08-07 23:12:20,912 - INFO - Variable no mapeada: 'Metodo_Pago_Cheque Electrónico' - asignando score por patrón
+2025-08-07 23:12:20,913 - INFO - Variable no mapeada: 'TV_Streaming_No' - asignando score por patrón
+2025-08-07 23:12:20,914 - INFO - Variable no mapeada: 'Facturacion_Digital_encoded' - asignando score por patrón
+2025-08-07 23:12:20,915 - INFO - Identificados 10 factores críticos
+2025-08-07 23:12:20,915 - INFO - ==================================================
+2025-08-07 23:12:20,915 - INFO - ANALIZANDO POR CATEGORÍAS DE NEGOCIO
+2025-08-07 23:12:20,915 - INFO - Analizando por categorías de negocio...
+2025-08-07 23:12:20,915 - INFO - Analizadas 3 categorías de negocio
+2025-08-07 23:12:20,916 - INFO - ==================================================
+2025-08-07 23:12:20,916 - INFO - GENERANDO INSIGHTS DE NEGOCIO
+2025-08-07 23:12:20,916 - INFO - Generando insights de negocio...
+2025-08-07 23:12:20,916 - INFO - ==================================================
+2025-08-07 23:12:20,917 - INFO - GENERANDO VISUALIZACIÓN MEJORADA
+2025-08-07 23:12:20,917 - INFO - Creando visualización mejorada de análisis consolidado...
+2025-08-07 23:12:21,125 - INFO - Clasificación por rangos de importancia:
+2025-08-07 23:12:21,126 - INFO -   Meses_Cliente: 18.9% -> #F4320B (CRÍTICO (≥15%))
+2025-08-07 23:12:21,126 - INFO -   Tipo_Contrato_encoded: 17.4% -> #F4320B (CRÍTICO (≥15%))
+2025-08-07 23:12:21,127 - INFO -   Cargo_Total: 8.2% -> #F54927 (IMPORTANTE (6-14.9%))
+2025-08-07 23:12:21,127 - INFO -   Servicio_Internet_Fibra Óptica: 7.0% -> #F54927 (IMPORTANTE (6-14.9%))
+2025-08-07 23:12:21,128 - INFO -   Soporte_Tecnico_No: 6.9% -> #F54927 (IMPORTANTE (6-14.9%))
+2025-08-07 23:12:21,128 - INFO -   Seguridad_Online_No: 6.3% -> #F54927 (IMPORTANTE (6-14.9%))
+2025-08-07 23:12:21,128 - INFO -   Servicio_Internet_No: 4.9% -> #F87C63 (MODERADO (<6%))
+2025-08-07 23:12:21,128 - INFO -   Metodo_Pago_Cheque Electrónico: 4.9% -> #F87C63 (MODERADO (<6%))
+2025-08-07 23:12:21,752 - INFO - Visualización con colores específicos guardada: graficos/paso13a_analisis_consolidado_v2_20250807_231220.png
+2025-08-07 23:12:21,753 - INFO - ==================================================
+2025-08-07 23:12:21,753 - INFO - GUARDANDO RESULTADOS CONSOLIDADOS
+2025-08-07 23:12:21,756 - INFO - Datos consolidados guardados: datos/paso13a_analisis_consolidado_v2_20250807_231220.json
+2025-08-07 23:12:21,756 - INFO - Informe resumen guardado: informes/paso13a_analisis_consolidado_resumen_v2_20250807_231220.txt
+2025-08-07 23:12:21,756 - INFO - ================================================================================
+2025-08-07 23:12:21,756 - INFO - PASO 13A V2 COMPLETADO EXITOSAMENTE
+2025-08-07 23:12:21,756 - INFO - ================================================================================
+2025-08-07 23:12:21,756 - INFO - 
+2025-08-07 23:12:21,757 - INFO - 🎯 FACTORES CRÍTICOS IDENTIFICADOS:
+2025-08-07 23:12:21,757 - INFO -   1. Meses_Cliente: 18.9% | 🔴 Baja
+2025-08-07 23:12:21,757 - INFO -   2. Tipo_Contrato_encoded: 17.4% | 🟢 Alta
+2025-08-07 23:12:21,757 - INFO -   3. Cargo_Total: 8.2% | 🔴 Baja
+2025-08-07 23:12:21,758 - INFO -   4. Servicio_Internet_Fibra Óptica: 7.0% | 🟡 Media
+2025-08-07 23:12:21,758 - INFO -   5. Soporte_Tecnico_No: 6.9% | 🟢 Alta
+2025-08-07 23:12:21,758 - INFO - 
+2025-08-07 23:12:21,758 - INFO - 🏢 CATEGORÍAS PRIORITARIAS:
+2025-08-07 23:12:21,759 - INFO -   1. Contractuales: ALTA (43.3 pts)
+2025-08-07 23:12:21,759 - INFO -   2. Otras: ALTA (39.3 pts)
+2025-08-07 23:12:21,759 - INFO -   3. Servicios Adicionales: ALTA (38.4 pts)
+2025-08-07 23:12:21,759 - INFO - 
+2025-08-07 23:12:21,759 - INFO - ⚡ DISTRIBUCIÓN DE ACCIONABILIDAD:
+2025-08-07 23:12:21,759 - INFO -   • Alta (7-10): 4 factores
+2025-08-07 23:12:21,759 - INFO -   • Media (4-6): 4 factores
+2025-08-07 23:12:21,760 - INFO -   • Baja (1-3): 2 factores
+2025-08-07 23:12:21,760 - INFO - 
+2025-08-07 23:12:21,760 - INFO - 📁 ARCHIVOS GENERADOS:
+2025-08-07 23:12:21,760 - INFO -   • Datos consolidados: datos/paso13a_analisis_consolidado_v2_20250807_231220.json
+2025-08-07 23:12:21,760 - INFO -   • Informe resumen: informes/paso13a_analisis_consolidado_resumen_v2_20250807_231220.txt
+2025-08-07 23:12:21,760 - INFO -   • Visualización mejorada: graficos/paso13a_analisis_consolidado_v2_20250807_231220.png
+2025-08-07 23:12:21,760 - INFO - 
+2025-08-07 23:12:21,760 - INFO - ✅ MEJORAS IMPLEMENTADAS EN V2:
+2025-08-07 23:12:21,760 - INFO -   • Visualizaciones con colores profesionales
+2025-08-07 23:12:21,761 - INFO -   • Mejor espaciado y legibilidad
+2025-08-07 23:12:21,761 - INFO -   • Texto sin superposición
+2025-08-07 23:12:21,761 - INFO -   • Gráficos de mayor resolución
+2025-08-07 23:12:21,762 - INFO - 
+2025-08-07 23:12:21,762 - INFO - 📋 LISTO PARA PRÓXIMOS SCRIPTS:
+2025-08-07 23:12:21,762 - INFO -   • paso13b: Segmentación estratégica
+2025-08-07 23:12:21,762 - INFO -   • paso13c: Business case con ROI
+2025-08-07 23:12:21,762 - INFO -   • paso13d: Roadmap de implementación
+2025-08-07 23:12:21,762 - INFO - ================================================================================

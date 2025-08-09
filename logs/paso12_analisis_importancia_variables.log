@@ -1,0 +1,118 @@
+2025-08-07 19:12:00,957 - INFO - ================================================================================
+2025-08-07 19:12:00,958 - INFO - INICIANDO PASO 12: ANÁLISIS DE IMPORTANCIA DE VARIABLES
+2025-08-07 19:12:00,958 - INFO - ================================================================================
+2025-08-07 19:12:00,958 - INFO - Análisis exhaustivo de variables críticas para predicción de churn
+2025-08-07 19:12:00,958 - INFO - Carpeta verificada/creada: excel
+2025-08-07 19:12:00,959 - INFO - Carpeta verificada/creada: informes
+2025-08-07 19:12:00,974 - INFO - Carpeta verificada/creada: graficos
+2025-08-07 19:12:00,974 - INFO - Carpeta verificada/creada: logs
+2025-08-07 19:12:00,975 - INFO - Carpeta verificada/creada: datos
+2025-08-07 19:12:00,975 - INFO - Carpeta verificada/creada: modelos
+2025-08-07 19:12:00,975 - INFO - Cargando modelos y datos del Paso 11...
+2025-08-07 19:12:02,576 - INFO - Random Forest cargado: modelos\random_forest_model_20250806_192021.pkl
+2025-08-07 19:12:02,586 - INFO - Regresión Logística cargada: modelos\logistic_regression_pipeline_20250806_192021.pkl
+2025-08-07 19:12:02,673 - INFO - Datos cargados exitosamente: 21 variables
+2025-08-07 19:12:02,673 - INFO - Modelos cargados: ['Random Forest', 'Regresión Logística']
+2025-08-07 19:12:02,674 - INFO - Variables disponibles: 21
+2025-08-07 19:12:02,674 - INFO - ==================================================
+2025-08-07 19:12:02,674 - INFO - ANALIZANDO RANDOM FOREST
+2025-08-07 19:12:02,674 - INFO - Analizando importancia de variables en Random Forest...
+2025-08-07 19:12:02,702 - INFO - Random Forest - Variable más importante: Meses_Cliente (20.16%)
+2025-08-07 19:12:02,703 - INFO - Random Forest - Top 7 variables explican 77.1% de la importancia
+2025-08-07 19:12:02,703 - INFO - ==================================================
+2025-08-07 19:12:02,703 - INFO - ANALIZANDO REGRESIÓN LOGÍSTICA
+2025-08-07 19:12:02,703 - INFO - Analizando coeficientes de Regresión Logística...
+2025-08-07 19:12:02,706 - INFO - Regresión Logística - Variable más importante: Meses_Cliente
+2025-08-07 19:12:02,706 - INFO - Regresión Logística - Coeficiente: -0.7265
+2025-08-07 19:12:02,706 - INFO - Regresión Logística - Odds Ratio: 0.4836
+2025-08-07 19:12:02,706 - INFO - Regresión Logística - Variables positivas: 10, negativas: 11
+2025-08-07 19:12:02,706 - INFO - ==================================================
+2025-08-07 19:12:02,706 - INFO - COMPARANDO IMPORTANCIA ENTRE MODELOS
+2025-08-07 19:12:02,706 - INFO - Comparando importancia de variables entre modelos...
+2025-08-07 19:12:02,715 - INFO - Variables de alto consenso: 8
+2025-08-07 19:12:02,716 - INFO - Variable de mayor consenso: Meses_Cliente
+2025-08-07 19:12:02,716 - INFO - Concordancia entre modelos: 40.0%
+2025-08-07 19:12:02,716 - INFO - ==================================================
+2025-08-07 19:12:02,718 - INFO - GENERANDO INTERPRETACIONES DE NEGOCIO
+2025-08-07 19:12:02,718 - INFO - Generando interpretaciones de negocio...
+2025-08-07 19:12:02,729 - INFO - Generadas interpretaciones para 8 variables clave
+2025-08-07 19:12:02,729 - INFO - ==================================================
+2025-08-07 19:12:02,729 - INFO - GENERANDO VISUALIZACIONES
+2025-08-07 19:12:02,729 - INFO - Generando visualizaciones...
+2025-08-07 19:12:05,784 - INFO - Generadas 5 visualizaciones
+2025-08-07 19:12:05,784 - INFO - ==================================================
+2025-08-07 19:12:05,784 - INFO - CREANDO REPORTE EXCEL
+2025-08-07 19:12:05,785 - INFO - Creando reporte Excel...
+2025-08-07 19:12:05,890 - INFO - Reporte Excel guardado: excel/paso12_analisis_importancia_variables_20250807_191200.xlsx
+2025-08-07 19:12:05,890 - INFO - ==================================================
+2025-08-07 19:12:05,891 - INFO - GENERANDO INFORME COMPLETO
+2025-08-07 19:12:05,893 - INFO - Informe completo guardado: informes/paso12_analisis_importancia_variables_informe_20250807_191200.txt
+2025-08-07 19:12:05,893 - INFO - ================================================================================
+2025-08-07 19:12:05,893 - INFO - PASO 12 COMPLETADO EXITOSAMENTE
+2025-08-07 19:12:05,894 - INFO - ================================================================================
+2025-08-07 19:12:05,894 - INFO - RESULTADOS DEL ANÁLISIS DE IMPORTANCIA:
+2025-08-07 19:12:05,894 - INFO - 
+2025-08-07 19:12:05,894 - INFO - 🎯 VARIABLES MÁS IMPORTANTES:
+2025-08-07 19:12:05,894 - INFO - 
+2025-08-07 19:12:05,894 - INFO - 🌳 RANDOM FOREST - TOP 5:
+2025-08-07 19:12:05,895 - INFO -   1. Meses_Cliente: 20.16%
+2025-08-07 19:12:05,895 - INFO -   2. Tipo_Contrato_encoded: 19.35%
+2025-08-07 19:12:05,895 - INFO -   3. Cargo_Total: 12.27%
+2025-08-07 19:12:05,896 - INFO -   4. Soporte_Tecnico_No: 8.04%
+2025-08-07 19:12:05,896 - INFO -   5. Seguridad_Online_No: 7.50%
+2025-08-07 19:12:05,896 - INFO - 
+2025-08-07 19:12:05,896 - INFO - 📈 REGRESIÓN LOGÍSTICA - TOP 5:
+2025-08-07 19:12:05,897 - INFO -   1. Meses_Cliente: -0.7265 ↘️ (OR: 0.484)
+2025-08-07 19:12:05,897 - INFO -   2. Tipo_Contrato_encoded: -0.6350 ↘️ (OR: 0.530)
+2025-08-07 19:12:05,897 - INFO -   3. Servicio_Internet_Fibra Óptica: +0.3852 ↗️ (OR: 1.470)
+2025-08-07 19:12:05,897 - INFO -   4. Servicio_Internet_No: -0.3476 ↘️ (OR: 0.706)
+2025-08-07 19:12:05,898 - INFO -   5. TV_Streaming_No: -0.2638 ↘️ (OR: 0.768)
+2025-08-07 19:12:05,898 - INFO - 
+2025-08-07 19:12:05,898 - INFO - 🤝 VARIABLES DE ALTO CONSENSO:
+2025-08-07 19:12:05,898 - INFO -   1. Meses_Cliente: RF=20.2% | LR=17.7%
+2025-08-07 19:12:05,898 - INFO -   2. Tipo_Contrato_encoded: RF=19.4% | LR=15.4%
+2025-08-07 19:12:05,899 - INFO -   3. Cargo_Total: RF=12.3% | LR=4.1%
+2025-08-07 19:12:05,899 - INFO -   4. Servicio_Internet_Fibra Óptica: RF=4.7% | LR=9.4%
+2025-08-07 19:12:05,899 - INFO -   5. Soporte_Tecnico_No: RF=8.0% | LR=5.7%
+2025-08-07 19:12:05,899 - INFO - 
+2025-08-07 19:12:05,899 - INFO - 📊 MÉTRICAS DE ANÁLISIS:
+2025-08-07 19:12:05,899 - INFO -   • Variables evaluadas: 21
+2025-08-07 19:12:05,900 - INFO -   • Variables de consenso: 8
+2025-08-07 19:12:05,900 - INFO -   • Concordancia entre modelos: 40.0%
+2025-08-07 19:12:05,900 - INFO -   • Variable más importante: Meses_Cliente
+2025-08-07 19:12:05,900 - INFO - 
+2025-08-07 19:12:05,900 - INFO - 💼 PRINCIPALES INSIGHTS DE NEGOCIO:
+2025-08-07 19:12:05,900 - INFO -   1. Meses_Cliente
+2025-08-07 19:12:05,900 - INFO -      Variable específica del negocio con impacto en churn. Esta variable reduce la probabilidad de churn ...
+2025-08-07 19:12:05,901 - INFO -   2. Tipo_Contrato_encoded
+2025-08-07 19:12:05,901 - INFO -      Variable específica del negocio con impacto en churn. Esta variable reduce la probabilidad de churn ...
+2025-08-07 19:12:05,901 - INFO -   3. Cargo_Total
+2025-08-07 19:12:05,901 - INFO -      Variable específica del negocio con impacto en churn. Esta variable reduce la probabilidad de churn ...
+2025-08-07 19:12:05,901 - INFO - 
+2025-08-07 19:12:05,901 - INFO - 🚀 RECOMENDACIONES ESTRATÉGICAS CLAVE:
+2025-08-07 19:12:05,902 - INFO -   1. Retención Temprana: Implementar programa de onboarding robusto y seguimiento proactivo en primeros 6...
+2025-08-07 19:12:05,903 - INFO -   2. Estrategia Contractual: Incentivar contratos de mayor duración con descuentos progresivos y beneficios e...
+2025-08-07 19:12:05,903 - INFO - 
+2025-08-07 19:12:05,904 - INFO - 📁 ARCHIVOS GENERADOS:
+2025-08-07 19:12:05,904 - INFO -   • Informe completo: informes/paso12_analisis_importancia_variables_informe_20250807_191200.txt
+2025-08-07 19:12:05,904 - INFO -   • Reporte Excel: excel/paso12_analisis_importancia_variables_20250807_191200.xlsx
+2025-08-07 19:12:05,904 - INFO -   • Visualizaciones: 5 gráficos en graficos/
+2025-08-07 19:12:05,905 - INFO -     - Importancia Random Forest
+2025-08-07 19:12:05,905 - INFO -     - Coeficientes Regresión Logística
+2025-08-07 19:12:05,905 - INFO -     - Comparación entre modelos
+2025-08-07 19:12:05,906 - INFO -     - Análisis de consenso
+2025-08-07 19:12:05,906 - INFO -     - Odds Ratios
+2025-08-07 19:12:05,907 - INFO - 
+2025-08-07 19:12:05,907 - INFO - ✅ ANÁLISIS COMPLETADO:
+2025-08-07 19:12:05,907 - INFO -   • Variables críticas identificadas
+2025-08-07 19:12:05,907 - INFO -   • Interpretaciones de negocio generadas
+2025-08-07 19:12:05,907 - INFO -   • Recomendaciones estratégicas listas
+2025-08-07 19:12:05,908 - INFO -   • Documentación completa disponible
+2025-08-07 19:12:05,908 - INFO - 
+2025-08-07 19:12:05,908 - INFO - 📊 PRÓXIMOS PASOS RECOMENDADOS:
+2025-08-07 19:12:05,909 - INFO -   1. Implementar scoring de riesgo basado en variables críticas
+2025-08-07 19:12:05,909 - INFO -   2. Desarrollar campañas de retención segmentadas
+2025-08-07 19:12:05,909 - INFO -   3. Crear dashboard de monitoreo de variables clave
+2025-08-07 19:12:05,909 - INFO -   4. Diseñar experimentos para validar causalidad
+2025-08-07 19:12:05,910 - INFO -   5. Optimizar productos/servicios basado en insights
+2025-08-07 19:12:05,910 - INFO - ================================================================================
