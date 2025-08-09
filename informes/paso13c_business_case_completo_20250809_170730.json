@@ -1,0 +1,188 @@
+{
+  "metadata": {
+    "timestamp": "20250809_170730",
+    "script": "paso13c_Business_Case_Completo",
+    "version": "1.0",
+    "disclaimer": "DATOS ESTIMADOS - BENCHMARKS INDUSTRIA TELECOM - EJERCICIO DE SIMULACIÓN"
+  },
+  "current_state": {
+    "Bajo_Riesgo": {
+      "customers": 1761,
+      "monthly_revenue": 79245.0,
+      "annual_revenue": 950940.0,
+      "annual_churn_rate": 0.021010789324247586,
+      "annual_churned_customers": 37.0,
+      "annual_churn_revenue_loss": 19980.0,
+      "customer_lifetime_value": 1080.0,
+      "segment_ltv_total": 1901880.0
+    },
+    "Medio_Riesgo": {
+      "customers": 3521,
+      "monthly_revenue": 158445.0,
+      "annual_revenue": 1901340.0,
+      "annual_churn_rate": 0.20789548423743254,
+      "annual_churned_customers": 732.0,
+      "annual_churn_revenue_loss": 395280.0,
+      "customer_lifetime_value": 1080.0,
+      "segment_ltv_total": 3802680.0
+    },
+    "Alto_Riesgo": {
+      "customers": 1761,
+      "monthly_revenue": 79245.0,
+      "annual_revenue": 950940.0,
+      "annual_churn_rate": 0.6246450880181715,
+      "annual_churned_customers": 1100.0,
+      "annual_churn_revenue_loss": 594000.0,
+      "customer_lifetime_value": 1080.0,
+      "segment_ltv_total": 1901880.0
+    },
+    "totals": {
+      "total_customers": 7043,
+      "total_annual_revenue": 3803220.0,
+      "total_annual_churn_loss": 1009260.0,
+      "overall_churn_rate": 0.2653698707936959,
+      "churn_impact_percentage": 26.536987079369588,
+      "average_revenue_per_customer": 540.0
+    }
+  },
+  "intervention_scenarios": {
+    "Bajo_Riesgo": {
+      "baseline_customers_at_risk": 37.0,
+      "save_rate_assumed": 0.15,
+      "customers_saved": 5.55,
+      "investment_required_annual": 925.0,
+      "revenue_saved_annual": 2997.0,
+      "ltv_customers_saved": 5994.0,
+      "net_benefit_annual": 2072.0,
+      "roi_percentage": 224.00000000000003,
+      "payback_months": 3.7037037037037037,
+      "cost_per_attempt": 25.0,
+      "cost_per_customer_saved": 166.66666666666669,
+      "revenue_per_customer_saved": 540.0
+    },
+    "Medio_Riesgo": {
+      "baseline_customers_at_risk": 732.0,
+      "save_rate_assumed": 0.35,
+      "customers_saved": 256.2,
+      "investment_required_annual": 25620.0,
+      "revenue_saved_annual": 138348.0,
+      "ltv_customers_saved": 276696.0,
+      "net_benefit_annual": 112728.0,
+      "roi_percentage": 440.00000000000006,
+      "payback_months": 2.2222222222222223,
+      "cost_per_attempt": 35.0,
+      "cost_per_customer_saved": 100.0,
+      "revenue_per_customer_saved": 540.0
+    },
+    "Alto_Riesgo": {
+      "baseline_customers_at_risk": 1100.0,
+      "save_rate_assumed": 0.2,
+      "customers_saved": 220.0,
+      "investment_required_annual": 49500.0,
+      "revenue_saved_annual": 118800.0,
+      "ltv_customers_saved": 237600.0,
+      "net_benefit_annual": 69300.0,
+      "roi_percentage": 140.0,
+      "payback_months": 5.0,
+      "cost_per_attempt": 45.0,
+      "cost_per_customer_saved": 225.0,
+      "revenue_per_customer_saved": 540.0
+    },
+    "consolidated": {
+      "total_annual_investment": 76045.0,
+      "total_annual_revenue_saved": 260145.0,
+      "setup_costs": {
+        "technology_setup": 50000.0,
+        "training_cost": 15000.0,
+        "total_setup": 65000.0
+      },
+      "total_first_year_cost": 141045.0,
+      "net_benefit_annual": 184100.0,
+      "overall_roi_annual": 242.09349727135248,
+      "overall_payback_months": 3.5078129504699302,
+      "monthly_operational_overhead": 8000.0
+    }
+  },
+  "projections_3_years": {
+    "years": [
+      2025,
+      2026,
+      2027
+    ],
+    "without_intervention": [
+      2793960.0,
+      2825801.91,
+      2857039.7705999995
+    ],
+    "with_intervention": [
+      2913060.0,
+      2963546.91575,
+      3022551.3518014993
+    ],
+    "incremental_benefit": [
+      119100.0,
+      137745.00575,
+      165511.58120149994
+    ],
+    "cumulative_investment": [
+      141045.0,
+      294753.445,
+      453073.14335
+    ],
+    "cumulative_benefit": [
+      260145.0,
+      551598.4507500001,
+      875429.7303015001
+    ],
+    "cumulative_roi": [
+      84.44113580772094,
+      87.13893259161061,
+      93.22039788732933
+    ],
+    "summary": {
+      "total_3year_investment": 453073.14335,
+      "total_3year_benefit": 422356.5869514999,
+      "net_present_value": 346462.87567731016,
+      "final_cumulative_roi": 93.22039788732933,
+      "break_even_year": 1
+    }
+  },
+  "benchmarks_used": {
+    "financial_metrics": {
+      "average_monthly_revenue_per_user": 45.0,
+      "customer_acquisition_cost": 150.0,
+      "annual_churn_rate_baseline": 0.265,
+      "customer_lifetime_months": 24.0,
+      "gross_margin_percentage": 0.75,
+      "operational_cost_per_customer_monthly": 12.0
+    },
+    "retention_effectiveness": {
+      "save_rate_alto_riesgo": 0.2,
+      "save_rate_medio_riesgo": 0.35,
+      "save_rate_bajo_riesgo": 0.15,
+      "campaign_effectiveness_decline": 0.15,
+      "time_to_impact_months": 3
+    },
+    "investment_costs": {
+      "cost_per_retention_attempt_alto": 45.0,
+      "cost_per_retention_attempt_medio": 35.0,
+      "cost_per_retention_attempt_bajo": 25.0,
+      "technology_setup_cost": 50000.0,
+      "training_cost_per_agent": 1500.0,
+      "monthly_operational_overhead": 8000.0
+    },
+    "market_assumptions": {
+      "annual_inflation_rate": 0.03,
+      "revenue_growth_retained_customers": 0.05,
+      "discount_rate_npv": 0.1,
+      "market_saturation_factor": 0.95
+    }
+  },
+  "key_recommendations": {
+    "proceed_with_implementation": true,
+    "recommended_roi": 242.09349727135248,
+    "payback_months": 3.5078129504699302,
+    "most_profitable_segment": "Medio_Riesgo",
+    "implementation_approach": "Phased rollout starting with pilot"
+  }
+}

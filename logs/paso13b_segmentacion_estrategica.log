@@ -1,0 +1,92 @@
+2025-08-09 13:27:07,824 - INFO - ================================================================================
+2025-08-09 13:27:07,824 - INFO - INICIANDO PASO 13B: SEGMENTACIÓN ESTRATÉGICA BASADA EN RIESGO
+2025-08-09 13:27:07,824 - INFO - ================================================================================
+2025-08-09 13:27:07,826 - INFO - Carpeta verificada/creada: excel
+2025-08-09 13:27:07,826 - INFO - Carpeta verificada/creada: informes
+2025-08-09 13:27:07,826 - INFO - Carpeta verificada/creada: graficos
+2025-08-09 13:27:07,827 - INFO - Carpeta verificada/creada: logs
+2025-08-09 13:27:07,827 - INFO - Carpeta verificada/creada: datos
+2025-08-09 13:27:07,827 - INFO - ==================================================
+2025-08-09 13:27:07,828 - INFO - CARGANDO FACTORES CRÍTICOS DEL PASO 13A
+2025-08-09 13:27:07,828 - INFO - Cargando factores críticos del Paso 13A...
+2025-08-09 13:27:07,828 - INFO - Factores críticos cargados: 10
+2025-08-09 13:27:07,829 - INFO - Categorías analizadas: 3
+2025-08-09 13:27:07,829 - INFO - Mejor modelo: Regresión Logística
+2025-08-09 13:27:07,829 - INFO - ==================================================
+2025-08-09 13:27:07,829 - INFO - CARGANDO DATASET Y MODELO ENTRENADO
+2025-08-09 13:27:07,829 - INFO - Cargando dataset optimizado y modelo entrenado...
+2025-08-09 13:27:07,846 - INFO - Dataset cargado con encoding: utf-8-sig
+2025-08-09 13:27:07,847 - INFO - Dataset cargado: 7,043 registros, 22 columnas
+2025-08-09 13:27:07,847 - INFO - Tasa de churn: 26.5%
+2025-08-09 13:27:07,928 - INFO - Modelo cargado: modelos\logistic_regression_pipeline_20250806_192021.pkl
+2025-08-09 13:27:07,929 - INFO - Features disponibles: 21
+2025-08-09 13:27:07,930 - INFO - ==================================================
+2025-08-09 13:27:07,930 - INFO - GENERANDO PROBABILIDADES DE CHURN
+2025-08-09 13:27:07,930 - INFO - Generando probabilidades de churn...
+2025-08-09 13:27:07,937 - INFO - Probabilidades generadas para 7,043 clientes
+2025-08-09 13:27:07,938 - INFO - Probabilidad promedio: 39.6%
+2025-08-09 13:27:07,938 - INFO - Percentil 25: 9.7%
+2025-08-09 13:27:07,939 - INFO - Percentil 75: 68.0%
+2025-08-09 13:27:07,939 - INFO - ==================================================
+2025-08-09 13:27:07,939 - INFO - CREANDO SEGMENTOS DE RIESGO
+2025-08-09 13:27:07,939 - INFO - Creando segmentos de riesgo...
+2025-08-09 13:27:07,946 - INFO - SEGMENTACIÓN COMPLETADA:
+2025-08-09 13:27:07,946 - INFO -   Bajo_Riesgo: 1,761 clientes (25.0%)
+2025-08-09 13:27:07,946 - INFO -     Prob. promedio: 4.5%
+2025-08-09 13:27:07,946 - INFO -     Churn real: 2.1%
+2025-08-09 13:27:07,946 - INFO -   Medio_Riesgo: 3,521 clientes (50.0%)
+2025-08-09 13:27:07,946 - INFO -     Prob. promedio: 36.6%
+2025-08-09 13:27:07,946 - INFO -     Churn real: 20.8%
+2025-08-09 13:27:07,946 - INFO -   Alto_Riesgo: 1,761 clientes (25.0%)
+2025-08-09 13:27:07,948 - INFO -     Prob. promedio: 80.7%
+2025-08-09 13:27:07,948 - INFO -     Churn real: 62.5%
+2025-08-09 13:27:07,948 - INFO - ==================================================
+2025-08-09 13:27:07,948 - INFO - DEFINIENDO ESTRATEGIAS POR SEGMENTO
+2025-08-09 13:27:07,948 - INFO - Definiendo estrategias por segmento...
+2025-08-09 13:27:07,948 - INFO - Estrategias definidas para todos los segmentos
+2025-08-09 13:27:07,949 - INFO - ==================================================
+2025-08-09 13:27:07,949 - INFO - CREANDO VISUALIZACIONES
+2025-08-09 13:27:07,949 - INFO - Creando visualizaciones de segmentación...
+2025-08-09 13:27:07,949 - INFO - Segmentos disponibles: ['Bajo_Riesgo', 'Medio_Riesgo', 'Alto_Riesgo']
+2025-08-09 13:27:09,623 - INFO - Visualización guardada exitosamente: graficos/paso13b_segmentacion_estrategica_20250809_132707.png (568,138 bytes)
+2025-08-09 13:27:09,625 - INFO - ==================================================
+2025-08-09 13:27:09,626 - INFO - CREANDO DASHBOARD EXCEL
+2025-08-09 13:27:09,626 - INFO - Creando dashboard ejecutivo en Excel...
+2025-08-09 13:27:10,683 - INFO - Dashboard Excel creado: excel/paso13b_dashboard_segmentacion_20250809_132707.xlsx
+2025-08-09 13:27:10,683 - INFO - ==================================================
+2025-08-09 13:27:10,683 - INFO - GUARDANDO RESULTADOS
+2025-08-09 13:27:10,683 - INFO - Guardando resultados de segmentación...
+2025-08-09 13:27:10,721 - INFO - CSV segmentación guardado: excel/paso13b_segmentacion_clientes_20250809_132707.csv
+2025-08-09 13:27:10,721 - INFO - JSON datos completos guardado: informes/paso13b_segmentacion_estrategica_20250809_132707.json
+2025-08-09 13:27:10,721 - INFO - Informe ejecutivo guardado: informes/paso13b_segmentacion_estrategica_20250809_132707.txt
+2025-08-09 13:27:10,721 - INFO - ================================================================================
+2025-08-09 13:27:10,722 - INFO - PASO 13B COMPLETADO EXITOSAMENTE
+2025-08-09 13:27:10,722 - INFO - ================================================================================
+2025-08-09 13:27:10,722 - INFO - 
+2025-08-09 13:27:10,722 - INFO - 🎯 SEGMENTACIÓN COMPLETADA:
+2025-08-09 13:27:10,722 - INFO -   🟢 Bajo_Riesgo: 1,761 clientes (25.0%) - Prob: 4.5%
+2025-08-09 13:27:10,722 - INFO -   🟡 Medio_Riesgo: 3,521 clientes (50.0%) - Prob: 36.6%
+2025-08-09 13:27:10,723 - INFO -   🔴 Alto_Riesgo: 1,761 clientes (25.0%) - Prob: 80.7%
+2025-08-09 13:27:10,723 - INFO - 
+2025-08-09 13:27:10,723 - INFO - 💰 REVENUE POR SEGMENTO:
+2025-08-09 13:27:10,723 - INFO -   • Bajo_Riesgo: $92,004.70
+2025-08-09 13:27:10,723 - INFO -   • Medio_Riesgo: $221,629.20
+2025-08-09 13:27:10,723 - INFO -   • Alto_Riesgo: $142,027.10
+2025-08-09 13:27:10,723 - INFO - 
+2025-08-09 13:27:10,723 - INFO - ⚡ ESTRATEGIAS DEFINIDAS:
+2025-08-09 13:27:10,723 - INFO -   • Bajo_Riesgo: Baja prioridad - 10-15% budget
+2025-08-09 13:27:10,724 - INFO -   • Medio_Riesgo: Media-Alta prioridad - 40-50% budget
+2025-08-09 13:27:10,724 - INFO -   • Alto_Riesgo: Crítica prioridad - 35-40% budget
+2025-08-09 13:27:10,724 - INFO - 
+2025-08-09 13:27:10,724 - INFO - 📁 ARCHIVOS GENERADOS:
+2025-08-09 13:27:10,724 - INFO -   • CSV segmentación: excel/paso13b_segmentacion_clientes_20250809_132707.csv
+2025-08-09 13:27:10,724 - INFO -   • JSON datos completos: informes/paso13b_segmentacion_estrategica_20250809_132707.json
+2025-08-09 13:27:10,724 - INFO -   • Informe ejecutivo: informes/paso13b_segmentacion_estrategica_20250809_132707.txt
+2025-08-09 13:27:10,724 - INFO -   • Dashboard Excel: excel/paso13b_dashboard_segmentacion_20250809_132707.xlsx
+2025-08-09 13:27:10,725 - INFO -   • Visualizaciones: graficos/paso13b_segmentacion_estrategica_20250809_132707.png
+2025-08-09 13:27:10,725 - INFO - 
+2025-08-09 13:27:10,725 - INFO - 📋 LISTO PARA PRÓXIMOS SCRIPTS:
+2025-08-09 13:27:10,725 - INFO -   • paso13c: Business case con ROI detallado
+2025-08-09 13:27:10,725 - INFO -   • paso13d: Roadmap de implementación
+2025-08-09 13:27:10,725 - INFO -   • paso13e: Outputs ejecutivos finales
+2025-08-09 13:27:10,725 - INFO - ================================================================================

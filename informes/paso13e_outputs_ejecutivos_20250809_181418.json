@@ -1,0 +1,78 @@
+{
+  "disclaimer": "⚠️ ANÁLISIS BASADO EN DATOS ESTIMADOS INDUSTRIA TELECOM",
+  "project_overview": {
+    "total_customers": 4225,
+    "baseline_churn_rate": 0.26532544378698225,
+    "model_performance": 0.6504720075868541,
+    "critical_factors_identified": 10,
+    "top_factor": "Meses_Cliente",
+    "most_actionable_factor": "Tipo_Contrato_encoded"
+  },
+  "financial_impact": {
+    "annual_investment_required": 76045.0,
+    "annual_revenue_saved": 260145.0,
+    "roi_annual": 242.09349727135248,
+    "payback_months": 3.5078129504699302,
+    "npv_3_years": 346462.87567731016,
+    "break_even_year": 1,
+    "current_churn_loss": 1009260.0
+  },
+  "implementation": {
+    "implementation_duration": 12,
+    "total_phases": 5,
+    "priority_segment": "Medio_Riesgo",
+    "total_budget_estimated": 660000,
+    "critical_milestone_month": 5
+  },
+  "risk_assessment": {
+    "primary_risk": "Save rates reales menores a estimados benchmark",
+    "risk_level": "MEDIO",
+    "mitigation": "Validación temprana con piloto controlado",
+    "data_dependency": "ALTA - Análisis basado en estimaciones industria"
+  },
+  "recommendations": {
+    "primary_recommendation": "PROCEDER CON IMPLEMENTACIÓN",
+    "priority_action": "Iniciar con piloto Medio Riesgo",
+    "critical_validation": "Confirmar supuestos con datos reales empresa",
+    "success_probability": "ALTA con validación adecuada"
+  },
+  "segmentation": {
+    "total_clients_segmented": 7043,
+    "segmentation_method": "Risk-based (percentiles 25-75)",
+    "segments": {
+      "Bajo_Riesgo": {
+        "count": 1761,
+        "percentage": 25.003549623739886,
+        "avg_probability": 0.04469280483741262,
+        "min_probability": 0.009158483071407923,
+        "max_probability": 0.09739504335551016,
+        "actual_churn_rate": 0.021010789324247586,
+        "predicted_churn_rate": 0.0,
+        "avg_months_tenure": 56.370244179443496,
+        "avg_total_charges": 52.24571266325952
+      },
+      "Medio_Riesgo": {
+        "count": 3521,
+        "percentage": 49.99290075252023,
+        "avg_probability": 0.36571642909937613,
+        "min_probability": 0.09744433179017473,
+        "max_probability": 0.6797667400964793,
+        "actual_churn_rate": 0.20789548423743254,
+        "predicted_churn_rate": 0.26668560068162456,
+        "avg_months_tenure": 30.40329451860267,
+        "avg_total_charges": 62.94495881851747
+      },
+      "Alto_Riesgo": {
+        "count": 1761,
+        "percentage": 25.003549623739886,
+        "avg_probability": 0.8073141533757919,
+        "min_probability": 0.6802112216805102,
+        "max_probability": 0.9441398507271136,
+        "actual_churn_rate": 0.6246450880181715,
+        "predicted_churn_rate": 1.0,
+        "avg_months_tenure": 12.30664395229983,
+        "avg_total_charges": 80.65139125496877
+      }
+    }
+  }
+}

@@ -1,0 +1,623 @@
+{
+  "metadata": {
+    "timestamp": "20250809_174349",
+    "script": "paso13d_Roadmap_Detallado",
+    "version": "1.0",
+    "disclaimer": "ROADMAP BASADO EN BUSINESS CASE CON DATOS ESTIMADOS"
+  },
+  "phases": {
+    "Fase_1_Preparacion": {
+      "name": "Preparación y Setup",
+      "duration_months": 2,
+      "start_month": 1,
+      "priority": "Crítica",
+      "segments_focus": [
+        "Todos"
+      ],
+      "key_activities": [
+        "Setup tecnológico y sistemas",
+        "Contratación y entrenamiento de equipos",
+        "Desarrollo de procesos y workflows",
+        "Configuración de dashboards y métricas",
+        "Validación de datos y segmentación"
+      ],
+      "deliverables": [
+        "Plataforma de retención operativa",
+        "Equipos entrenados y certificados",
+        "Procesos documentados y aprobados",
+        "Dashboard de KPIs en tiempo real",
+        "Base de datos de clientes segmentada"
+      ],
+      "budget_percentage": 15,
+      "success_criteria": [
+        "Sistemas operativos al 100%",
+        "Equipos entrenados (95% certificación)",
+        "Procesos validados con QA",
+        "Dashboard funcional con datos en tiempo real"
+      ]
+    },
+    "Fase_2_Piloto_Medio_Riesgo": {
+      "name": "Piloto Medio Riesgo (Prioridad Máxima)",
+      "duration_months": 3,
+      "start_month": 3,
+      "priority": "Crítica",
+      "segments_focus": [
+        "Medio_Riesgo"
+      ],
+      "key_activities": [
+        "Implementación piloto 30% clientes Medio Riesgo",
+        "Campañas proactivas de retención",
+        "Seguimiento intensivo y optimización",
+        "Validación de save rates y costos",
+        "Ajuste de estrategias basado en resultados"
+      ],
+      "deliverables": [
+        "Resultados piloto validados",
+        "Save rate real vs estimado",
+        "Procesos optimizados",
+        "ROI real calculado",
+        "Plan de escalamiento aprobado"
+      ],
+      "budget_percentage": 25,
+      "success_criteria": [
+        "Save rate ≥ 25% (objetivo conservador)",
+        "Payback ≤ 3 meses",
+        "NPS post-intervención ≥ 7/10",
+        "Costos dentro de presupuesto (+/- 10%)"
+      ]
+    },
+    "Fase_3_Scaling_Medio_Riesgo": {
+      "name": "Scaling Completo Medio Riesgo",
+      "duration_months": 2,
+      "start_month": 6,
+      "priority": "Alta",
+      "segments_focus": [
+        "Medio_Riesgo"
+      ],
+      "key_activities": [
+        "Rollout completo segmento Medio Riesgo",
+        "Automatización de procesos repetitivos",
+        "Optimización continua basada en ML",
+        "Entrenamiento avanzado de equipos",
+        "Preparación para siguientes segmentos"
+      ],
+      "deliverables": [
+        "100% cobertura Medio Riesgo",
+        "Procesos automatizados operativos",
+        "Modelos de ML optimizados",
+        "Equipos especializados por segmento",
+        "Baseline establecido para comparación"
+      ],
+      "budget_percentage": 30,
+      "success_criteria": [
+        "Cobertura 100% Medio Riesgo",
+        "Automatización ≥ 70% procesos",
+        "ROI sostenible mes a mes",
+        "Preparación para siguiente fase"
+      ]
+    },
+    "Fase_4_Alto_Riesgo_Selectivo": {
+      "name": "Alto Riesgo Selectivo",
+      "duration_months": 3,
+      "start_month": 8,
+      "priority": "Media-Alta",
+      "segments_focus": [
+        "Alto_Riesgo"
+      ],
+      "key_activities": [
+        "Implementación selectiva Alto Riesgo",
+        "Enfoque en clientes de alto valor",
+        "Intervenciones intensivas personalizadas",
+        "Seguimiento especializado post-save",
+        "Análisis de casos exitosos vs fallidos"
+      ],
+      "deliverables": [
+        "Estrategia Alto Riesgo refinada",
+        "Clientes de alto valor retenidos",
+        "Procesos intensivos documentados",
+        "Análisis de efectividad por perfil",
+        "Recomendaciones de optimización"
+      ],
+      "budget_percentage": 20,
+      "success_criteria": [
+        "Save rate ≥ 15% Alto Riesgo",
+        "Enfoque en top 20% clientes por valor",
+        "Payback ≤ 6 meses",
+        "Learnings documentados para mejora"
+      ]
+    },
+    "Fase_5_Bajo_Riesgo_Mantenimiento": {
+      "name": "Bajo Riesgo y Optimización",
+      "duration_months": 2,
+      "start_month": 11,
+      "priority": "Media",
+      "segments_focus": [
+        "Bajo_Riesgo",
+        "Todos"
+      ],
+      "key_activities": [
+        "Implementación automatizada Bajo Riesgo",
+        "Programas de fidelización y upselling",
+        "Optimización global de todos los segmentos",
+        "Análisis de resultados consolidados",
+        "Preparación para año 2"
+      ],
+      "deliverables": [
+        "Cobertura completa todos los segmentos",
+        "Programas de fidelización activos",
+        "Análisis anual consolidado",
+        "Roadmap año 2 preparado",
+        "Procesos optimizados y documentados"
+      ],
+      "budget_percentage": 10,
+      "success_criteria": [
+        "Cobertura 100% todos los segmentos",
+        "Automatización ≥ 85% Bajo Riesgo",
+        "ROI anual consolidado ≥ objetivo",
+        "Plan año 2 aprobado"
+      ]
+    }
+  },
+  "timeline_monthly": [
+    {
+      "month": 1,
+      "date": "2025-01-01 00:00:00",
+      "phase_id": "Fase_1_Preparacion",
+      "phase_name": "Preparación y Setup",
+      "phase_month": 1,
+      "priority": "Crítica",
+      "segments_focus": [
+        "Todos"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental",
+        "% Setup completado",
+        "Equipos entrenados"
+      ],
+      "resources": {
+        "team_size": 12,
+        "budget_monthly": 60000,
+        "technology_hours": 320,
+        "training_hours": 120
+      },
+      "budget_percentage": 7.5,
+      "success_criteria": [
+        "Sistemas operativos al 100%",
+        "Equipos entrenados (95% certificación)",
+        "Procesos validados con QA",
+        "Dashboard funcional con datos en tiempo real"
+      ]
+    },
+    {
+      "month": 2,
+      "date": "2025-01-31 00:00:00",
+      "phase_id": "Fase_1_Preparacion",
+      "phase_name": "Preparación y Setup",
+      "phase_month": 2,
+      "priority": "Crítica",
+      "segments_focus": [
+        "Todos"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental",
+        "% Setup completado",
+        "Equipos entrenados"
+      ],
+      "resources": {
+        "team_size": 12,
+        "budget_monthly": 60000,
+        "technology_hours": 320,
+        "training_hours": 120
+      },
+      "budget_percentage": 7.5,
+      "success_criteria": [
+        "Sistemas operativos al 100%",
+        "Equipos entrenados (95% certificación)",
+        "Procesos validados con QA",
+        "Dashboard funcional con datos en tiempo real"
+      ]
+    },
+    {
+      "month": 3,
+      "date": "2025-03-02 00:00:00",
+      "phase_id": "Fase_2_Piloto_Medio_Riesgo",
+      "phase_name": "Piloto Medio Riesgo (Prioridad Máxima)",
+      "phase_month": 1,
+      "priority": "Crítica",
+      "segments_focus": [
+        "Medio_Riesgo"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental",
+        "% Muestra completada",
+        "Learnings documentados"
+      ],
+      "resources": {
+        "team_size": 8,
+        "budget_monthly": 50000,
+        "technology_hours": 160,
+        "training_hours": 60
+      },
+      "budget_percentage": 8.333333333333334,
+      "success_criteria": [
+        "Save rate ≥ 25% (objetivo conservador)",
+        "Payback ≤ 3 meses",
+        "NPS post-intervención ≥ 7/10",
+        "Costos dentro de presupuesto (+/- 10%)"
+      ]
+    },
+    {
+      "month": 4,
+      "date": "2025-04-01 00:00:00",
+      "phase_id": "Fase_2_Piloto_Medio_Riesgo",
+      "phase_name": "Piloto Medio Riesgo (Prioridad Máxima)",
+      "phase_month": 2,
+      "priority": "Crítica",
+      "segments_focus": [
+        "Medio_Riesgo"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental",
+        "% Muestra completada",
+        "Learnings documentados"
+      ],
+      "resources": {
+        "team_size": 8,
+        "budget_monthly": 50000,
+        "technology_hours": 160,
+        "training_hours": 60
+      },
+      "budget_percentage": 8.333333333333334,
+      "success_criteria": [
+        "Save rate ≥ 25% (objetivo conservador)",
+        "Payback ≤ 3 meses",
+        "NPS post-intervención ≥ 7/10",
+        "Costos dentro de presupuesto (+/- 10%)"
+      ]
+    },
+    {
+      "month": 5,
+      "date": "2025-05-01 00:00:00",
+      "phase_id": "Fase_2_Piloto_Medio_Riesgo",
+      "phase_name": "Piloto Medio Riesgo (Prioridad Máxima)",
+      "phase_month": 3,
+      "priority": "Crítica",
+      "segments_focus": [
+        "Medio_Riesgo"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental",
+        "% Muestra completada",
+        "Learnings documentados"
+      ],
+      "resources": {
+        "team_size": 8,
+        "budget_monthly": 50000,
+        "technology_hours": 160,
+        "training_hours": 60
+      },
+      "budget_percentage": 8.333333333333334,
+      "success_criteria": [
+        "Save rate ≥ 25% (objetivo conservador)",
+        "Payback ≤ 3 meses",
+        "NPS post-intervención ≥ 7/10",
+        "Costos dentro de presupuesto (+/- 10%)"
+      ]
+    },
+    {
+      "month": 6,
+      "date": "2025-05-31 00:00:00",
+      "phase_id": "Fase_3_Scaling_Medio_Riesgo",
+      "phase_name": "Scaling Completo Medio Riesgo",
+      "phase_month": 1,
+      "priority": "Alta",
+      "segments_focus": [
+        "Medio_Riesgo"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental",
+        "% Cobertura segmento",
+        "Automatización implementada"
+      ],
+      "resources": {
+        "team_size": 10,
+        "budget_monthly": 70000,
+        "technology_hours": 192,
+        "training_hours": 40
+      },
+      "budget_percentage": 15.0,
+      "success_criteria": [
+        "Cobertura 100% Medio Riesgo",
+        "Automatización ≥ 70% procesos",
+        "ROI sostenible mes a mes",
+        "Preparación para siguiente fase"
+      ]
+    },
+    {
+      "month": 7,
+      "date": "2025-06-30 00:00:00",
+      "phase_id": "Fase_3_Scaling_Medio_Riesgo",
+      "phase_name": "Scaling Completo Medio Riesgo",
+      "phase_month": 2,
+      "priority": "Alta",
+      "segments_focus": [
+        "Medio_Riesgo"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental",
+        "% Cobertura segmento",
+        "Automatización implementada"
+      ],
+      "resources": {
+        "team_size": 10,
+        "budget_monthly": 70000,
+        "technology_hours": 192,
+        "training_hours": 40
+      },
+      "budget_percentage": 15.0,
+      "success_criteria": [
+        "Cobertura 100% Medio Riesgo",
+        "Automatización ≥ 70% procesos",
+        "ROI sostenible mes a mes",
+        "Preparación para siguiente fase"
+      ]
+    },
+    {
+      "month": 8,
+      "date": "2025-07-30 00:00:00",
+      "phase_id": "Fase_4_Alto_Riesgo_Selectivo",
+      "phase_name": "Alto Riesgo Selectivo",
+      "phase_month": 1,
+      "priority": "Media-Alta",
+      "segments_focus": [
+        "Alto_Riesgo"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental"
+      ],
+      "resources": {
+        "team_size": 8,
+        "budget_monthly": 50000,
+        "technology_hours": 160,
+        "training_hours": 40
+      },
+      "budget_percentage": 6.666666666666667,
+      "success_criteria": [
+        "Save rate ≥ 15% Alto Riesgo",
+        "Enfoque en top 20% clientes por valor",
+        "Payback ≤ 6 meses",
+        "Learnings documentados para mejora"
+      ]
+    },
+    {
+      "month": 9,
+      "date": "2025-08-29 00:00:00",
+      "phase_id": "Fase_4_Alto_Riesgo_Selectivo",
+      "phase_name": "Alto Riesgo Selectivo",
+      "phase_month": 2,
+      "priority": "Media-Alta",
+      "segments_focus": [
+        "Alto_Riesgo"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental"
+      ],
+      "resources": {
+        "team_size": 8,
+        "budget_monthly": 50000,
+        "technology_hours": 160,
+        "training_hours": 40
+      },
+      "budget_percentage": 6.666666666666667,
+      "success_criteria": [
+        "Save rate ≥ 15% Alto Riesgo",
+        "Enfoque en top 20% clientes por valor",
+        "Payback ≤ 6 meses",
+        "Learnings documentados para mejora"
+      ]
+    },
+    {
+      "month": 10,
+      "date": "2025-09-28 00:00:00",
+      "phase_id": "Fase_4_Alto_Riesgo_Selectivo",
+      "phase_name": "Alto Riesgo Selectivo",
+      "phase_month": 3,
+      "priority": "Media-Alta",
+      "segments_focus": [
+        "Alto_Riesgo"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental"
+      ],
+      "resources": {
+        "team_size": 8,
+        "budget_monthly": 50000,
+        "technology_hours": 160,
+        "training_hours": 40
+      },
+      "budget_percentage": 6.666666666666667,
+      "success_criteria": [
+        "Save rate ≥ 15% Alto Riesgo",
+        "Enfoque en top 20% clientes por valor",
+        "Payback ≤ 6 meses",
+        "Learnings documentados para mejora"
+      ]
+    },
+    {
+      "month": 11,
+      "date": "2025-10-28 00:00:00",
+      "phase_id": "Fase_5_Bajo_Riesgo_Mantenimiento",
+      "phase_name": "Bajo Riesgo y Optimización",
+      "phase_month": 1,
+      "priority": "Media",
+      "segments_focus": [
+        "Bajo_Riesgo",
+        "Todos"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental"
+      ],
+      "resources": {
+        "team_size": 8,
+        "budget_monthly": 50000,
+        "technology_hours": 160,
+        "training_hours": 40
+      },
+      "budget_percentage": 5.0,
+      "success_criteria": [
+        "Cobertura 100% todos los segmentos",
+        "Automatización ≥ 85% Bajo Riesgo",
+        "ROI anual consolidado ≥ objetivo",
+        "Plan año 2 aprobado"
+      ]
+    },
+    {
+      "month": 12,
+      "date": "2025-11-27 00:00:00",
+      "phase_id": "Fase_5_Bajo_Riesgo_Mantenimiento",
+      "phase_name": "Bajo Riesgo y Optimización",
+      "phase_month": 2,
+      "priority": "Media",
+      "segments_focus": [
+        "Bajo_Riesgo",
+        "Todos"
+      ],
+      "activities": [
+        "Actividades continuas de la fase",
+        "Monitoreo y optimización",
+        "Reporting mensual"
+      ],
+      "kpis": [
+        "Clientes contactados",
+        "Save rate mensual",
+        "Costo por cliente salvado",
+        "NPS post-intervención",
+        "ROI incremental"
+      ],
+      "resources": {
+        "team_size": 8,
+        "budget_monthly": 50000,
+        "technology_hours": 160,
+        "training_hours": 40
+      },
+      "budget_percentage": 5.0,
+      "success_criteria": [
+        "Cobertura 100% todos los segmentos",
+        "Automatización ≥ 85% Bajo Riesgo",
+        "ROI anual consolidado ≥ objetivo",
+        "Plan año 2 aprobado"
+      ]
+    }
+  ],
+  "business_case_ref": {
+    "roi_target": 242.09349727135248,
+    "total_investment": 76045.0,
+    "payback_months": 3.5078129504699302
+  },
+  "summary_metrics": {
+    "total_duration_months": 12,
+    "total_phases": 5,
+    "total_budget_estimated": 660000,
+    "priority_segment": "Medio_Riesgo",
+    "implementation_approach": "Phased with Medio Riesgo priority"
+  }
+}
